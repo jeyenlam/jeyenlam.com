@@ -1,4 +1,10 @@
 import React from "react";
+import linkedin from '@/assets/linkedin.png'
+import devpost from '@/assets/letter-d.png'
+import github from '@/assets/github.png'
+import youtube from '@/assets/youtube.png'
+import codepen from '@/assets/codepen.png'
+
 
 export const links = [
   {
@@ -105,3 +111,26 @@ export const projects = [
     techStack: ['HTML', 'CSS', 'Flask', 'Python', 'OAuth', 'DiscogsAPI']
   },
 ]
+
+export const icons = [
+  {
+    name: 'linkedin',
+    icon: 'faLinkedin',
+    url: 'https://www.linkedin.com/in/jeyenlam/'
+  },
+  {
+    name: 'github',
+    icon: 'faGithub',
+    url: 'https://github.com/jeyenlam'
+  },
+  {
+    name: 'codepen',
+    icon: 'faCodepen',
+    url: 'https://codepen.io/jeyenlam'
+  },
+  {
+    name: 'dev',
+    icon: 'faDev',
+    url: 'https://devpost.com/jeyenlam?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav'
+  }
+] as const
