@@ -4,24 +4,29 @@ import devpost from '@/assets/letter-d.png'
 import github from '@/assets/github.png'
 import youtube from '@/assets/youtube.png'
 import codepen from '@/assets/codepen.png'
+import { faUser, faLaptopFile, faLayerGroup, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 
-export const links = [
+export const navLinks = [
   {
     name: "About",
-    hash: "#about",
+    icon: faUser,
+    url: "#about",
   },
   {
     name: "Projects",
-    hash: "#projects",
+    icon: faLaptopFile,
+    url: "#projects",
   },
   {
     name: "Skills",
-    hash: "#skills",
+    icon: faLayerGroup,
+    url: "#skills",
   },
   {
     name: "Experience",
-    hash: "#experience",
+    icon: faBriefcase,
+    url: "#experience",
   },
 ] as const;
 

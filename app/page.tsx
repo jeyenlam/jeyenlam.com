@@ -3,9 +3,9 @@ import Nav from "@/components/Nav";
 
 export default function Home() {
   return (
-    <main className="h-full w-full flex flex-col overflow-x-hidden">
+    <main className="h-full w-full flex overflow-x-hidden">
       <Nav/>
-      <div className="p-20">
+      <div className="">
         <About/>
       </div>
       
