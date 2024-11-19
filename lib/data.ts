@@ -1,8 +1,8 @@
-import { faUser, faLaptopFile, faLayerGroup, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faLaptopFile, faLayerGroup, faBriefcase, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { faDev, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {IIcon, IProject} from '@/lib/myInterface'
 
-
-export const navLinks = [
+export const navLinks: IIcon[] = [
   {
     name: "About",
     icon: faUser,
@@ -23,8 +23,7 @@ export const navLinks = [
     icon: faBriefcase,
     url: "#experience",
   },
-] as const;
-
+];
 
 export const experiences = [
   {
@@ -56,17 +55,17 @@ export const experiences = [
   }
 ];
 
-export const projects = [
+export const projects: IProject[] = [
   {
     title: 'Vinyl Collection Tracker',
     urls: [
       {
-        title: 'github',
+        name: 'github',
         icon: faGithub,
         url: '/'
       },
       {
-        title: 'devpost',
+        name: 'devpost',
         icon: faDev,
         url: '/'
       }
@@ -82,7 +81,7 @@ export const projects = [
     title: 'Full-stack Intelligent Athlete Tracker',
     urls: [
       {
-        title: 'github',
+        name: 'github',
         icon: faGithub,
         url: '/'
       },

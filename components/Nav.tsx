@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
-import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
@@ -13,12 +13,16 @@ const Nav = () => {
   return (
     <>
       <motion.div
-        className={isExpandedNav ? "flex justify-center h-screen bg-black text-white" : "flex justify-center w-14 h-screen bg-black text-white"}
-        initial={{ width: "10rem" }} // Initial collapsed width
-        animate={{ width: isExpandedNav ? "10rem" : "3.5rem" }} // Animate expanded/collapsed width
+        className={
+          isExpandedNav
+            ? "flex justify-center border-r-4 h-screen border-zinc- text-s"
+            : "flex justify-center w-14 h-screen border-r-4 border-zinc-"
+        }
+        initial={{ width: "15rem" }} // Initial collapsed width
+        animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
         transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition timing
       >
-        <nav className="flex flex-col h-2/5 mt-10 justify-evenly items-center bg-slate-00">
+        <nav className="flex flex-col h-1/2 mt-10 justify-evenly items-center bg-slate-00">
           {/* Toggle button for expanding/collapsing */}
           <motion.div
             onClick={() => setIsExpandedNav(!isExpandedNav)}
@@ -28,16 +32,35 @@ const Nav = () => {
           </motion.div>
 
           {/* Navigation links */}
-          <ul className="w-full h-3/5 flex flex-col justify-around bg-slate-00">
+          <ul className="flex flex-col justify-around bg-slate-00">
             {navLinks.map((navLink) => (
-              <li key={navLink.name} className="text-xs flex items-center p-2">
-                <Link href={navLink.url} onClick={() => setIsActive(navLink.name)} className={isActive === navLink.name ? "flex items-center text-violet-500 rounded-sm" : "flex items-center justify-start rounded-sm"}>
+              <li
+                key={navLink.name}
+                className={
+                  isExpandedNav
+                    ? "text-lg flex items-center p-2"
+                    : "text-lg flex items-center p-2"
+                }
+              >
+                <Link
+                  href={navLink.url}
+                  onClick={() => setIsActive(navLink.name)}
+                  className={`flex items-center px-2 rounded-sm ${
+                    isActive === navLink.name
+                      ? "border-b-4 border-zinc-900 border font-bold bg-indigo-500"
+                      : "border-l-4 border-transparent justify-start"
+                  } ${
+                    isExpandedNav ? "w-40 h-10" : "w-10 h-10 justify-center"
+                  }`}
+                >
                   <FontAwesomeIcon icon={navLink.icon} />
-                  {isExpandedNav && <span className="pl-2">{navLink.name}</span>} {/* Only show text when expanded */}
+                  {isExpandedNav && (
+                    <span className="pl-2">{navLink.name}</span>
+                  )}{" "}
+                  {/* Only show text when expanded */}
                 </Link>
               </li>
             ))}
-            <hr className="opacity-45" />
           </ul>
         </nav>
       </motion.div>

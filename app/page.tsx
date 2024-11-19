@@ -15,8 +15,6 @@ export default function Home() {
         <hr/>
         <About/>
         <hr/>
-        <Skills/>
-        <hr/>
         <Projects/>
       </div>
     </main>
