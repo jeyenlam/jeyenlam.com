@@ -15,8 +15,8 @@ const Nav = () => {
       <motion.div
         className={
           isExpandedNav
-            ? "flex justify-center border-r-4 h-screen border-zinc- text-s"
-            : "flex justify-center w-14 h-screen border-r-4 border-zinc-"
+            ? "flex justify-center border-r-4 h-screen border-zinc-00"
+            : "flex justify-center w-14 h-screen border-r-4 border-zinc-00"
         }
         initial={{ width: "15rem" }} // Initial collapsed width
         animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
@@ -47,7 +47,7 @@ const Nav = () => {
                   onClick={() => setIsActive(navLink.name)}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
-                      ? "border-b-4 border-zinc-900 border font-bold bg-indigo-500"
+                      ? "border-b-4 border-zinc-900 border font-bold bg-blue-800 text-lime-200"
                       : "border-l-4 border-transparent justify-start"
                   } ${
                     isExpandedNav ? "w-40 h-10" : "w-10 h-10 justify-center"

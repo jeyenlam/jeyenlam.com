@@ -7,7 +7,7 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
-    <div className='w-96 h-96 border-2 border-black'>{project.title}</div>
+    <div className='border-2 border-b-8 border-black'>{project.title}</div>
   )
 }
 

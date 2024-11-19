@@ -1,7 +1,7 @@
 import React from 'react'
 import {easeInOut, motion} from "framer-motion"
 import Image from 'next/image'
-import profileImg from "@/assets/profile.jpeg";
+import profileImg from "@/assets/profile1.jpeg";
 
 const IntroImg = () => {
   return (
@@ -13,13 +13,13 @@ const IntroImg = () => {
       >
         
         <motion.div 
-          className='p-4 shadow-xl bg-yellow-50'
+          className='p-4 shadow-xl border-2 border-zinc-900 border-b-8 '
           whileHover={{
             rotate: [0, 0, 5, 0], // Rotate left (-10deg), then right (10deg), and back to 0
             transition: { duration: 0.7, ease: "easeInOut" } // Smooth transition
           }}
         >
-          <Image src={profileImg} width={500} height={500} alt='profile-pic' className='shadow-sm'/>
+          <Image src={profileImg} width={200} height={200} alt='profile-pic' className='shadow-sm border border-zinc-900'/>
           <h1 className='mt-2 text-4xl font-semibold'>Yen Lam</h1>
           <h1 className='text-xl'>Software Developer</h1>
           <h1 className='text-sm'>B.S. Computer Science</h1>

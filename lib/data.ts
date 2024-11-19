@@ -1,5 +1,5 @@
-import { faUser, faLaptopFile, faLayerGroup, faBriefcase, IconDefinition } from '@fortawesome/free-solid-svg-icons'
-import { faDev, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faUser, faLaptopFile, faLayerGroup, faBriefcase, IconDefinition, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faDev, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {IIcon, IProject} from '@/lib/myInterface'
 
 export const navLinks: IIcon[] = [
@@ -24,6 +24,24 @@ export const navLinks: IIcon[] = [
     url: "#experience",
   },
 ];
+
+export const contacts: IIcon[] = [
+  {
+    name: 'LinkedIn',
+    icon: faLinkedin,
+    url: 'https://www.linkedin.com/in/jeyenlam/'
+  },
+  {
+    name: 'Github',
+    icon: faGithub,
+    url: 'https://www.github.com/jeyenlam/'
+  },
+  {
+    name: 'Resume',
+    icon: faDownload,
+    url: '/'
+  }
+]
 
 export const experiences = [
   {
