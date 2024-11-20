@@ -6,10 +6,10 @@ import SectionTitleContainer from '@/components/SectionTitleContainer'
 
 const Projects = () => {
   return (
-    <section className='w-full flex justify-center items-center'>
-      <div className='w-3/4 flex flex-col sm:flex-row items-start bg-slate-100'>
+    <section className='pt-20 w-full flex justify-center items-center md:p-20 bg-slate-00'>
+      <div className='w-3/4 flex flex-col items-end bg-slate-00'>
         <SectionTitleContainer title={"02. Projects"}/>
-        <div className='w-full flex flex-col sm:flex-row justify-evenly items-start sm:items-center'>
+        <div className='mt-8 w-full lg:grid grid-cols-2 gap-4'>
           { 
             projects.map((project) => { 
               return (
