@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Intro from "@/pages/Intro";
 import Skills from "@/pages/Skills";
 import Projects from "@/pages/Projects";
+import Experience from "@/pages/Experience";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <About/>
         <hr/>
         <Projects/>
+        <hr/>
+        <Experience/>
       </div>
     </main>
   );
