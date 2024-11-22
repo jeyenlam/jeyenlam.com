@@ -1,15 +1,20 @@
 "use client"
 import React, { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import ProjectContainer from '@/components/ProjectContainer';
-import { projects } from '@/lib/data';
+import SectionTitleContainer from '@/components/SectionTitleContainer';
+import { experiences } from '@/lib/data';
 
 const Experience = () => {
   return (
-    <section>
+    <section className='bg-lime-50 w-full sm:h-full flex flex-col items-center'>
+      <SectionTitleContainer title='Experience'/>
+      <div>
+        {experiences.map((experience) => {return (
+          <div>{experience.title}</div>
+        )})}
+      
+      </div> 
 
     </section>
   );

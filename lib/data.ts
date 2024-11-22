@@ -43,6 +43,10 @@ export const contacts: IIcon[] = [
   }
 ]
 
+export const skills = [
+  "React.js", "React Native", "Next.js", "Javascript", "Typescript", "Node.js", "MongoDB", "C#", "TailwindCSS"
+]
+
 export const experiences = [
   {
     title: 'Software Engineer Intern',
@@ -94,6 +98,38 @@ export const projects: IProject[] = [
       "Created use cases, a traceability matrix and applied Agile methodology to accommodate ongoing changes, ensuring the app's adaptability and smooth integration of new features throughout development."
     ],
     tech: ['Flask', 'HTML5', 'CSS3', 'DiscogAPI', 'OAuth']
+  },
+  {
+    title: 'Full-stack Intelligent Athlete Tracker',
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: '/'
+      },
+    ],
+    projectDescription: [
+      "Developed a mobile app leveraging the built-in camera and ROC.ai technology to help coaches and parents monitor athlete performance and manage profiles efficiently, aiming for a low-cost alternative to existing products.",
+      "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
+      "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
+    ],
+    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.ai', 'TailwindCSS']
+  },
+  {
+    title: 'Full-stack Intelligent Athlete Tracker',
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: '/'
+      },
+    ],
+    projectDescription: [
+      "Developed a mobile app leveraging the built-in camera and ROC.ai technology to help coaches and parents monitor athlete performance and manage profiles efficiently, aiming for a low-cost alternative to existing products.",
+      "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
+      "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
+    ],
+    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.ai', 'TailwindCSS']
   },
   {
     title: 'Full-stack Intelligent Athlete Tracker',

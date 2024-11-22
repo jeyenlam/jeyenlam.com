@@ -13,9 +13,7 @@ export default function Home() {
       </div>
       <div className="flex-1 h-screen overflow-y-scroll">
         <Intro />
-        <hr/>
         <About/>
-        <hr/>
         <Projects/>
         <hr/>
         <Experience/>

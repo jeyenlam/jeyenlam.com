@@ -12,7 +12,7 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
-    <div className='border-2 border-b-8 border-zinc-900 mt-2 rounded-sm'>
+    <div className='border-2 border-b-8 border-zinc-900 mt-2 rounded-sm bg-slate-50'>
       <h1 className='pl-2 bg-lime-200 py-1 text-blue-800 text-lg font-bold flex border-b border-zinc-900'>{project.title}</h1>
       <div className='p-4 sm:p-6 text-xs flex flex-col gap-3'>
         <Image src={image} width={200} alt={project.title}/>

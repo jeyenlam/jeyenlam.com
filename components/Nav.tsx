@@ -4,7 +4,7 @@ import { navLinks } from "@/lib/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [isActive, setIsActive] = useState("About");
@@ -15,20 +15,20 @@ const Nav = () => {
       <motion.div
         className={
           isExpandedNav
-            ? "flex justify-center border-r-4 h-screen border-zinc-00"
-            : "flex justify-center w-14 h-screen border-r-4 border-zinc-00"
+            ? "flex justify-center h-screen bg-zinc-900"
+            : "flex justify-center w-14 h-screen border-zinc-00 bg-zinc-900"
         }
         initial={{ width: "15rem" }} // Initial collapsed width
         animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
         transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition timing
       >
-        <nav className="flex flex-col h-1/2 mt-10 justify-evenly items-center bg-slate-00">
+        <nav className="flex flex-col h-1/2 mt-10 justify-evenly items-center bg-zinc-00">
           {/* Toggle button for expanding/collapsing */}
           <motion.div
             onClick={() => setIsExpandedNav(!isExpandedNav)}
             className="cursor-pointer mb-10"
           >
-            <FontAwesomeIcon icon={isExpandedNav ? faAngleLeft : faBars} />
+            <FontAwesomeIcon className="text-lime-200" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Navigation links */}
@@ -47,8 +47,8 @@ const Nav = () => {
                   onClick={() => setIsActive(navLink.name)}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
-                      ? "border-b-4 border-zinc-900 border font-bold bg-blue-800 text-lime-200"
-                      : "border-l-4 border-transparent justify-start"
+                      ? "border-b-4 border-lime-200 border font-bold bg-blue-800 text-lime-200"
+                      : "border-l-4 border-transparent justify-start text-lime-50"
                   } ${
                     isExpandedNav ? "w-40 h-10" : "w-10 h-10 justify-center"
                   }`}
