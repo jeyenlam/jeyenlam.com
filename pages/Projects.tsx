@@ -1,36 +1,59 @@
 "use client"
 import React from 'react'
-import {projects} from '@/lib/data'
+import { projects } from '@/lib/data'
 import ProjectContainer from '@/components/ProjectContainer'
 import SectionTitleContainer from '@/components/SectionTitleContainer'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Mousewheel } from 'swiper/modules';
+import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 
 const Projects = () => {
   return (
-    <section className='bg-gradient-to-b from-rose-50 to-lime-50 pt-20 w-full flex justify-center items-center md:p-20 bg-slate-00'>
-      <div className='w-4/5 md:w-3/4 xl:w-1/2 bg-rose-00'>
-        <SectionTitleContainer title={"02. Projects"}/>
+    <section id="projects" className='pt-20 w-full flex justify-center items-center md:p-20'>
+      <div className='w-full h-full bg-rose-00 px-14 flex flex-col items-end'>
+        <div className=''>
+          <SectionTitleContainer title={"02. My Projects"} />
+        </div>
         <Swiper
-          slidesPerView={1}
+          slidesPerView={3} // default number of slides
           direction={'horizontal'}
           spaceBetween={30}
-          // loop={true}
-          // longSwipes={true}
+          loop={true}
+          autoplay={{
+            delay: 3500,
+            pauseOnMouseEnter: true,
+          }}
           mousewheel={true}
           pagination={{
             clickable: true,
           }}
-          modules={[Mousewheel, Pagination]}
-          className="h-full w-full bg-cyan-00"
+          breakpoints={{
+            // when window width is >= 1024px (desktop)
+            1024: {
+              slidesPerView: 3,
+            },
+            // when window width is >= 768px (tablet)
+            768: {
+              slidesPerView: 2,
+            },
+            // when window width is <= 768px (mobile)
+            0: {
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Mousewheel, Pagination, Autoplay]}
+          className="h-full w-full mt-4"
         >
-          {projects.map((project) => { return (
-            <div className='w-full h-full bg-red-600'>
-              <SwiperSlide className='flex flex-col justify-stretch mb-10 bg-slate-00'><ProjectContainer project={project}/></SwiperSlide>
-            </div>
-          )})}
+          {projects.map((project) => {
+            return (
+              <div className='w-full h-full bg-red-600'>
+                <SwiperSlide className='flex flex-col justify-stretch mb-10 bg-slate-00'>
+                  <ProjectContainer project={project} />
+                </SwiperSlide>
+              </div>
+            )
+          })}
         </Swiper>
       </div>
     </section>
