@@ -4,6 +4,7 @@ import Intro from "@/pages/Intro";
 import Skills from "@/pages/Skills";
 import Projects from "@/pages/Projects";
 import Experience from "@/pages/Experience";
+import Contact from "@/pages/Contact";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Projects/>
         <hr/>
         <Experience/>
+        <Contact/>
       </div>
     </main>
   );

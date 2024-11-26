@@ -15,8 +15,8 @@ const Nav = () => {
       <motion.div
         className={
           isExpandedNav
-            ? "flex justify-center h-screen bg-zinc-900"
-            : "flex justify-center w-14 h-screen border-zinc-00 bg-zinc-900"
+            ? "flex justify-center h-screen bg-zinc-800"
+            : "flex justify-center w-14 h-screen border-zinc-00 bg-zinc-800"
         }
         initial={{ width: "15rem" }} // Initial collapsed width
         animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
@@ -28,7 +28,7 @@ const Nav = () => {
             onClick={() => setIsExpandedNav(!isExpandedNav)}
             className="cursor-pointer mb-10"
           >
-            <FontAwesomeIcon className="text-lime-200" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Navigation links */}
@@ -47,8 +47,8 @@ const Nav = () => {
                   onClick={() => setIsActive(navLink.name)}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
-                      ? "border-b-4 border-lime-200 border font-bold bg-blue-800 text-lime-200"
-                      : "border-l-4 border-transparent justify-start text-lime-50"
+                      ? "rounded-xl border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
+                      : "border-transparent justify-start text-indigo-200"
                   } ${
                     isExpandedNav ? "w-40 h-10" : "w-10 h-10 justify-center"
                   }`}

@@ -7,6 +7,7 @@ import SectionTitleContainer from '@/components/SectionTitleContainer';
 import { skills } from '@/lib/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons';
+import IntroImg from '@/components/IntroImg';
 
 const About = () => {
   // Set up a ref and inView state for the h1
@@ -14,12 +15,11 @@ const About = () => {
   const isInView = useInView(aboutRef);
 
   return (
-    <section className='bg-rose-50 pt-20 w-full flex flex-col items-center justify-center md:p-20'>
-      <div className='w-3/4 bg-slate-00 flex flex-col justify-start items-start'>
-        <SectionTitleContainer title={"01. About Me"}/>
+    <section className='bg-indigo-50 pt-20 w-full flex items-start justify-center md:p-20 gap-4'>
+      <div className='w-3/5 bg-slate-00 flex flex-col justify-start items-start'>
         <div className='flex justify-center text-sm sm:text-base'>
-          <div className='text-zinc-800 flex flex-col items-baseline bg-slate-00'>
-            <br/>
+          <div className='text-zinc-800 flex flex-col items-baseline bg-lime-200 p-4 border-2 border-zinc-900 rounded-xl'>
+            <SectionTitleContainer title='01. About Me'/>
             <br/>
             <p>
               I'm a senior majoring in Computer Science at <b><a target="_blank" href="https://gvsu.edu" className='text-blue-800 hover:border-b-2 border-blue-800'>Grand Valley State University</a></b>.
@@ -39,12 +39,13 @@ const About = () => {
             <br/>
             <ul className='grid grid-cols-2 text-xs sm:grid-cols-5 gap-2 gap-x-4 bg-blue-00'>
               {skills.map((skill) => { return (
-                <li className='p-1 rounded-lg px-2 text-center bg-blue-50 text-blue-800'>{skill}</li>
+                <li className='p-1 rounded-lg px-2 text-center bg-slate-50 text-blue-800'>{skill}</li>
               )})}
             </ul>
           </div>  
         </div>
       </div>
+      <IntroImg/>
       
     </section>
   )
