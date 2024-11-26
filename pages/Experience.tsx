@@ -10,19 +10,19 @@ import Link from 'next/link';
 
 const Experience = () => {
   return (
-    <section id='experience' className='bg-indigo-50 w-full sm:h-full lg:h-full flex flex-col justify-center items-center'>
-      <div className="sm:w-4/5 p-2 flex flex-row justify-center items-center">
-        <div className='transform -rotate-90'>
+    <section id='experience' className='bg-indigo-50 w-full xl:h-full flex flex-col justify-center items-center'>
+      <div className="mt-5 sm:mt-0 bg-slate-00 flex flex-col lg:flex-row justify-center items-center">
+        <div className='lg:transform lg:-rotate-90'>
           <SectionTitleContainer title='03. My Experience'/>
         </div>
-        <div className='lg:relative -left-16 sm:w-2/3'>
+        <div className='w-4/5 text-xs sm:text-base lg:relative -left-16 md:w-3/5'>
           {experiences.map((experience) => {return (
             <div className='p-4 border-2 rounded-3xl border-b-8  border-zinc-900 mt-4'>
               <div className='flex flex-row gap-4 items-center'>
-                <h1 className='text-lg font-semibold py-2 border-zinc-900 border bg-lime-200 rounded-full border-r-4 px-4'>{experience.title}</h1>
-                <h1 className='text-sm px-4 border border-zinc-900 border-r-4 hover:font-bold bg-indigo-400 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
+                <h1 className='sm:text-lg font-semibold py-2 border-zinc-900 border bg-lime-200 rounded-full border-r-4 px-4'>{experience.title}</h1>
+                <h1 className='sm:text-sm px-4 border border-zinc-900 border-r-4 hover:font-bold bg-indigo-400 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
               </div>
-              <p className='m-2 text-sm font-medium text-zinc-500'>{experience.duration}</p>
+              <p className='m-2 sm:text-sm font-medium text-zinc-500'>{experience.duration}</p>
               <ul className='bg-slate-50 border border-zinc-900 p-4 rounded-3xl'>
                 {(experience.roleDescription).map((description) => {
                   return (

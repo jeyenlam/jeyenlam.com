@@ -1,7 +1,6 @@
 import About from "@/pages/About";
 import Nav from "@/components/Nav";
 import Intro from "@/pages/Intro";
-import Skills from "@/pages/Skills";
 import Projects from "@/pages/Projects";
 import Experience from "@/pages/Experience";
 import Contact from "@/pages/Contact";
@@ -16,7 +15,6 @@ export default function Home() {
         <Intro />
         <About/>
         <Projects/>
-        <hr/>
         <Experience/>
         <Contact/>
       </div>

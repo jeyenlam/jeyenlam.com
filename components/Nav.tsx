@@ -22,13 +22,13 @@ const Nav = () => {
         animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
         transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition timing
       >
-        <nav className="flex flex-col h-1/2 mt-10 justify-evenly items-center bg-zinc-00">
+        <nav className="flex flex-col h-1/2 mt-10 md:justify-evenly items-center bg-zinc-00">
           {/* Toggle button for expanding/collapsing */}
           <motion.div
             onClick={() => setIsExpandedNav(!isExpandedNav)}
             className="cursor-pointer mb-10"
           >
-            <FontAwesomeIcon className="text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden md:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Navigation links */}

@@ -1,4 +1,4 @@
-import { faUser, faLaptopFile, faLayerGroup, faBriefcase, IconDefinition, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faLaptopFile, faBriefcase, faDownload, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 import { faDev, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {IIcon, IProject} from '@/lib/myInterface'
 import vinylAppImage from '@/assets/vinylapp.png'
@@ -18,14 +18,14 @@ export const navLinks: IIcon[] = [
     url: "#projects",
   },
   {
-    name: "Skills",
-    icon: faLayerGroup,
-    url: "#skills",
-  },
-  {
     name: "Experience",
     icon: faBriefcase,
     url: "#experience",
+  },
+  {
+    name: "Contact",
+    icon: faAddressBook,
+    url: "#contact",
   },
 ];
 
