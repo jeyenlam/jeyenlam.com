@@ -62,7 +62,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit" className='self-center bg-indigo-400 p-2 rounded-2xl border border-zinc-900 border-b-4 hover:border-b hover:bg-lime-200 px-4'>Submit</button>
+      <button type="submit" className='self-center bg-indigo-400 p-2 rounded-2xl border border-zinc-900 border-b-4 hover:border-b hover:mt-[2px] hover:bg-lime-200 px-4'>Submit</button>
     </form>
   )
 }

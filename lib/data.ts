@@ -40,11 +40,6 @@ export const contacts: IIcon[] = [
     icon: faGithub,
     url: 'https://www.github.com/jeyenlam/'
   },
-  {
-    name: 'Resume',
-    icon: faDownload,
-    url: '/'
-  }
 ]
 
 export const skills = [

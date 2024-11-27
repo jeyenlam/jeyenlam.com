@@ -3,11 +3,12 @@ import AnimationOnScroll from '@/components/AnimationOnScroll'
 import ContactForm from '@/components/ContactForm'
 import SectionTitleContainer from '@/components/SectionTitleContainer'
 import { contacts } from '@/lib/data'
-import { faStar, faStarOfLife } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faStar, faStarOfLife } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import {motion} from 'framer-motion'
+import CustomTooltip from '@/components/CustomTooltip'
 
 const Contact = () => {
 
@@ -63,11 +64,17 @@ const Contact = () => {
         <SectionTitleContainer title="04. What's next?"/>
       </AnimationOnScroll>
       <ContactForm/>
-      <ul className='flex bg-slate-00 justify-evenly w-40'>{contacts.map((contact)=>{ return (
-        <Link href={contact.url} className='mt-4'>
-          <FontAwesomeIcon icon={contact.icon} className='text-2xl border-2 border-zinc-900 rounded-md border-b-4 hover:bg-lime-200 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+      <ul className='flex bg-slate-00 justify-evenly w-40'>
+        {contacts.map((contact)=>{ return (
+          <Link href={contact.url} className='mt-4'>
+            <FontAwesomeIcon icon={contact.icon} className='text-2xl border-2 border-zinc-900 rounded-md border-b-4 hover:border-b-2 hover:mt-[2px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+          </Link>
+        )})}
+        <Link target="_blank" href='/YenLamResume2024v3.pdf' download={"YenLamResume2024v3.pdf"} className='mt-4 relative group'>
+          <FontAwesomeIcon icon={faDownload} className='text-2xl border-2 border-zinc-900 rounded-md border-b-4 hover:border-b-2 hover:mt-[2px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+          <CustomTooltip tip="Download Resume"/>
         </Link>
-      )})}</ul>
+      </ul>
     </section>
   )
 }

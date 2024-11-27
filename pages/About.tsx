@@ -25,17 +25,9 @@ const About = () => {
                 <SectionTitleContainer title='01. About Me'/>
                 <br/>
                 <p>
-                  I'm a senior majoring in Computer Science at <a target="_blank" href="https://gvsu.edu" className='font-medium text-indigo-700 hover:font-bold'>Grand Valley State University</a>.
-                  <br/><br/>
-                  Over the years, I've built strong technical skills in various programming languages
-                  and developed soft skills that help me excel in professional environments.
-                  I'm now focusing on Web and Mobile Development yet still leaving some space for exploring different fields to
-                  refresh my knowledge as well as being up-to-date to adapt to the fast-paced tech industry.
-                  <br/><br/>
-                  At the moment, I'm seeking a software engineering internship for Winter 2025,
-                  with the goal of securing a full-time position afterward.
-                  I’m eager to explore potential opportunities and how I can bring value to your team.
-                  Feel free to reach out if you'd like to connect further.
+                  I'm a senior majoring in Computer Science at <a target="_blank" href="https://gvsu.edu" className='font-medium text-indigo-700 hover:font-bold'>Grand Valley State University</a>.<br/><br/>
+                  Throughout my academic journey, I’ve developed a strong foundation in various programming languages, along with essential soft skills that enable me to thrive in professional settings. While I’m currently focusing on Web and Mobile Development, I remain open to exploring new areas to stay up-to-date and adaptable in the fast-evolving tech industry.<br/><br/>
+                  I’m actively seeking a software engineering internship for Winter 2025, with the aim of transitioning into a full-time role afterward. I would love to discuss how I can contribute to your team and make a positive impact. Please feel free to reach out if you’re interested in connecting!
                 </p>
                 <br/>
                 <h1>Here are some technlogies I've been working with recently:</h1>
@@ -46,7 +38,7 @@ const About = () => {
                   )})}
                 </ul>
               </div>
-              <div className='hidden lg:block relative left-14 top-10 transform rotate-6'><IntroImg/></div>
+              <div className='hidden lg:block relative left-14 top-5 transform rotate-6'><IntroImg/></div>
             </div>  
           </div>
         </div>
