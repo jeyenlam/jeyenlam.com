@@ -1,4 +1,5 @@
 "use client"
+import AnimationOnScroll from '@/components/AnimationOnScroll'
 import ContactForm from '@/components/ContactForm'
 import SectionTitleContainer from '@/components/SectionTitleContainer'
 import { contacts } from '@/lib/data'
@@ -6,6 +7,7 @@ import { faStar, faStarOfLife } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import {motion} from 'framer-motion'
 
 const Contact = () => {
 
@@ -15,21 +17,51 @@ const Contact = () => {
         <h1>Made by Yen with ♡</h1>
         <h1>Copyright 2024</h1>
       </div>
-      <div className='hidden xl:flex absolute bottom-5 -z-0 text-indigo-400'>
-        <div className='relative bottom-2 -left-[28rem]'>
+      <div className='hidden xl:flex absolute bottom-10 -z-0 text-indigo-400'>
+        <motion.div 
+          animate={{ y: [0,50,0] }}  // Moves from x=0 to x=100 and back to x=0
+          transition={{
+            duration: 10,                 // The total duration of one cycle (2 seconds)
+            repeat: Infinity,            // Repeats infinitely
+            ease: "linear",           // Easing function for smooth motion
+          }}
+          className='relative bottom-2 -left-[28rem]'>
           <FontAwesomeIcon icon={faStar} className='text-4xl text-zinc-900'/>
-        </div>
-        <div className='relative bottom-16 -left-56'>
+        </motion.div>
+        <motion.div 
+          animate={{ y: [0,50,0] }}  // Moves from x=0 to x=100 and back to x=0
+          transition={{
+            duration: 10,                 // The total duration of one cycle (2 seconds)
+            repeat: Infinity,            // Repeats infinitely
+            ease: "linear",           // Easing function for smooth motion
+          }}
+          className='relative bottom-16 -left-56'>
           <FontAwesomeIcon icon={faStarOfLife} className='text-6xl'/>
-        </div>
-        <div className='relative text-6xl -right-56 bottom-4'>
+        </motion.div>
+        <motion.div 
+          animate={{ y: [0,20,0] }}  // Moves from x=0 to x=100 and back to x=0
+          transition={{
+            duration: 5,                 // The total duration of one cycle (2 seconds)
+            repeat: Infinity,            // Repeats infinitely
+            ease: "linear",           // Easing function for smooth motion
+          }}
+          className='relative text-6xl -right-56 bottom-4'>
           <FontAwesomeIcon icon={faStar} className='text-7xl text-zinc-800'/>
-        </div>
-        <div className='relative -right-[28rem]'>
+        </motion.div>
+        <motion.div
+          animate={{ y: [0,30,0] }}  // Moves from x=0 to x=100 and back to x=0
+          transition={{
+            duration: 10,                 // The total duration of one cycle (2 seconds)
+            repeat: Infinity,            // Repeats infinitely
+            ease: "linear",           // Easing function for smooth motion
+          }}
+          className='relative -right-[28rem]'>
           <FontAwesomeIcon icon={faStarOfLife} className='text-3xl'/>
-        </div>
+        </motion.div>
       </div>
-      <SectionTitleContainer title="04. What's next?"/>
+      <AnimationOnScroll>
+        <SectionTitleContainer title="04. What's next?"/>
+      </AnimationOnScroll>
       <ContactForm/>
       <ul className='flex bg-slate-00 justify-evenly w-40'>{contacts.map((contact)=>{ return (
         <Link href={contact.url} className='mt-4'>

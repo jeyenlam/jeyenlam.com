@@ -7,7 +7,7 @@ const dmMono = DM_Mono({ subsets: ["latin"],  weight: ["300", "400", "500"]});
 
 export const metadata: Metadata = {
   title: "Yen Lam",
-  description: "Web Developer",
+  description: "Software Developer",
 };
 
 export default function RootLayout({

@@ -5,23 +5,40 @@ import { contacts } from '@/lib/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { faStar, faStarOfLife } from '@fortawesome/free-solid-svg-icons';
+import {easeInOut, motion} from "framer-motion"
 
 const Intro = () => {
   return (
-    <section className='relative w-full xl:h-full flex flex-col items-center justify-center bg-gradient-to-b from-lime-200 to-indigo-50'> 
-      <div className='hidden xl:block absolute z-10 text-zinc-900'>
-        <div className='relative -top-52'>
+    <section className='relative w-full lg:h-full flex flex-col items-center justify-center bg-gradient-to-b from-lime-200 to-indigo-50'> 
+      <motion.div className='hidden xl:block absolute z-10 text-zinc-900'>
+        <motion.div 
+          initial={{y:-10, opacity:0}}
+          animate={{y:1, opacity:1}}
+          transition={{duration:0.6, delay: 0.6, ease:easeInOut}}
+          className='relative -top-52'>
           <FontAwesomeIcon icon={faStarOfLife} className='text-7xl'/>
-        </div>
-        <div className='relative text-7xl -top-8 -left-[32rem]'>
+        </motion.div>
+        <motion.div 
+          initial={{y:-10, opacity:0}}
+          animate={{y:1, opacity:1}}
+          transition={{duration:0.6, delay: 0.8, ease:easeInOut}}
+          className='relative text-7xl -top-8 -left-[32rem]'>
           <FontAwesomeIcon icon={faStar} className='text-7xl'/>
-        </div>
-      </div>
-      <div className='z-0 w-full flex flex-col justify-end relative md:pt-10 bg-slate-00 p-5 sm:pr-10'>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{x:10, opacity:0}}
+        animate={{x:1, opacity:1}}
+        transition={{duration:0.5, ease:easeInOut}} 
+        className='z-0 w-11/12 flex flex-col justify-end relative md:pt-10 bg-slate-00 p-5 sm:pr-10'>
         <IntroText/>
-      </div>
+      </motion.div>
       
-      <div className='relative -top-28 -left-32'>
+      <motion.div 
+        initial={{y:10, opacity:0}}
+        animate={{y:1, opacity:1}}
+        transition={{duration: 0.8, delay: 1, ease:easeInOut}}
+        className='relative -top-28 -left-32'>
         <div className='hidden xl:block h-full bottom-96 xl:left-[-10rem] bg-lime-00 text-5xl bg-lime-200 border-2 border-zinc-900 border-b-8 rounded-lg p-4 pt-2'>
           <span className='text-2xl font-medium'>I'm currently </span><br/>
           Looking for <br/> <span className='italic text-6xl font-medium'>Opportunities</span>.
@@ -31,7 +48,7 @@ const Intro = () => {
             </Link>
           )})}</ul>
         </div>
-      </div>
+      </motion.div>
     </section>
     
   )

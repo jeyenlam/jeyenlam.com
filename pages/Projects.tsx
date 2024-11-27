@@ -7,14 +7,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
+import AnimationOnScroll from '@/components/AnimationOnScroll'
 
 const Projects = () => {
   return (
     <section id="projects" className='w-full flex justify-center items-center md:px-20 md:py-5 bg-indigo-50'>
       <div className='mt-10 md:mt-0 w-full h-full bg-rose-00 px-8 md:px-14 flex flex-col items-center sm:items-end'>
-        <div className=''>
-          <SectionTitleContainer title={"02. My Projects"} />
-        </div>
+        <SectionTitleContainer title={"02. My Projects"} />
         <Swiper
           slidesPerView={3} // default number of slides
           direction={'horizontal'}

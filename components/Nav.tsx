@@ -1,14 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
+
   const [isActive, setIsActive] = useState("About");
   const [isExpandedNav, setIsExpandedNav] = useState(false);
+
+  const handleExpendedNavWhenScreenIsSmall = () => {
+    if (window.innerWidth < 768){
+      setIsExpandedNav(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleExpendedNavWhenScreenIsSmall);
+
+    return () => {
+      window.removeEventListener("resize", handleExpendedNavWhenScreenIsSmall)
+    };
+  }, [])
 
   return (
     <>
@@ -25,6 +40,9 @@ const Nav = () => {
         <nav className="flex flex-col h-1/2 mt-10 md:justify-evenly items-center bg-zinc-00">
           {/* Toggle button for expanding/collapsing */}
           <motion.div
+            initial={{opacity:0, y: 50}}
+            animate={{opacity:1, y:0}}
+            transition={{duration: 1, delay:1, ease: "easeOut"}}
             onClick={() => setIsExpandedNav(!isExpandedNav)}
             className="cursor-pointer mb-10"
           >
@@ -32,10 +50,13 @@ const Nav = () => {
           </motion.div>
 
           {/* Navigation links */}
-          <ul className="flex flex-col justify-around bg-slate-00">
+          <motion.ul className="flex flex-col justify-around bg-slate-00">
             {navLinks.map((navLink) => (
-              <li
+              <motion.li
                 key={navLink.name}
+                initial={{opacity:0, y: 50}}
+                animate={{opacity:1, y:0}}
+                transition={{duration: 1, delay:1, ease: "easeOut"}}
                 className={
                   isExpandedNav
                     ? "text-lg flex items-center p-2"
@@ -56,12 +77,11 @@ const Nav = () => {
                   <FontAwesomeIcon icon={navLink.icon} />
                   {isExpandedNav && (
                     <span className="pl-2">{navLink.name}</span>
-                  )}{" "}
-                  {/* Only show text when expanded */}
+                  )}
                 </Link>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </nav>
       </motion.div>
     </>
