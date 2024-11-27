@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
+import ScrollToSection from "@/hooks/ScrollToSection";
 
 const Nav = () => {
 
@@ -12,7 +13,7 @@ const Nav = () => {
   const [isExpandedNav, setIsExpandedNav] = useState(false);
 
   const handleExpendedNavWhenScreenIsSmall = () => {
-    if (window.innerWidth < 768){
+    if (window.innerWidth < 1200){
       setIsExpandedNav(false);
     }
   }
@@ -37,7 +38,7 @@ const Nav = () => {
         animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
         transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition timing
       >
-        <nav className="flex flex-col h-1/2 mt-10 md:justify-evenly items-center bg-zinc-00">
+        <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center bg-zinc-00">
           {/* Toggle button for expanding/collapsing */}
           <motion.div
             initial={{opacity:0, y: 50}}
@@ -46,11 +47,11 @@ const Nav = () => {
             onClick={() => setIsExpandedNav(!isExpandedNav)}
             className="cursor-pointer mb-10"
           >
-            <FontAwesomeIcon className="hidden md:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden xl:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Navigation links */}
-          <motion.ul className="flex flex-col justify-around bg-slate-00">
+          <motion.ul className="flex flex-col justify-around">
             {navLinks.map((navLink) => (
               <motion.li
                 key={navLink.name}
@@ -65,7 +66,7 @@ const Nav = () => {
               >
                 <Link
                   href={navLink.url}
-                  onClick={() => setIsActive(navLink.name)}
+                  onClick={() => {setIsActive(navLink.name)}}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
                       ? "rounded-xl border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"

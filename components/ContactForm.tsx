@@ -15,6 +15,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    })
   }
 
   return (

@@ -11,7 +11,7 @@ import AnimationOnScroll from '@/components/AnimationOnScroll';
 
 const Experience = () => {
   return (
-    <section id='experience' className='bg-indigo-50 w-full xl:h-full flex flex-col justify-center items-center'>
+    <section id='experience' className='scroll-smooth bg-indigo-50 w-full xl:h-full flex flex-col justify-center items-center'>
       <AnimationOnScroll>
         <div className="mt-5 sm:mt-0 bg-slate-00 flex flex-col lg:flex-row justify-center items-center">
           <div className='lg:transform lg:-rotate-90'>
