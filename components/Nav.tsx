@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { navLinks } from "@/lib/data";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -40,13 +39,9 @@ const Nav = () => {
   return (
     <>
       <motion.div
-        className={
-          isExpandedNav
-            ? "flex justify-center h-screen bg-zinc-800"
-            : "flex justify-center w-14 h-screen border-zinc-00 bg-zinc-800"
-        }
+        className="flex justify-center h-screen bg-zinc-800 px-2"
         initial={{ width: "15rem" }}
-        animate={{ width: isExpandedNav ? "15rem" : "6rem" }}
+        animate={{ width: isExpandedNav ? "15rem" : "5rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center bg-zinc-00">
@@ -69,21 +64,16 @@ const Nav = () => {
                 initial={{opacity:0, y: 50}}
                 animate={{opacity:1, y:0}}
                 transition={{duration: 1, delay:1, ease: "easeOut"}}
-                className={
-                  isExpandedNav
-                    ? "text-lg flex items-center p-2"
-                    : "text-lg flex items-center p-2"
-                }
+                className="sm:text-lg flex items-center p-2"
               >
                 <button
-                  // href={navLink.url}
                   onClick={() => handleNavLinkOnClick(navLink)}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
                       ? "rounded-xl border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
                       : "border-transparent justify-start text-indigo-200"
                   } ${
-                    isExpandedNav ? "w-40 h-10" : "w-10 h-10 justify-center"
+                    isExpandedNav ? "w-40 h-10" : "w-8 sm:w-10 h-8 sm:h-10 justify-center"
                   }`}
                 >
                   <FontAwesomeIcon icon={navLink.icon} />

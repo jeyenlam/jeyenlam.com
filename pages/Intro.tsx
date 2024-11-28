@@ -10,7 +10,7 @@ import CustomTooltip from '@/components/CustomTooltip';
 
 const Intro = () => {
   return (
-    <section className='relative w-full xl:h-full flex flex-col items-center justify-center bg-gradient-to-b from-lime-200 to-indigo-50'> 
+    <section className='relative w-full xl:h-full flex flex-col items-center justify-center bg-gradient-to-b from-lime-200 text-zinc-800 to-indigo-50'> 
       <motion.div className='hidden xl:block absolute z-10 text-zinc-900'>
         <motion.div 
           initial={{y:-10, opacity:0}}

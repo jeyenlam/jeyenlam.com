@@ -11,24 +11,27 @@ import AnimationOnScroll from '@/components/AnimationOnScroll';
 
 const Experience = () => {
   return (
-    <section id='experience' className='scroll-smooth bg-indigo-50 w-full xl:h-full flex flex-col justify-center items-center'>
+    <section id='experience' className='bg-indigo-50 w-full xl:h-full flex flex-col justify-center items-center'>
       <AnimationOnScroll>
-        <div className="mt-5 sm:mt-0 bg-slate-00 flex flex-col lg:flex-row justify-center items-center">
+        <div className="mt-5 sm:mt-0 flex flex-col lg:flex-row justify-center items-center">
           <div className='lg:transform lg:-rotate-90'>
             <SectionTitleContainer title='03. My Experience'/>
           </div>
-          <div className='w-4/5 text-xs sm:text-base lg:relative -left-16 md:w-3/5'>
+          <div className='w-4/5 text-xs sm:text-base lg:relative -left-16 md:w-3/6 text-zinc-800'>
             {experiences.map((experience) => {return (
-              <div className='p-4 border-2 rounded-3xl border-b-8  border-zinc-900 mt-4'>
-                <div className='flex flex-row gap-4 items-center'>
-                  <h1 className='sm:text-lg font-semibold py-2 border-zinc-900 border bg-lime-200 rounded-full border-r-4 px-4'>{experience.title}</h1>
-                  <h1 className='sm:text-sm px-4 border border-zinc-900 border-r-4 hover:font-bold bg-indigo-400 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
+              <div className='p-4 border-2 rounded-3xl border-b-4 sm:border-b-8  border-zinc-900 mt-4'>
+                <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center'>
+                  {/* Title */}
+                  <h1 className='sm:text-lg font-medium sm:font-semibold py-1 sm:py-2 border-zinc-900 border bg-lime-200 rounded-full sm:border-r-4 px-2 sm:px-4'>{experience.title}</h1>
+                  {/* Company */}
+                  <h1 className='text-[10px] sm:text-sm px-2 sm:px-4 border border-zinc-900 sm:border-r-4 hover:font-bold bg-indigo-400 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
                 </div>
-                <p className='m-2 sm:text-sm font-medium text-zinc-500'>{experience.duration}</p>
-                <ul className='bg-slate-50 border border-zinc-900 p-4 rounded-3xl'>
+                {/* Duration */}
+                <p className='m-1 sm:m-2 text-[9px] sm:text-xs font-medium text-zinc-500'>{experience.duration}</p>
+                <ul className='bg-slate-50 border border-zinc-900 p-2 sm:p-4 rounded-3xl'>
                   {(experience.roleDescription).map((description) => {
                     return (
-                      <div className='flex'>
+                      <div className='flex text-[10px] sm:text-xs lg:text-sm'>
                         <FontAwesomeIcon icon={faCaretRight} width={10} className='mr-1 mt-1'/>
                         <li>{description}</li>
                       </div>

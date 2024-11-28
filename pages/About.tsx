@@ -19,8 +19,8 @@ const About = () => {
     <section id='about' className='bg-indigo-50 pt-10 md:pt-20 md:h-full md:items-center w-full flex items-start justify-center md:p-20 gap-4'>
       <AnimationOnScroll>
         <div className='flex flex-col justify-start items-start'>
-          <div className='px-5 md:px-0 flex justify-center text-xs sm:text-sm'>
-            <div className='md:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-4 border-2 border-zinc-900 border-b-8 rounded-xl'>
+          <div className='px-5 md:px-0 flex justify-center text-[10px] sm:text-xs md:text-sm'>
+            <div className='md:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-2 sm:p-4 border-2 border-zinc-900 border-b-4 sm:border-b-8 rounded-xl'>
               <div className='w-full lg:w-4/5 flex flex-col items-start'>
                 <SectionTitleContainer title='01. About Me'/>
                 <br/>
@@ -32,9 +32,9 @@ const About = () => {
                 <br/>
                 <h1>Here are some technlogies I've been working with recently:</h1>
                 <br/>
-                <ul className='grid grid-cols-2 sm:grid-cols-5 gap-2 gap-x-4 bg-blue-00'>
+                <ul className='grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4 bg-blue-00'>
                   {skills.map((skill) => { return (
-                    <li className='p-1 rounded-xl text-xs px-2 text-center bg-slate-50 text-indigo-700'>{skill}</li>
+                    <li className='p-1 rounded-xl text-[8px] sm:text-xs px-2 text-center bg-slate-50 text-indigo-700'>{skill}</li>
                   )})}
                 </ul>
               </div>

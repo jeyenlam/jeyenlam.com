@@ -25,7 +25,7 @@ const ContactForm = () => {
   return (
     <form 
       onSubmit={handleSubmit}
-      className='lg:w-1/3 lg:h-2/5 p-4 bg-indigo-50 flex flex-col rounded-2xl gap-2 border-2 border-zinc-900 border-b-8 justify-evenly'
+      className='lg:w-1/3 lg:h-3/5 p-4 text-xs sm:text-sm bg-indigo-50 flex flex-col rounded-2xl gap-2 border-2 border-zinc-900 border-b-8 justify-evenly'
     >
       <div className='w-full flex justify-between gap-2'>
         <label htmlFor='name'>Name:</label>
@@ -54,7 +54,7 @@ const ContactForm = () => {
       <div className='w-full flex items-center gap-2'>
         <label htmlFor="message">Message:</label>
         <textarea
-          className='w-full h-24 p-2 rounded-xl border border-zinc-800 text-sm'
+          className='w-full h-24 p-2 rounded-xl border border-zinc-800 text-[10px] sm:text-sm'
           id="message"
           name="message"
           value={formData.message}
