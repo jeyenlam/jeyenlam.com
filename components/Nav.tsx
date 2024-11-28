@@ -5,24 +5,33 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
-import ScrollToSection from "@/hooks/ScrollToSection";
+import { IIcon } from "@/lib/myInterface";
 
 const Nav = () => {
-
   const [isActive, setIsActive] = useState("About");
   const [isExpandedNav, setIsExpandedNav] = useState(false);
 
-  const handleExpendedNavWhenScreenIsSmall = () => {
+  const handleMinimizingNav = () => {
     if (window.innerWidth < 1200){
       setIsExpandedNav(false);
     }
   }
 
+  const handleNavMenuOnClick = () => {
+    setIsExpandedNav(!isExpandedNav);
+  }
+
+  const handleNavLinkOnClick = ( navLink: IIcon ) => {
+    setIsExpandedNav(!isExpandedNav);
+    setIsActive(navLink.name);
+    
+  }
+
   useEffect(() => {
-    window.addEventListener("resize", handleExpendedNavWhenScreenIsSmall);
+    window.addEventListener("resize", handleMinimizingNav);
 
     return () => {
-      window.removeEventListener("resize", handleExpendedNavWhenScreenIsSmall)
+      window.removeEventListener("resize", handleMinimizingNav)
     };
   }, [])
 
@@ -34,23 +43,23 @@ const Nav = () => {
             ? "flex justify-center h-screen bg-zinc-800"
             : "flex justify-center w-14 h-screen border-zinc-00 bg-zinc-800"
         }
-        initial={{ width: "15rem" }} // Initial collapsed width
-        animate={{ width: isExpandedNav ? "15rem" : "6rem" }} // Animate expanded/collapsed width
-        transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition timing
+        initial={{ width: "15rem" }}
+        animate={{ width: isExpandedNav ? "15rem" : "6rem" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center bg-zinc-00">
-          {/* Toggle button for expanding/collapsing */}
+          {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
             initial={{opacity:0, y: 50}}
             animate={{opacity:1, y:0}}
             transition={{duration: 1, delay:1, ease: "easeOut"}}
-            onClick={() => setIsExpandedNav(!isExpandedNav)}
+            onClick={handleNavMenuOnClick}
             className="cursor-pointer mb-10"
           >
             <FontAwesomeIcon className="hidden xl:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
-          {/* Navigation links */}
+          {/* Nav links */}
           <motion.ul className="flex flex-col justify-around">
             {navLinks.map((navLink) => (
               <motion.li
@@ -66,7 +75,7 @@ const Nav = () => {
               >
                 <Link
                   href={navLink.url}
-                  onClick={() => {setIsActive(navLink.name)}}
+                  onClick={() => handleNavLinkOnClick(navLink)}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
                       ? "rounded-xl border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
