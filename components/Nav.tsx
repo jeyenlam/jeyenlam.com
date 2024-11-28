@@ -22,9 +22,11 @@ const Nav = () => {
   }
 
   const handleNavLinkOnClick = ( navLink: IIcon ) => {
-    setIsExpandedNav(!isExpandedNav);
+    setIsExpandedNav(isExpandedNav === true ? !isExpandedNav : isExpandedNav); // only minimizing nav when expended
     setIsActive(navLink.name);
-    
+
+    let sectionId = navLink.url.slice(1); //get rid of "#"
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   }
 
   useEffect(() => {
@@ -73,8 +75,8 @@ const Nav = () => {
                     : "text-lg flex items-center p-2"
                 }
               >
-                <Link
-                  href={navLink.url}
+                <button
+                  // href={navLink.url}
                   onClick={() => handleNavLinkOnClick(navLink)}
                   className={`flex items-center px-2 rounded-sm ${
                     isActive === navLink.name
@@ -88,7 +90,7 @@ const Nav = () => {
                   {isExpandedNav && (
                     <span className="pl-2">{navLink.name}</span>
                   )}
-                </Link>
+                </button>
               </motion.li>
             ))}
           </motion.ul>
