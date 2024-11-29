@@ -15,11 +15,29 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    })
+    
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok){
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+        alert("Message sent!");
+      } else {
+        alert("Error sending message!");
+      }
+    } catch (error) {
+      alert("Error:" + error);
+    }
   }
 
   return (
