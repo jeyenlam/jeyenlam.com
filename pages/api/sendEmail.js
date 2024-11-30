@@ -1,4 +1,4 @@
-export default async (req, res) => {
+const sendEmail = async (req, res) => {
 
   if (req.method !== "POST"){
     return res.status(404).json({message: "POST request only!"});
@@ -33,3 +33,5 @@ export default async (req, res) => {
     res.status(500).json({message: "AWS Lambda Server Error"});
   }
 }
+
+export default sendEmail;

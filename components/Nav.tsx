@@ -58,7 +58,7 @@ const Nav = () => {
 
           {/* Nav links */}
           <motion.ul className="flex flex-col justify-around">
-            {navLinks.map((navLink) => (
+            {navLinks.map((navLink, index) => (
               <motion.li
                 key={navLink.name}
                 initial={{opacity:0, y: 50}}

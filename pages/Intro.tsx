@@ -43,7 +43,7 @@ const Intro = () => {
         transition={{duration: 0.8, delay: 1, ease:easeInOut}}
         className='px-4 pb-2 lg:relative -top-28 -left-52 xl:-left-40 w-[99%] lg:w-auto'>
         <div className='h-full bottom-96 xl:left-[-10rem] text-2xl lg:text-4xl bg-lime-200 border border-zinc-900 lg:border-b-4 xl:border-b-8 rounded-xl p-2 md:p-4 pt-2'>
-          <span className='text-base lg:text-xl xl:text-2xl font-medium'>I'm actively </span><br/>
+          <span className='text-base lg:text-xl xl:text-2xl font-medium'>I&#39;m actively </span><br/>
           Looking for <br/> 
           <span className='italic text-3xl lg:text-5xl xl:text-6xl font-medium'>Opportunities</span>.
           <ul className='flex text-base justify-evenly w-28 lg:w-40'>

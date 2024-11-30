@@ -20,8 +20,8 @@ const Experience = () => {
           </div>
           {/* Experience Cards */}
           <div className=' text-xs sm:text-sm lg:relative -left-16 md:w-4/6 xl:w-3/6 text-zinc-800'>
-            {experiences.map((experience) => {return (
-              <div className='p-4 border rounded-3xl border-b-2 lg:border-b-4 border-zinc-900 mt-4 bg-indigo-100'>
+            {experiences.map((experience, index) => {return (
+              <div key={index} className='p-4 border rounded-3xl border-b-2 lg:border-b-4 border-zinc-900 mt-4 bg-indigo-100'>
                 <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center'>
                   {/* Title */}
                   <h1 className='md:text-lg font-medium sm:font-semibold py-1 sm:py-2 border-zinc-900 border bg-lime-200 rounded-full lg:border-r-4 px-2 sm:px-4'>{experience.title}</h1>
@@ -31,9 +31,9 @@ const Experience = () => {
                 {/* Duration */}
                 <p className='m-1 sm:m-2 text-[9px] sm:text-xs font-medium text-zinc-500'>{experience.duration}</p>
                 <ul className='bg-slate-50 border border-zinc-900 p-2 sm:p-4 rounded-3xl'>
-                  {(experience.roleDescription).map((description) => {
+                  {(experience.roleDescription).map((description, index) => {
                     return (
-                      <div className='flex text-[10px] sm:text-xs lg:text-sm'>
+                      <div key={index} className='flex text-[10px] sm:text-xs lg:text-sm'>
                         <FontAwesomeIcon icon={faCaretRight} width={10} className='mr-1 mt-1'/>
                         <li>{description}</li>
                       </div>

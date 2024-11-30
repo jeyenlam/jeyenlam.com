@@ -71,8 +71,8 @@ const Contact = () => {
         </AnimationOnScroll>
         <ContactForm/>
         <ul className='flex justify-evenly w-28 lg:w-40 z-10'>
-          {contacts.map((contact)=>{ return (
-            <Link href={contact.url} className='mt-4'>
+          {contacts.map((contact, index)=>{ return (
+            <Link key={index} href={contact.url} className='mt-4'>
               <FontAwesomeIcon icon={contact.icon} className='text-base lg:text-2xl border border-zinc-900 rounded-lg border-b-2 lg:border-b-4 hover:border-b hover:mt-[2px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
             </Link>
           )})}

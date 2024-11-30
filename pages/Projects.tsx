@@ -43,9 +43,9 @@ const Projects = () => {
           modules={[Mousewheel, Pagination, Autoplay]}
           className="h-full w-full mt-4"
         >
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             return (
-              <div className='w-full h-full bg-red-600'>
+              <div key={index} className='w-full h-full bg-red-600'>
                 <SwiperSlide className='flex flex-col justify-stretch mb-10 bg-slate-00'>
                   <ProjectContainer project={project} />
                 </SwiperSlide>

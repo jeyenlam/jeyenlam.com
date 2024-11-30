@@ -1,9 +1,7 @@
 import React from 'react'
 import { IProject } from '@/lib/myInterface'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
-import image from '@/assets/profile3.png'
 import Link from 'next/link'
 
 interface ProjectContainerProps {
@@ -19,14 +17,14 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
       <div className='p-2 md:p-6 text-xs flex flex-col gap-3'>
         <Image src={project.media} width={400} alt={project.title} />
         <ul className='flex text-xl sm:text-2xl gap-2 text-zinc-800'>
-          {(project.urls).map(url => {return(
-            <li className='p-[2px] px-[6px] rounded-xl hover:text-3xl border-zinc-900'><Link href={url.url} target="_blank"><FontAwesomeIcon icon={url.icon}/></Link></li>
+          {(project.urls).map((url, index) => {return(
+            <li key={index} className='p-[2px] px-[6px] rounded-xl hover:text-3xl border-zinc-900'><Link href={url.url} target="_blank"><FontAwesomeIcon icon={url.icon}/></Link></li>
           )})}
         </ul>
         <p className='text-[10px] sm:text-xs'>{project.projectDescription[0]}</p>
         <ul className='flex flex-wrap gap-1 sm:gap-2 text-blue-800'>
-          {(project.tech).map((tech) => {return (
-            <li className='p-1 px-2 text-[8px] sm:text-[10px] sm:px-3 rounded-full bg-indigo-50'>{tech}</li>
+          {(project.tech).map((tech, index) => {return (
+            <li key={index} className='p-1 px-2 text-[8px] sm:text-[10px] sm:px-3 rounded-full bg-indigo-50'>{tech}</li>
           )})}
         </ul>
       </div>
