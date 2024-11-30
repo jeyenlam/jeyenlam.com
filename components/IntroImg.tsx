@@ -21,7 +21,7 @@ const IntroImg = () => {
         >
           <Image src={profileImg} width={200} height={200} alt='profile-pic' className='shadow-sm border border-zinc-900'/>
           <h1 className='mt-2 text-4xl font-semibold'>Yen Lam</h1>
-          <h1 className='text-xl'>Software Developer</h1>
+          <h1 className='text-base font-medium'>Software Developer</h1>
           <h1 className='text-sm'>B.S. Computer Science</h1>
           <h1 className='text-sm'>Senior @ GVSU</h1>
         </motion.div>

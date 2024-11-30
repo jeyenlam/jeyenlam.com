@@ -73,11 +73,11 @@ const Contact = () => {
         <ul className='flex justify-evenly w-28 lg:w-40 z-10'>
           {contacts.map((contact)=>{ return (
             <Link href={contact.url} className='mt-4'>
-              <FontAwesomeIcon icon={contact.icon} className='text-base lg:text-2xl border border-zinc-900 rounded-lg border-b-2 lg:border-b-4 hover:border-b hover:mt-[1px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+              <FontAwesomeIcon icon={contact.icon} className='text-base lg:text-2xl border border-zinc-900 rounded-lg border-b-2 lg:border-b-4 hover:border-b hover:mt-[2px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
             </Link>
           )})}
           <Link target="_blank" href='/YenLamResume2024v3.pdf' download={"YenLamResume2024v3.pdf"} className='mt-4 relative group'>
-            <FontAwesomeIcon icon={faDownload} className='text-base lg:text-2xl border border-zinc-900 rounded-lg border-b-2 lg:border-b-4 hover:border-b hover:mt-[1px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+            <FontAwesomeIcon icon={faDownload} className='text-base lg:text-2xl border border-zinc-900 rounded-lg border-b-2 lg:border-b-4 hover:border-b hover:mt-[2px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
             <CustomTooltip tip="Download Resume"/>
           </Link>
         </ul>  
