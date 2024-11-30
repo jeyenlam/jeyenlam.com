@@ -13,7 +13,7 @@ const IntroImg = () => {
       >
         
         <motion.div 
-          className='p-4 shadow-xl border-2 rounded-md border-zinc-900 border-b-8 bg-slate-50'
+          className='p-4 shadow-xl border rounded-md border-zinc-900 border-b-4 bg-slate-50'
           whileHover={{
             rotate: [0, 0, 5, 0], // Rotate left (-10deg), then right (10deg), and back to 0
             transition: { duration: 0.7, ease: "easeInOut" } // Smooth transition

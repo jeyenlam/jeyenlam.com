@@ -43,7 +43,7 @@ const ContactForm = () => {
   return (
     <form 
       onSubmit={handleSubmit}
-      className='w-4/5 lg:w-1/3 lg:h-3/5 p-4 text-xs sm:text-sm bg-indigo-50 flex flex-col rounded-2xl gap-2 border md:border-2 border-zinc-900 border-b-2 md:border-b-8 justify-evenly'
+      className='w-4/5 lg:w-1/3 lg:h-3/5 p-4 text-xs sm:text-sm bg-indigo-50 flex flex-col rounded-2xl gap-2 border border-zinc-900 border-b-2 lg:border-b-4 justify-evenly'
     >
       <div className='w-full flex justify-between gap-2'>
         <label htmlFor='name'>Name:</label>
@@ -80,7 +80,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit" className='self-center bg-indigo-400 p-2 rounded-2xl border border-zinc-900 border-b-2 md:border-b-4 hover:border-b hover:mt-[2px] hover:bg-lime-200 px-4'>Submit</button>
+      <button type="submit" className='self-center bg-indigo-400 p-2 rounded-2xl border border-zinc-900 border-b-2 lg:border-b-4 hover:border-b hover:mt-[1px] hover:bg-lime-200 px-4'>Submit</button>
     </form>
   )
 }
