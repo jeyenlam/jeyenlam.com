@@ -47,8 +47,8 @@ const Intro = () => {
           Looking for <br/> 
           <span className='italic text-3xl lg:text-5xl xl:text-6xl font-medium'>Opportunities</span>.
           <ul className='flex text-base justify-evenly w-28 lg:w-40'>
-            {contacts.map((contact)=>{ return (
-              <Link target='_blank' href={contact.url} className='mt-2 lg:mt-4'>
+            {contacts.map((contact, index) => { return (
+              <Link key={index} target='_blank' href={contact.url} className='mt-2 lg:mt-4'>
                 <FontAwesomeIcon icon={contact.icon} className='lg:text-2xl border border-zinc-900 rounded-md border-b-2 lg:border-b-4 hover:border-b hover:mt-[1px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
               </Link>
             )})}
