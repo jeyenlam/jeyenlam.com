@@ -41,10 +41,10 @@ const Nav = () => {
       <motion.div
         className="flex justify-center h-screen bg-zinc-800 px-2"
         initial={{ width: "15rem" }}
-        animate={{ width: isExpandedNav ? "15rem" : "5rem"}}
+        animate={{ width: isExpandedNav ? "15rem" : "4rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center bg-zinc-00">
+        <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center">
           {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
             initial={{opacity:0, y: 50}}
@@ -68,9 +68,9 @@ const Nav = () => {
               >
                 <button
                   onClick={() => handleNavLinkOnClick(navLink)}
-                  className={`flex items-center px-2 rounded-sm ${
+                  className={`flex items-center px-2 rounded-lg ${
                     isActive === navLink.name
-                      ? "rounded-xl border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
+                      ? "rounded-lg border-b-2 md:border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
                       : "border-transparent justify-start text-indigo-200"
                   } ${
                     isExpandedNav ? "w-40 h-10" : "w-8 sm:w-10 h-8 sm:h-10 justify-center"

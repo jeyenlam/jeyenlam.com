@@ -19,7 +19,7 @@ const Experience = () => {
           </div>
           <div className='w-4/5 text-xs sm:text-base lg:relative -left-16 md:w-3/6 text-zinc-800'>
             {experiences.map((experience) => {return (
-              <div className='p-4 border-2 rounded-3xl border-b-4 sm:border-b-8  border-zinc-900 mt-4'>
+              <div className='p-4 border sm:border-2 rounded-3xl border-b-2 md:border-b-4 sm:border-b-8 border-zinc-900 mt-4 bg-indigo-100'>
                 <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center'>
                   {/* Title */}
                   <h1 className='sm:text-lg font-medium sm:font-semibold py-1 sm:py-2 border-zinc-900 border bg-lime-200 rounded-full sm:border-r-4 px-2 sm:px-4'>{experience.title}</h1>

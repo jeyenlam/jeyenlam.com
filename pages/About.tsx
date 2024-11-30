@@ -16,11 +16,11 @@ const About = () => {
   const isInView = useInView(aboutRef);
 
   return (
-    <section id='about' className='bg-indigo-50 pt-10 md:pt-20 md:h-full md:items-center w-full flex items-start justify-center md:p-20 gap-4'>
+    <section id='about' className='bg-indigo-50 md:pt-20 md:h-full md:items-center w-full flex items-start justify-center md:p-20 gap-4'>
       <AnimationOnScroll>
         <div className='flex flex-col justify-start items-start'>
-          <div className='px-5 md:px-0 flex justify-center text-[10px] sm:text-xs md:text-sm'>
-            <div className='md:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-2 sm:p-4 border-2 border-zinc-900 border-b-4 sm:border-b-8 rounded-xl'>
+          <div className='px-4 py-2 md:px-0 flex justify-center text-[10px] sm:text-xs md:text-sm'>
+            <div className='md:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-2 sm:p-4 border border-zinc-900 md:border-b-4 sm:border-b-8 rounded-xl'>
               <div className='w-full lg:w-4/5 flex flex-col items-start'>
                 <SectionTitleContainer title='01. About Me'/>
                 <br/>
