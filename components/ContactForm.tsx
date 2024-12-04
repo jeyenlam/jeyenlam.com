@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-const sendEmailURL = process.env.SEND_EMAIL_URL;
+const sendEmailURL = process.env.NEXT_PUBLIC_SEND_EMAIL_URL;
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +14,7 @@ const ContactForm = () => {
     setFormData({...formData, [name]:value});
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {    
     e.preventDefault();
     
     try {
