@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+const sendEmailURL = process.env.SEND_EMAIL_URL;
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ const ContactForm = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch(`${sendEmailURL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
