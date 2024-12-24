@@ -5,7 +5,7 @@ import React from 'react'
 import CustomTooltip from './CustomTooltip'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
-const ContactList = () => {
+const ContactIconList = () => {
   return (
     <div className='h-14'>
       <ul className='flex justify-evenly w-28 lg:w-40'>
@@ -23,4 +23,4 @@ const ContactList = () => {
   )
 }
 
-export default ContactList
+export default ContactIconList

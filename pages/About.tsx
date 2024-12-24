@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import { useInView } from "framer-motion"
-import SectionTitleContainer from '@/components/SectionTitleContainer';
+import SectionTitle from '@/components/SectionTitle';
 import { skills } from '@/lib/data';
 import AnimationOnScroll from '@/components/AnimationOnScroll';
 
@@ -11,12 +11,12 @@ const About = () => {
   const isInView = useInView(aboutRef);
 
   return (
-    <section id='about' className='bg-zinc-900 lg:pt-20 lg:h-full lg:items-center w-full flex items-start justify-center lg:p-20 gap-4'>
+    <section id='about' className='bg-zinc-900 lg:pt-20 lg:items-center w-full flex items-start justify-center lg:p-20 gap-4'>
       <AnimationOnScroll>
         <div className='flex flex-col justify-start items-start'>
           <div className='px-4 py-4 lg:px-0 flex justify-center text-[10px] sm:text-[13px] lg:text-sm text-indigo-200'>
             <div className='p-2 w-full lg:w-4/5 flex flex-col items-start'>
-              <SectionTitleContainer title='01. About Me'/>
+              <SectionTitle title='01. About Me'/>
               <div className='mt-4 flex flex-col gap-6'>
                 <p>
                   I&#39;m a senior majoring in Computer Science at <a target="_blank" href="https://gvsu.edu" className='font-medium text-indigo-400 hover:text-indigo-600 hover:font-semibold'>Grand Valley State University</a>.<br/><br/>

@@ -1,8 +1,8 @@
 "use client"
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import SectionTitleContainer from '@/components/SectionTitleContainer';
+import SectionTitle from '@/components/SectionTitle';
 import { experiences } from '@/lib/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
@@ -16,12 +16,12 @@ const Experience = () => {
         <div className="mt-5 flex flex-col lg:flex-row justify-center items-center">
           {/* Title */}
           <div className='lg:transform lg:-rotate-90'>
-            <SectionTitleContainer title='03. My Experience'/>
+            <SectionTitle title='03. My Experience'/>
           </div>
           {/* Experience Cards */}
           <div className=' text-xs sm:text-sm lg:relative -left-16 md:w-4/6 xl:w-3/6 text-indigo-200'>
             {experiences.map((experience, index) => {return (
-              <div key={index} className='p-4  rounded-3xl -b-2 lg:-b-4 -zinc-900 mt-4 border border-indigo-400'>
+              <div key={index} className='p-4 rounded-3xl -b-2 lg:-b-4 mt-4 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-30'>
                 <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center'>
                   {/* Title */}
                   <h1 className='text-indigo-400 md:text-lg font-medium py-1 sm:py-2 lg:-r-4 px-2 sm:px-4'>{experience.title}</h1>

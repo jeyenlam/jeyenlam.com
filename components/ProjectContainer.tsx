@@ -10,21 +10,23 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
-    <div className='mt-2 rounded-xl'>
-      {/* Title */}
-      <h1 className='bg-indigo-400 pl-2 p-1 sm:p-2 text-slate-950 text-sm sm:text-base font-medium sm:font-semibold flex justify-start rounded-t-xl'>{project.title}</h1>
-      {/* Content */}
-      <div className='border border-indigo-400 p-2 md:p-6 text-xs flex flex-col gap-3'>
-        <Image src={project.media} width={400} alt={project.title} />
+    <div className='rounded-xl text-indigo-300'>   
+      <div className='border-indigo-400 p-2 md:p-6 text-xs flex flex-col gap-3'>
+        {/* Title */}
+        <h1 className='text-sm'>{project.title}</h1>
+        {/* <Image src={project.media} width={400} alt={project.title} className='opacity-70'/> */}
+        {/* Content */}
         <ul className='flex text-xl sm:text-2xl gap-2 text-indigo-300'>
-          {(project.urls).map((url, index) => {return(
-            <li key={index} className='p-[2px] px-[6px] rounded-xl hover:text-3xl'><Link href={url.url} target="_blank"><FontAwesomeIcon icon={url.icon}/></Link></li>
+          {(project.urls).map((url, index) => { return(
+            <li key={index} className='px-[6px] rounded-xl hover:text-indigo-500'>
+              <Link href={url.url} target="_blank"><FontAwesomeIcon icon={url.icon}/></Link>
+            </li>
           )})}
         </ul>
         <p className='text-[10px] sm:text-xs text-indigo-200'>{project.projectDescription[0]}</p>
-        <ul className='flex flex-wrap gap-1 sm:gap-2 text-indigo-400'>
+        <ul className='flex flex-wrap sm:gap-2 text-indigo-400'>
           {(project.tech).map((tech, index) => {return (
-            <li key={index} className='p-1 px-2 text-[8px] sm:text-[10px] sm:px-3 rounded-full bg-slate-900 opacity-80'>{tech}</li>
+            <li key={index} className='p-1 px-2 text-[8px] sm:text-[10px] sm:px-3 rounded-full bg-zinc-800 opacity-80 text-indigo-400 text-opacity-50'>{tech}</li>
           )})}
         </ul>
       </div>
