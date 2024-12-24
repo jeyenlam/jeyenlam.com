@@ -3,7 +3,7 @@ import {easeInOut, motion} from "framer-motion"
 
 const IntroText = () => {
   return (
-    <div className='w-full items-baseline text-right px-2 py-1 lg:px-6 bg-indigo-400 lg:py-4 shadow-sm rounded-xl text-zinc-800'>
+    <div className='w-full items-baseline text-right px-2 py-1 lg:px-6 border border-indigo-400 shadow shadow-indigo-900 lg:py-4 rounded-xl text-indigo-400'>
     <motion.h1 
       className='text-xl md:text-2xl lg:text-4xl'
       initial={{x:10, opacity:0}}

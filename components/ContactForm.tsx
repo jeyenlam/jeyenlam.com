@@ -44,12 +44,12 @@ const ContactForm = () => {
   return (
     <form 
       onSubmit={handleSubmit}
-      className='w-4/5 lg:w-1/3 lg:h-3/5 p-4 text-xs sm:text-sm bg-indigo-50 flex flex-col rounded-2xl gap-2  -zinc-900 -b-2 lg:-b-4 justify-evenly'
+      className='w-4/5 lg:w-1/3 lg:h-3/5 p-4 text-indigo-600 text-xs sm:text-sm border border-indigo-600 flex flex-col rounded-2xl gap-2 -b-2 lg:-b-4 justify-evenly'
     >
       <div className='w-full flex justify-between gap-2'>
         <label htmlFor='name'>Name:</label>
         <input
-          className='w-4/5 p-2 rounded-xl  -zinc-800'
+          className='w-4/5 p-2 rounded-xl bg-slate-900 opacity-80'
           type="text"
           id="name"
           name="name"
@@ -61,7 +61,7 @@ const ContactForm = () => {
       <div className='w-full flex items-center justify-between gap-2'>
         <label htmlFor="email">Email:</label>
         <input
-          className='w-4/5 p-2 rounded-xl  -zinc-800'
+          className='w-4/5 p-2 rounded-xl bg-slate-900 opacity-80'
           type="email"
           id="email"
           name="email"
@@ -73,7 +73,7 @@ const ContactForm = () => {
       <div className='w-full flex items-center gap-2'>
         <label htmlFor="message">Message:</label>
         <textarea
-          className='w-full h-24 p-2 rounded-xl  -zinc-800 text-[10px] sm:text-sm'
+          className='w-full h-24 p-2 rounded-xl text-[10px] sm:text-sm bg-slate-900 opacity-80'
           id="message"
           name="message"
           value={formData.message}
@@ -81,7 +81,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit" className='self-center bg-indigo-400 p-2 rounded-2xl  -zinc-900 -b-2 lg:-b-4 hover:-b hover:mt-[1px] hover:bg-lime-200 px-4'>Submit</button>
+      <button type="submit" className='self-center text-indigo-300 bg-indigo-600 p-2 rounded-2xl -b-2 lg:-b-4 hover:bg-transparent hover:border border-indigo-600 px-4'>Submit</button>
     </form>
   )
 }

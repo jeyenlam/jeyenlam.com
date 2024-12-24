@@ -13,8 +13,8 @@ import CustomTooltip from '@/components/CustomTooltip'
 const Contact = () => {
 
   return (
-    <section id="contact" className='relative w-full h-[40rem] sm:h-full bg-gradient-to-b from-indigo-50 to-lime-200 flex flex-col sm:justify-center gap-8'>
-      <div className='absolute self-center bottom-5 z-10 text-[10px] sm:text-xs px-4 py-1 bg-indigo-300 rounded-3xl -zinc-900  -b-2 lg:-b-4 text-zinc-800 flex gap-2'>
+    <section id="contact" className='relative w-full h-[40rem] sm:h-full bg-slate-950 flex flex-col sm:justify-center gap-8'>
+      <div className='absolute self-center bottom-5 z-10 text-[10px] sm:text-xs px-4 py-1 bg-slate-900 opacity-80 rounded-3xl -b-2 lg:-b-4 text-indigo-400 flex gap-2'>
         <h1>Made by Yen with ♡</h1>
         <h1>Copyright 2024</h1>
       </div>
@@ -66,18 +66,16 @@ const Contact = () => {
         </motion.div>
       </div>
       <div className='h-[90%] flex flex-col justify-evenly items-center'>
-        <AnimationOnScroll>
-          <SectionTitleContainer title="04. What's next?"/>
-        </AnimationOnScroll>
+        <SectionTitleContainer title="04. What's next?"/>
         <ContactForm/>
         <ul className='flex justify-evenly w-28 lg:w-40 z-10'>
           {contacts.map((contact, index)=>{ return (
             <Link key={index} href={contact.url} className='mt-4'>
-              <FontAwesomeIcon icon={contact.icon} className='text-base lg:text-2xl  -zinc-900 rounded-lg -b-2 lg:-b-4 hover:-b hover:mt-[2px] hover:bg-indigo-600 hover:text-lime-200 p-2 bg-indigo-400 text-zinc-900'/>
+              <FontAwesomeIcon icon={contact.icon} className='text-base lg:text-2xl  -zinc-900 rounded-lg -b-2 lg:-b-4 hover:-b hover:mt-[2px] hover:bg-indigo-600 hover:text-lime-200 p-2 bg-indigo-400 text-slate-950'/>
             </Link>
           )})}
           <Link target="_blank" href='/YenLamResume2024v3.pdf' download={"YenLamResume2024v3.pdf"} className='mt-4 relative group'>
-            <FontAwesomeIcon icon={faDownload} className='text-base lg:text-2xl  -zinc-900 rounded-lg -b-2 lg:-b-4 hover:-b hover:mt-[2px] hover:bg-indigo-600 hover:text-lime-200 p-2 bg-indigo-400 text-zinc-900'/>
+            <FontAwesomeIcon icon={faDownload} className='text-base lg:text-2xl rounded-lg -b-2 lg:-b-4 hover:-b hover:mt-[2px] hover:bg-indigo-600 hover:text-inidgo-200 p-2 bg-indigo-400 text-slate-950'/>
             <CustomTooltip tip="Download Resume"/>
           </Link>
         </ul>  

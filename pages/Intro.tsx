@@ -10,7 +10,7 @@ import CustomTooltip from '@/components/CustomTooltip';
 
 const Intro = () => {
   return (
-    <section className='relative w-full xl:h-full flex flex-col items-center justify-center bg-gradient-to-b from-lime-200 text-zinc-800 to-indigo-50'> 
+    <section className='relative w-full xl:h-full flex flex-col items-center justify-center bg-slate-950 text-lime-200'> 
       {/* Decoration */}
       <motion.div className='hidden xl:block absolute z-10 text-zinc-900'>
         <motion.div 
@@ -42,7 +42,7 @@ const Intro = () => {
         animate={{y:1, opacity:1}}
         transition={{duration: 0.8, delay: 1, ease:easeInOut}}
         className='px-4 pb-2 lg:relative -top-28 -left-52 xl:-left-40 w-[99%] lg:w-auto'>
-        <div className='h-full bottom-96 xl:left-[-10rem] text-2xl lg:text-4xl bg-lime-200  -zinc-900 lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2'>
+        <div className='h-full bottom-96 xl:left-[-10rem] text-2xl lg:text-4xl bg-slate-950 border border-indigo-600 shadow shadow-indigo-900 lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-indigo-600'>
           <span className='text-base lg:text-xl xl:text-2xl font-medium'>I&#39;m actively </span><br/>
           Looking for <br/> 
           <span className='italic text-3xl lg:text-5xl xl:text-6xl font-medium'>Opportunities</span>.

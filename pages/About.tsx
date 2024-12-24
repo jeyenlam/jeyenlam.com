@@ -16,11 +16,11 @@ const About = () => {
   const isInView = useInView(aboutRef);
 
   return (
-    <section id='about' className='bg-indigo-50 lg:pt-20 lg:h-full lg:items-center w-full flex items-start justify-center lg:p-20 gap-4'>
+    <section id='about' className='bg-slate-950 lg:pt-20 lg:h-full lg:items-center w-full flex items-start justify-center lg:p-20 gap-4'>
       <AnimationOnScroll>
         <div className='flex flex-col justify-start items-start'>
           <div className='px-4 py-4 lg:px-0 flex justify-center text-[10px] sm:text-xs lg:text-sm'>
-            <div className='lg:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-2 sm:p-4  -zinc-900 md:-b-4 sm:-b-8 rounded-xl'>
+            <div className='lg:w-4/5 text-indigo-300 flex justify-between p-2 sm:p-4 lg:border border-indigo-400 md:-b-4 sm:-b-8 rounded-xl'>
               <div className='w-full lg:w-4/5 flex flex-col items-start'>
                 <SectionTitleContainer title='01. About Me'/>
                 <br/>
@@ -32,9 +32,9 @@ const About = () => {
                 <br/>
                 <h1>Here are some technlogies I&#39;ve been working with recently:</h1>
                 <br/>
-                <ul className='grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4 bg-blue-00'>
+                <ul className='grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4'>
                   {skills.map((skill, index) => { return (
-                    <li key={index} className='p-1 rounded-xl text-[8px] sm:text-xs px-2 text-center bg-slate-50 text-indigo-700'>{skill}</li>
+                    <li key={index} className='p-1 rounded-xl text-[8px] sm:text-xs px-2 text-center bg-slate-900 opacity-80 text-indigo-400 text-opacity-50'>{skill}</li>
                   )})}
                 </ul>
               </div>
