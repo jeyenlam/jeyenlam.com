@@ -39,7 +39,7 @@ const Nav = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center h-screen bg-slate-950"
+        className="flex justify-center h-screen bg-zinc-900"
         initial={{ width: "15rem" }}
         animate={{ width: isExpandedNav ? "15rem" : "3.2rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -53,7 +53,7 @@ const Nav = () => {
             onClick={handleNavMenuOnClick}
             className="cursor-pointer xl:mb-10"
           >
-            <FontAwesomeIcon className="hidden xl:block text-indigo-400" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden xl:block text-indigo-300" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Nav links */}
@@ -70,8 +70,8 @@ const Nav = () => {
                   onClick={() => handleNavLinkOnClick(navLink)}
                   className={`flex items-center rounded-lg ${
                     isActive === navLink.name
-                      ? "rounded-lg font-bold text-slate-950 bg-indigo-400"
-                      : "border-transparent justify-start text-indigo-200"
+                      ? "rounded-lg font-bold bg-indigo-500 text-zinc-900"
+                      : "border-transparent justify-start text-indigo-300"
                   } ${
                     isExpandedNav ? "pl-4 w-40 h-10" : "w-8 h-8 justify-center"
                   }`}

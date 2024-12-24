@@ -10,7 +10,7 @@ import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 
 const Projects = () => {
   return (
-    <section id="projects" className='w-full flex justify-center items-center p-4 sm:p-8 xl:px-20 bg-slate-950'>
+    <section id="projects" className='w-full flex justify-center items-center p-4 sm:p-8 xl:px-20 bg-zinc-900'>
       <div className='mt-10 sm:mt-0 xl:px-10 w-full h-full flex flex-col items-center sm:items-end'>
         <SectionTitleContainer title={"02. My Projects"} />
         <Swiper

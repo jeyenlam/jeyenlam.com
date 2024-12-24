@@ -3,14 +3,14 @@ import {easeInOut, motion} from "framer-motion"
 
 const IntroText = () => {
   return (
-    <div className='w-full items-baseline text-right px-2 py-1 lg:px-6 border border-indigo-400 shadow shadow-indigo-900 lg:py-4 rounded-xl text-indigo-400'>
+    <div className='w-full items-baseline text-right px-2 py-1 lg:px-6 border border-indigo-400 lg:py-4 rounded-xl text-indigo-300'>
     <motion.h1 
       className='text-xl md:text-2xl lg:text-4xl'
       initial={{x:10, opacity:0}}
       animate={{x:1, opacity:1}}
       transition={{duration:0.5, delay: 0.3, ease:easeInOut}}
     >
-      I <motion.span className='italic'>build</motion.span>
+      I <motion.span className='italic text-indigo-400'>build</motion.span>
     </motion.h1>
     <motion.h1 
       className='text-2xl md:text-3xl font-medium lg:text-6xl'
