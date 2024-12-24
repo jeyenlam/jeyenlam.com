@@ -39,21 +39,21 @@ const Nav = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center h-screen bg-zinc-800 px-2"
+        className="flex justify-center h-screen bg-indigo-800"
         initial={{ width: "15rem" }}
-        animate={{ width: isExpandedNav ? "15rem" : "4rem"}}
+        animate={{ width: isExpandedNav ? "15rem" : "3.2rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center">
+        <nav className="flex flex-col pt-10 xl:pt-20 items-center">
           {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
             initial={{opacity:0, y: 50}}
             animate={{opacity:1, y:0}}
             transition={{duration: 1, delay:1, ease: "easeOut"}}
             onClick={handleNavMenuOnClick}
-            className="cursor-pointer mb-10"
+            className="cursor-pointer xl:mb-10"
           >
-            <FontAwesomeIcon className="hidden xl:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden xl:block text-indigo-100" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Nav links */}
@@ -64,16 +64,16 @@ const Nav = () => {
                 initial={{opacity:0, y: 50}}
                 animate={{opacity:1, y:0}}
                 transition={{duration: 1, delay:1, ease: "easeOut"}}
-                className="sm:text-lg flex items-center p-2"
+                className="pt-5 sm:text-base flex items-center"
               >
                 <button
                   onClick={() => handleNavLinkOnClick(navLink)}
-                  className={`flex items-center px-2 rounded-lg ${
+                  className={`flex items-center rounded-xl ${
                     isActive === navLink.name
-                      ? "rounded-lg border-b-2 md:border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
+                      ? "rounded-xl font-bold text-indigo-900 bg-indigo-300"
                       : "border-transparent justify-start text-indigo-200"
                   } ${
-                    isExpandedNav ? "w-40 h-10" : "w-8 sm:w-10 h-8 sm:h-10 justify-center"
+                    isExpandedNav ? "pl-4 w-40 h-10" : "w-8 h-8 justify-center"
                   }`}
                 >
                   <FontAwesomeIcon icon={navLink.icon} />

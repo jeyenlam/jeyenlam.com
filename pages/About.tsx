@@ -20,7 +20,7 @@ const About = () => {
       <AnimationOnScroll>
         <div className='flex flex-col justify-start items-start'>
           <div className='px-4 py-4 lg:px-0 flex justify-center text-[10px] sm:text-xs lg:text-sm'>
-            <div className='lg:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-2 sm:p-4 border border-zinc-900 md:border-b-4 sm:border-b-8 rounded-xl'>
+            <div className='lg:w-4/5 text-zinc-800 flex justify-between bg-lime-200 p-2 sm:p-4  -zinc-900 md:-b-4 sm:-b-8 rounded-xl'>
               <div className='w-full lg:w-4/5 flex flex-col items-start'>
                 <SectionTitleContainer title='01. About Me'/>
                 <br/>

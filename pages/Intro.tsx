@@ -42,18 +42,18 @@ const Intro = () => {
         animate={{y:1, opacity:1}}
         transition={{duration: 0.8, delay: 1, ease:easeInOut}}
         className='px-4 pb-2 lg:relative -top-28 -left-52 xl:-left-40 w-[99%] lg:w-auto'>
-        <div className='h-full bottom-96 xl:left-[-10rem] text-2xl lg:text-4xl bg-lime-200 border border-zinc-900 lg:border-b-4 xl:border-b-8 rounded-xl p-2 md:p-4 pt-2'>
+        <div className='h-full bottom-96 xl:left-[-10rem] text-2xl lg:text-4xl bg-lime-200  -zinc-900 lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2'>
           <span className='text-base lg:text-xl xl:text-2xl font-medium'>I&#39;m actively </span><br/>
           Looking for <br/> 
           <span className='italic text-3xl lg:text-5xl xl:text-6xl font-medium'>Opportunities</span>.
           <ul className='flex text-base justify-evenly w-28 lg:w-40'>
             {contacts.map((contact, index) => { return (
               <Link key={index} target='_blank' href={contact.url} className='mt-2 lg:mt-4'>
-                <FontAwesomeIcon icon={contact.icon} className='lg:text-2xl border border-zinc-900 rounded-md border-b-2 lg:border-b-4 hover:border-b hover:mt-[1px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+                <FontAwesomeIcon icon={contact.icon} className='lg:text-2xl  -zinc-900 rounded-md -b-2 lg:-b-4 hover:mt-[1px] hover:bg-indigo-600 hover:text-indigo-100 p-2 bg-indigo-400 text-zinc-900'/>
               </Link>
             )})}
             <Link target="_blank" href='/YenLamResume2024v3.pdf' download={"YenLamResume2024v3.pdf"} className='mt-2 lg:mt-4 relative group'>
-                <FontAwesomeIcon icon={faDownload} className='lg:text-2xl border border-zinc-900 rounded-md border-b-2 lg:border-b-4 hover:border-b hover:mt-[1px] hover:bg-lime-300 hover:text-zinc-900 p-2 bg-indigo-400 text-zinc-900'/>
+                <FontAwesomeIcon icon={faDownload} className='lg:text-2xl  -zinc-900 rounded-md -b-2 lg:-b-4 hover:-b hover:mt-[1px] hover:bg-indigo-600 hover:text-indigo-100 p-2 bg-indigo-400 text-zinc-900'/>
                 <CustomTooltip tip="Download Resume"/>
             </Link>
           </ul>
