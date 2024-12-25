@@ -147,5 +147,35 @@ export const projects: IProject[] = [
       "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
     ],
     tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.ai', 'TailwindCSS']
+  },
+  {
+    title: 'Full Stack Financial Tracker',
+    media: financeAppImage,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: '/'
+      },
+    ],
+    projectDescription: [
+      "Developed an intuitive financial dashboard employing the MERN stack to facilitate efficient expense management.",
+    ],
+    tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'StyledComponents']
+  },
+  {
+    title: 'Full Stack Financial Tracker',
+    media: financeAppImage,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: '/'
+      },
+    ],
+    projectDescription: [
+      "Developed an intuitive financial dashboard employing the MERN stack to facilitate efficient expense management.",
+    ],
+    tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'StyledComponents']
   }
 ];

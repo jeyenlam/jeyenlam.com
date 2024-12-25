@@ -26,7 +26,7 @@ const About = () => {
                 <p>Here are some technlogies I&#39;ve been working with recently:</p>
                 <ul className='lg:w-3/5 grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4'>
                   {skills.map((skill, index) => { return (
-                    <li key={index} className='p-1 rounded-xl text-[8px] sm:text-xs px-2 text-center bg-zinc-800 opacity-80 text-indigo-400 text-opacity-50'>{skill}</li>
+                    <li key={index} className='p-1 rounded-xl text-[8px] sm:text-xs px-2 text-center bg-zinc-800 bg-opacity-30 text-indigo-300'>{skill}</li>
                   )})}
                 </ul>
               </div>

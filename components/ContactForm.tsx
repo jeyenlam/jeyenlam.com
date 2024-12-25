@@ -44,12 +44,12 @@ const ContactForm = () => {
   return (
     <form 
       onSubmit={handleSubmit}
-      className='w-4/5 lg:w-1/3 lg:h-3/5 p-4 text-indigo-400 text-xs sm:text-sm border border-indigo-600 flex flex-col rounded-2xl gap-2 -b-2 lg:-b-4 justify-evenly'
+      className='w-4/5 lg:w-1/3 lg:h-3/5 p-4 text-indigo-400 text-xs sm:text-sm border border-indigo-400 flex flex-col rounded-2xl gap-3 -b-2 lg:-b-4 justify-evenly'
     >
       <div className='w-full flex justify-between gap-2'>
         <label htmlFor='name'>Name:</label>
         <input
-          className='w-4/5 p-2 rounded-xl bg-zinc-800 opacity-80'
+          className='w-4/5 p-2 rounded-xl bg-zinc-800 bg-opacity-10'
           type="text"
           id="name"
           name="name"
@@ -61,7 +61,7 @@ const ContactForm = () => {
       <div className='w-full flex items-center justify-between gap-2'>
         <label htmlFor="email">Email:</label>
         <input
-          className='w-4/5 p-2 rounded-xl bg-zinc-800 opacity-80'
+          className='w-4/5 p-2 rounded-xl bg-zinc-800 bg-opacity-10'
           type="email"
           id="email"
           name="email"
@@ -73,7 +73,7 @@ const ContactForm = () => {
       <div className='w-full flex items-center gap-2'>
         <label htmlFor="message">Message:</label>
         <textarea
-          className='w-full h-24 p-2 rounded-xl text-[10px] sm:text-sm bg-zinc-800 opacity-80'
+          className='w-full h-24 p-2 rounded-xl text-[10px] sm:text-sm bg-zinc-800 bg-opacity-10'
           id="message"
           name="message"
           value={formData.message}
@@ -81,7 +81,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit" className='self-center text-indigo-300 bg-indigo-600 p-2 rounded-2xl -b-2 lg:-b-4 hover:bg-transparent border border-transparent hover:border-indigo-600 px-4'>Submit</button>
+      <button type="submit" className='self-center p-2 rounded-2xl -b-2 lg:-b-4 px-4 text-indigo-400 border border-indigo-600 hover:bg-indigo-600 hover:scale-110 hover:duration-100 bg-transparent'>Submit</button>
     </form>
   )
 }

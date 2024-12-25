@@ -54,9 +54,9 @@ const Intro = () => {
               <span className='italic text-3xl lg:text-5xl xl:text-6xl font-medium text-indigo-300'>Opportunities</span>.
               <ContactIconList/>
             </div>
-            <div className='hidden sm:block relative'>
+            <div className='hidden relative sm:block'>
               <Image src={original} width={150} alt="profile" className='opacity-60 border border-indigo-950 border-opacity-50 shadow rounded-xl'/>
-              <Image src={purple} width={150} alt="purple_profile" className='border border-indigo-950 border-opacity-80 shadow absolute top-0 opacity-100 hover:opacity-0 rounded-xl'/>
+              <Image src={purple} width={150} alt="purple_profile" className='border border-indigo-950 border-opacity-80 shadow absolute top-0 opacity-100 hover:opacity-0 duration-300 rounded-xl'/>
             </div>
           </div>
         </motion.div>
