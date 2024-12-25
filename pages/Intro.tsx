@@ -11,12 +11,17 @@ const Intro = () => {
     <section id='intro' className='flex flex-col lg:h-screen p-8 gap-4 bg-zinc-900 justify-center'>
       <div className='flex flex-col gap-4 bg-slate-00'>
         {/* Big Text Box */}
-        <div className='lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-right border border-indigo-400 text-indigo-300 bg-zinc-900'>
+        <motion.div 
+          className='lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-right border border-indigo-400 text-indigo-300 bg-zinc-900'
+          initial={{x:10, opacity:0}}
+          animate={{x:1, opacity:1}}
+          transition={{duration:0.5, delay: 0.3, ease:easeInOut}}
+        >
           <motion.h1 
             className='text-xl md:text-2xl lg:text-4xl'
             initial={{x:10, opacity:0}}
             animate={{x:1, opacity:1}}
-            // transition={{duration:0.5, delay: 0.3, ease:easeInOut}}
+            transition={{duration:0.5, delay: 0.3, ease:easeInOut}}
           >
             I <motion.span className='italic text-indigo-400'>build</motion.span>
           </motion.h1>
@@ -39,13 +44,15 @@ const Intro = () => {
             animate={{x:1, opacity:1}}
             transition={{duration:0.7, delay:0.7, ease:easeInOut}}
           >Mobile Apps</motion.h1>
-        </div>
+        </motion.div>
 
         {/* Small Text Box */}
         <motion.div 
-          initial={{y:10, opacity:0}}
-          animate={{y:1, opacity:1}}
-          // transition={{duration: 0.8, delay: 1, ease:easeInOut}}
+          // initial={{y:10, opacity:0}}
+          // animate={{y:1, opacity:1}}
+          initial={{x:10, opacity:0}}
+          animate={{x:1, opacity:1}}
+          transition={{duration: 0.7, delay: 0.9, ease:easeInOut}}
           className='flex justify-end'>
           <div className='flex gap-x-10 text-2xl lg:text-4xl bg-zinc-900 border border-indigo-400 lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-indigo-400'>
             <div>

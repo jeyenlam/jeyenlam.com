@@ -1,6 +1,5 @@
 import React from 'react'
 import { IProject } from '@/lib/myInterface'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -24,8 +23,9 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
         </ul>
       </div>
 
-      <Link href={project.urls[0].url} target="_blank" className=' absolute bottom-full group-hover:translate-y-64 duration-300'>
-        <Image src={project.media} alt={project.title} className='w-96 h-64'/>
+      <Link href={project.urls[0].url} target="_blank" className='absolute bottom-full group-hover:translate-y-64 duration-300 border border-zinc-800'>
+        <div className='w-96 h-64 absolute group-hover:translate-y-64 duration-300 bottom-full bg-zinc-900'></div>
+        <Image src={project.media} alt={project.title} className='w-96 h-64 relative opacity-70'/>
       </Link>
     </div>
   )

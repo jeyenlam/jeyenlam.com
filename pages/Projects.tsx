@@ -20,7 +20,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className='w-full lg:h-screen flex justify-center items-center p-4 sm:p-8 xl:px-20 bg-ecochic bg-zinc-900'>
+    <section id="projects" className='w-full lg:h-screen flex justify-center items-center p-4 sm:p-8 xl:px-20 bg-zinc-900'>
       <AnimationOnScroll>
         <div className='mt-10 sm:mt-0 xl:px-10 w-full h-full flex flex-col gap-8 items-center sm:items-end'>
           <SectionTitle title={"02. My Projects"} />

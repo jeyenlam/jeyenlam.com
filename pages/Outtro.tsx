@@ -26,7 +26,7 @@ const Outtro = () => {
           <h1>Copyright 2024</h1>
         </footer>
       </div>
-      <button onClick={handleArrowUpButton} className='absolute animate-bounce hover:animate-none bottom-10 right-10 text-indigo-400'><FontAwesomeIcon icon={faArrowUp}/></button>
+      <button onClick={handleArrowUpButton} className='absolute animate-bounce hover:animate-none bottom-5 right-5 lg:bottom-10 lg:right-10 text-indigo-300'><FontAwesomeIcon icon={faArrowUp}/></button>
     </section>
   )
 }

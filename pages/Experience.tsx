@@ -11,7 +11,7 @@ import AnimationOnScroll from '@/components/AnimationOnScroll';
 
 const Experience = () => {
   return (
-    <section id='experience' className='bg-zinc-900 pt-5 '>
+    <section id='experience' className='bg-zinc-900 p-4 sm:p-8 xl:px-20 '>
       <AnimationOnScroll>
         <div className="flex flex-col justify-center items-center">
           {/* Title */}
@@ -19,7 +19,7 @@ const Experience = () => {
           {/* Experience Cards */}
           <div className='text-xs sm:text-sm lg:relative md:w-4/6 xl:w-3/6 text-indigo-200'>
             {experiences.map((experience, index) => {return (
-              <div key={index} className='p-4 rounded-3xl -b-2 lg:-b-4 mt-4 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-10'>
+              <div key={index} className='p-4 rounded-3xl -b-2 lg:-b-4 mt-4'>
                 <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center'>
                   {/* Title */}
                   <h1 className='text-indigo-400 md:text-lg font-medium py-1 sm:py-2 px-2 sm:px-4'>{experience.title}</h1>

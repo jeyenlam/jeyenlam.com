@@ -47,9 +47,9 @@ const Nav = () => {
         <nav className="flex flex-col pt-10 xl:pt-20 items-center">
           {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
-            initial={{opacity:0, y: 50}}
+            initial={{opacity:0, y: -50}}
             animate={{opacity:1, y:0}}
-            transition={{duration: 1, delay:1, ease: "easeOut"}}
+            transition={{duration: 0.65, delay:0.7, ease: "easeOut"}}
             onClick={handleNavMenuOnClick}
             className="cursor-pointer xl:mb-10"
           >
@@ -61,9 +61,9 @@ const Nav = () => {
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={navLink.name}
-                initial={{opacity:0, y: 50}}
+                initial={{opacity:0, y: -50}}
                 animate={{opacity:1, y:0}}
-                transition={{duration: 1, delay:1, ease: "easeOut"}}
+                transition={{duration: 0.65, delay:0.7, ease: "easeOut"}}
                 className="pt-5 sm:text-base flex items-center"
               >
                 <button
