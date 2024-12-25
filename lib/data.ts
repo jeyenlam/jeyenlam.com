@@ -93,7 +93,7 @@ export const projects: IProject[] = [
       }
     ],
     projectDescription: [
-      "Developed a web app to enhance Discogs' user experience by integrating features like random vinyl browsin and intuitive collection management.",
+      "Developed a web app to enhance Discogs' user experience by integrating features like random vinyl browsing and intuitive collection management.",
       "Leveraged the DiscogsAPI to access and update user collection data, implementing OAuth for secure authentication and safeguarding user privacy.",
       "Created use cases, a traceability matrix and applied Agile methodology to accommodate ongoing changes, ensuring the app's adaptability and smooth integration of new features throughout development."
     ],
