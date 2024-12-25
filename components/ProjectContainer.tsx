@@ -12,7 +12,9 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
     <div className='w-96 h-64 relative rounded-xl overflow-hidden group flex text-indigo-300 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-10'>   
       <div className='p-2 md:p-6 text-xs flex flex-col justify-evenly gap-3'>
         {/* Title */}
-        <h1 className='text-sm text-indigo-400'>{project.title}</h1>
+        <Link href={project.urls[0].url} target="_blank">
+          <h1 className='text-sm text-indigo-400'>{project.title}</h1>
+        </Link>
         {/* Description */}
         <p className='text-[10px] sm:text-xs text-indigo-200'>{project.projectDescription[0]}</p>
         {/* Tech */}
@@ -24,8 +26,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
       </div>
 
       <Link href={project.urls[0].url} target="_blank" className='absolute bottom-full group-hover:translate-y-64 duration-300 border border-zinc-800'>
-        <div className='w-96 h-64 absolute group-hover:translate-y-64 duration-300 bottom-full bg-zinc-900'></div>
-        <Image src={project.media} alt={project.title} className='w-96 h-64 relative opacity-70'/>
+        <Image src={project.media} alt={project.title} className='w-96 h-64 relative'/>
       </Link>
     </div>
   )

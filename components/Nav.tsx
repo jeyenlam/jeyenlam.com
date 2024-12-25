@@ -41,10 +41,10 @@ const Nav = () => {
       <motion.div
         className="flex justify-center h-screen bg-zinc-900"
         initial={{ width: "15rem" }}
-        animate={{ width: isExpandedNav ? "15rem" : "3.2rem"}}
+        animate={{ width: isExpandedNav ? "15rem" : "4rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <nav className="flex flex-col pt-10 xl:pt-20 items-center">
+        <nav className="flex flex-col pt-2 lg:pt-10 items-center text-sm">
           {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
             initial={{opacity:0, y: -50}}
@@ -73,7 +73,7 @@ const Nav = () => {
                       ? "rounded-lg font-bold bg-indigo-500 text-zinc-900"
                       : "border-transparent justify-start text-indigo-300"
                   } ${
-                    isExpandedNav ? "pl-4 w-40 h-10" : "w-8 h-8 justify-center"
+                    isExpandedNav ? "pl-4 w-40 h-10" : "w-6 h-6 sm:w-8 sm:h-8 justify-center"
                   }`}
                 >
                   <FontAwesomeIcon icon={navLink.icon} />

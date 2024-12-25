@@ -7,7 +7,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const ContactIconList = () => {
   return (
-    <div className='text-zinc-950'>
+    <div className='text-zinc-900'>
       <ul className='text-base lg:text-2xl pt-4 flex gap-2 items-center justify-evenly w-28 lg:w-40'>
           {contacts.map((contact, index)=>{ return (
             <Link key={index} href={contact.url} className='flex group rounded-lg hover:bg-indigo-600 hover:text-inidgo-200 hover:translate-y-[2px] p-2 hover:text-indigo-200 bg-indigo-400'>
