@@ -9,7 +9,7 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
-    <div className='w-96 h-64 relative rounded-xl overflow-hidden group flex text-indigo-300 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-10'>   
+    <div className='w-72 h-56 sm:w-96 sm:h-64 relative rounded-xl overflow-hidden group flex text-indigo-300 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-10'>   
       <div className='p-2 md:p-6 text-xs flex flex-col justify-evenly gap-3'>
         {/* Title */}
         <Link href={project.urls[0].url} target="_blank">
@@ -25,8 +25,8 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
         </ul>
       </div>
 
-      <Link href={project.urls[0].url} target="_blank" className='absolute bottom-full group-hover:translate-y-64 duration-300 border border-zinc-800'>
-        <Image src={project.media} alt={project.title} className='w-96 h-64 relative'/>
+      <Link href={project.urls[0].url} target="_blank" className='hidden sm:block absolute bottom-full group-hover:translate-y-64 duration-300 border border-zinc-800'>
+        <Image src={project.media} alt={project.title} className='sm:w-96 sm:h-64 relative'/>
       </Link>
     </div>
   )
