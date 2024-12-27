@@ -2,7 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import React, { ReactNode, useRef } from 'react'
 
 type AnimateOnScrollProps = {
-  children: ReactNode; // Explicitly define the type for children
+  children: ReactNode;
 };
 
 const AnimationOnScroll = ({children}: AnimateOnScrollProps) => {

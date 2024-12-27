@@ -9,6 +9,7 @@ export interface IIcon {
 
 export interface IProject {
   title: string,
+  status: string,
   media: StaticImageData,
   urls: IIcon[],
   projectDescription: string[],

@@ -5,6 +5,7 @@ import vinylAppImage from '@/assets/vinylapp.png'
 import financeAppImage from '@/assets/financeapp.png'
 import athleteAppImage from '@/assets/athleteapp.png'
 import ecochicImage from '@/assets/ecochic.png'
+import portfolioImage from '@/assets/portoflio.png'
 
 export const navLinks: IIcon[] = [
   {
@@ -79,12 +80,13 @@ export const experiences = [
 export const projects: IProject[] = [
   {
     title: 'Vinyl Collection Tracker',
+    status: 'complete',
     media: vinylAppImage,
     urls: [
       {
         name: 'github',
         icon: faGithub,
-        url: '/'
+        url: 'https://github.com/jeyenlam/Vinyl-Collection-Tracker-App'
       },
       {
         name: 'devpost',
@@ -93,7 +95,7 @@ export const projects: IProject[] = [
       }
     ],
     projectDescription: [
-      "Developed a web app to enhance Discogs' user experience by integrating features like random vinyl browsin and intuitive collection management.",
+      "Developed a web app to enhance Discogs' user experience by integrating features like random vinyl browsing and intuitive collection management.",
       "Leveraged the DiscogsAPI to access and update user collection data, implementing OAuth for secure authentication and safeguarding user privacy.",
       "Created use cases, a traceability matrix and applied Agile methodology to accommodate ongoing changes, ensuring the app's adaptability and smooth integration of new features throughout development."
     ],
@@ -101,6 +103,7 @@ export const projects: IProject[] = [
   },
   {
     title: 'Full-stack Intelligent Athlete Tracker',
+    status: 'complete',
     media: athleteAppImage,
     urls: [
       {
@@ -114,38 +117,54 @@ export const projects: IProject[] = [
       "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
       "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
     ],
-    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.ai', 'TailwindCSS']
+    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.aiAPI', 'TailwindCSS']
+  },
+  {
+    title: 'Responsive Portfolio',
+    status: 'complete',
+    media: portfolioImage,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: 'https://github.com/jeyenlam/jeyenlam.com'
+      },
+    ],
+    projectDescription: [
+      "Created a responsive personal website using Next.js, integrating various AWS services, and deployed it on AWS.",
+    ],
+    tech: ['Next.js', 'Typescript', 'TailwindCSS', 'Aamzon Web Services']
+  },
+  {
+    title: 'EcoChic',
+    status: 'complete',
+    media: ecochicImage,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: 'https://github.com/jeyenlam/EcoChic'
+      },
+    ],
+    projectDescription: [
+      "Developed a web app that features approved sustainable brands within 36 hours.",
+    ],
+    tech: ['React.js', 'Javascript', 'CSS', 'RapidAPI']
   },
   {
     title: 'Full Stack Financial Tracker',
+    status: 'complete',
     media: financeAppImage,
     urls: [
       {
         name: 'github',
         icon: faGithub,
-        url: '/'
+        url: 'https://github.com/jeyenlam/MERN-Expense-Tracker-Dashboard'
       },
     ],
     projectDescription: [
       "Developed an intuitive financial dashboard employing the MERN stack to facilitate efficient expense management.",
     ],
     tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'StyledComponents']
-  },
-  {
-    title: 'EcoChic',
-    media: ecochicImage,
-    urls: [
-      {
-        name: 'github',
-        icon: faGithub,
-        url: '/'
-      },
-    ],
-    projectDescription: [
-      "Developed a web app that features approved sustainable brands within 36 hours.",
-      "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
-      "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
-    ],
-    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.ai', 'TailwindCSS']
   }
 ];

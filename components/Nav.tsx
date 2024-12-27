@@ -39,21 +39,21 @@ const Nav = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center h-screen bg-zinc-800 px-2"
+        className="flex justify-center h-screen bg-zinc-900"
         initial={{ width: "15rem" }}
         animate={{ width: isExpandedNav ? "15rem" : "4rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <nav className="flex flex-col h-1/2 mt-10 xl:justify-evenly items-center">
+        <nav className="flex flex-col pt-2 lg:pt-10 items-center text-sm">
           {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
-            initial={{opacity:0, y: 50}}
+            initial={{opacity:0, y: -50}}
             animate={{opacity:1, y:0}}
-            transition={{duration: 1, delay:1, ease: "easeOut"}}
+            transition={{duration: 0.65, delay:0.7, ease: "easeOut"}}
             onClick={handleNavMenuOnClick}
-            className="cursor-pointer mb-10"
+            className="cursor-pointer xl:mb-10"
           >
-            <FontAwesomeIcon className="hidden xl:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden xl:block text-indigo-300" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Nav links */}
@@ -61,19 +61,19 @@ const Nav = () => {
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={navLink.name}
-                initial={{opacity:0, y: 50}}
+                initial={{opacity:0, y: -50}}
                 animate={{opacity:1, y:0}}
-                transition={{duration: 1, delay:1, ease: "easeOut"}}
-                className="sm:text-lg flex items-center p-2"
+                transition={{duration: 0.65, delay:0.7, ease: "easeOut"}}
+                className="pt-5 sm:text-base flex items-center"
               >
                 <button
                   onClick={() => handleNavLinkOnClick(navLink)}
-                  className={`flex items-center px-2 rounded-lg ${
+                  className={`flex items-center rounded-lg ${
                     isActive === navLink.name
-                      ? "rounded-lg border-b-2 md:border-b-4 border-zinc-900 border font-bold text-zinc-900 bg-indigo-400"
-                      : "border-transparent justify-start text-indigo-200"
+                      ? "rounded-lg font-bold bg-indigo-500 text-zinc-900"
+                      : "border-transparent justify-start text-indigo-300"
                   } ${
-                    isExpandedNav ? "w-40 h-10" : "w-8 sm:w-10 h-8 sm:h-10 justify-center"
+                    isExpandedNav ? "pl-4 w-40 h-10" : "w-6 h-6 sm:w-8 sm:h-8 justify-center"
                   }`}
                 >
                   <FontAwesomeIcon icon={navLink.icon} />
