@@ -20,9 +20,9 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className='w-full lg:h-screen flex justify-center items-center p-4 sm:p-8 xl:px-20 bg-zinc-900'>
+    <section id="projects" className='outter-padding justify-center items-center'>
       <AnimationOnScroll>
-        <div className='mt-10 sm:mt-0 xl:px-10 w-full h-full flex flex-col gap-8 items-center sm:items-end'>
+        <div className='flex flex-col gap-8 items-center sm:items-end'>
           <SectionTitle title={"02. My Projects"} />
           <div className='grid sm:grid-cols-2 gap-4 sm:gap-6'>
             {projects.slice(0, projectCounter).map((project, index) => (

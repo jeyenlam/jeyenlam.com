@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'durer';
-  src: url('../assets/durer-webfont.woff2') format('woff2'),
-       url('../assets/durer-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -28,4 +20,12 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #818cf8;
+}
+
+.outter-padding {
+  @apply flex flex-col p-8 bg-zinc-900 justify-center;
+}
+
+.low-opacity-text-box {
+  @apply p-1 px-2 sm:px-3 rounded-full bg-zinc-800 bg-opacity-40 text-center text-[9px]
 }

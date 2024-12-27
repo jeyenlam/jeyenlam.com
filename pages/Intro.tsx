@@ -8,8 +8,8 @@ import original from '@/assets/original.jpg'
 
 const Intro = () => {
   return (
-    <section id='intro' className='flex flex-col lg:h-screen p-8 gap-4 bg-zinc-900 justify-center'>
-      <div className='flex flex-col gap-4 bg-slate-00'>
+    <section id='intro' className='outter-padding'>
+      <div className='lg:mt-20 flex flex-col gap-4'>
         {/* Big Text Box */}
         <motion.div 
           className='lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-right border border-indigo-400 text-indigo-300 bg-zinc-900'

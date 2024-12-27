@@ -20,7 +20,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
         {/* Tech */}
         <ul className='flex flex-wrap sm:gap-2 text-indigo-400'>
           {(project.tech).map((tech, index) => {return (
-            <li key={index} className='p-1 px-2 text-[8px] sm:text-[10px] sm:px-3 rounded-full bg-zinc-800 text-indigo-300 bg-opacity-40'>{tech}</li>
+            <li key={index} className='low-opacity-text-box text-indigo-300'>{tech}</li>
           )})}
         </ul>
       </div>

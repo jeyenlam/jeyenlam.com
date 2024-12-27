@@ -11,7 +11,7 @@ import AnimationOnScroll from '@/components/AnimationOnScroll';
 
 const Experience = () => {
   return (
-    <section id='experience' className='bg-zinc-900 p-4 sm:p-8 xl:px-20 '>
+    <section id='experience' className='outter-padding'>
       <AnimationOnScroll>
         <div className="flex flex-col justify-center items-center">
           {/* Title */}
@@ -24,7 +24,7 @@ const Experience = () => {
                   {/* Title */}
                   <h1 className='text-indigo-400 md:text-lg font-medium py-1 sm:py-2 px-2 sm:px-4'>{experience.title}</h1>
                   {/* Company */}
-                  <h1 className='text-[10px] sm:text-sm px-2 sm:px-4 lg:-r-4 hover:text-indigo-400 bg-zinc-800 opacity-80 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
+                  <h1 className='text-[10px] sm:text-xs px-2 sm:py-1 sm:px-4 lg:-r-4 hover:text-indigo-500 bg-zinc-800 opacity-80 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
                 </div>
                 {/* Duration */}
                 <p className='m-1 sm:m-2 pl-2 text-[9px] sm:text-xs font-medium text-opacity-80 text-indigo-300'>{experience.duration}</p>

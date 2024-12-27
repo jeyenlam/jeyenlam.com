@@ -10,9 +10,9 @@ const About = () => {
   const isInView = useInView(aboutRef);
 
   return (
-    <section id='about' className='bg-zinc-900 lg:pt-20 lg:items-center flex items-start justify-center lg:p-20 lg:h-screen gap-4'>
+    <section id='about' className='outter-padding'>
       <AnimationOnScroll>
-        <div className='px-4 py-4 lg:px-0 flex justify-center text-[10px] sm:text-[13px] lg:text-sm text-indigo-200'>
+        <div className='lg:my-28 flex justify-center text-[10px] sm:text-[13px] lg:text-sm text-indigo-200'>
           <div className='p-2 w-full lg:w-3/5 flex flex-col items-start'>
             <SectionTitle title='01. About Me'/>
             <div className='mt-8 flex flex-col gap-6'>
@@ -25,7 +25,7 @@ const About = () => {
               {/* Tech */}
               <ul className='lg:w-4/5 grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4'>
                 {skills.map((skill, index) => { return (
-                  <li key={index} className='p-1 rounded-xl text-[8px] sm:text-xs px-2 text-center bg-zinc-800 bg-opacity-30 text-indigo-300'>{skill}</li>
+                  <li key={index} className='low-opacity-text-box text-[8px] sm:text-xs text-indigo-300'>{skill}</li>
                 )})}
               </ul>
             </div>
