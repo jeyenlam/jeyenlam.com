@@ -7,8 +7,8 @@ import Outtro from "@/pages/Outtro";
 
 export default function Home() {
   return (
-    <main className="h-screen w-full flex overflow-hidden">
-      <div className="sticky top-0 h-screen z-10">
+    <main className="h-screen w-full flex">
+      <div className="sticky top-0 h-screen z-10 overflow-hidden">
         <Nav />
       </div>
       <div className="flex-1 h-screen overflow-y-scroll">

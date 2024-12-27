@@ -53,7 +53,7 @@ const Nav = () => {
             onClick={handleNavMenuOnClick}
             className="cursor-pointer xl:mb-10"
           >
-            <FontAwesomeIcon className="hidden xl:block text-indigo-300" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden xl:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Nav links */}
@@ -71,7 +71,7 @@ const Nav = () => {
                   className={`flex items-center rounded-lg ${
                     isActive === navLink.name
                       ? "rounded-lg font-bold bg-indigo-500 text-zinc-900"
-                      : "border-transparent justify-start text-indigo-300"
+                      : "border-transparent justify-start text-indigo-200"
                   } ${
                     isExpandedNav ? "pl-4 w-40 h-10" : "w-6 h-6 sm:w-8 sm:h-8 justify-center"
                   }`}
