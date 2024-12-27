@@ -3,6 +3,10 @@ My ultimate portfolio built with [Next.js](https://nextjs.org/), designed to be 
 
 ![portoflio](https://github.com/user-attachments/assets/eee417ba-79c1-4c44-9216-2d29f979b3e2)
 
+## Basic Cloud Architecture
+
+![diagram-export-12-27-2024-5_07_35-PM](https://github.com/user-attachments/assets/a293771d-c338-4bfd-a783-feee94369e32)
+
 ## Getting Started
 First, run the development server:
 ```bash
