@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section id='about' className='outter-padding'>
       <AnimationOnScroll>
-        <div className='lg:my-28 flex justify-center text-[10px] sm:text-[13px] lg:text-sm text-indigo-200'>
+        <div className='lg:my-28 flex justify-center text-sm lg:text-sm text-indigo-200'>
           <div className='p-2 w-full lg:w-3/5 flex flex-col items-start'>
             <SectionTitle title='01. About Me'/>
             <div className='mt-8 flex flex-col gap-6'>
@@ -23,7 +23,7 @@ const About = () => {
               </p>
               <p>Here are some technlogies I&#39;ve been working with recently:</p>
               {/* Tech */}
-              <ul className='lg:w-4/5 grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4'>
+              <ul className='lg:w-4/5 grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-2 gap-x-2 sm:gap-x-4'>
                 {skills.map((skill, index) => { return (
                   <li key={index} className='low-opacity-text-box text-[8px] sm:text-xs text-indigo-300'>{skill}</li>
                 )})}

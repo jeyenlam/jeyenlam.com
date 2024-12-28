@@ -9,14 +9,14 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
-    <div className='w-72 h-56 sm:w-96 sm:h-64 relative rounded-xl overflow-hidden group flex text-indigo-300 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-10'>   
-      <div className='p-2 md:p-6 text-xs flex flex-col justify-evenly gap-3'>
+    <div className='text-sm lg:w-96 lg:h-64 relative rounded-xl overflow-hidden group flex text-indigo-300 border border-zinc-800 shadow-lg bg-zinc-800 bg-opacity-10'>   
+      <div className='p-2 md:p-6 flex flex-col justify-evenly gap-3'>
         {/* Title */}
         <Link href={project.urls[0].url} target="_blank">
-          <h1 className='text-sm text-indigo-400'>{project.title}</h1>
+          <h1 className='text-base text-indigo-400'>{project.title}</h1>
         </Link>
         {/* Description */}
-        <p className='text-[10px] sm:text-xs text-indigo-200'>{project.projectDescription[0]}</p>
+        <p className='text-indigo-200 text-xs'>{project.projectDescription[0]}</p>
         {/* Tech */}
         <ul className='flex flex-wrap sm:gap-2 text-indigo-400'>
           {(project.tech).map((tech, index) => {return (
@@ -26,7 +26,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
       </div>
 
       <Link href={project.urls[0].url} target="_blank" className='hidden sm:block absolute bottom-full group-hover:translate-y-64 duration-300 border border-zinc-800'>
-        <Image src={project.media} alt={project.title} className='sm:w-96 sm:h-64 relative'/>
+        <Image src={project.media} alt={project.title} className='lg:w-96 lg:h-64 relative'/>
       </Link>
     </div>
   )

@@ -9,7 +9,7 @@ import original from '@/assets/original.jpg'
 const Intro = () => {
   return (
     <section id='intro' className='outter-padding'>
-      <div className='lg:mt-20 flex flex-col gap-4'>
+      <div className='pt-2 sm:pt-0 lg:mt-20 flex flex-col gap-4'>
         {/* Big Text Box */}
         <motion.div 
           className='lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-right border border-indigo-400 text-indigo-200 bg-zinc-900'

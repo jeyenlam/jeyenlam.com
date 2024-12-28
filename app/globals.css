@@ -23,9 +23,9 @@
 }
 
 .outter-padding {
-  @apply flex flex-col p-8 bg-zinc-900 justify-center;
+  @apply flex flex-col p-2 sm:p-8 bg-zinc-900 justify-center;
 }
 
 .low-opacity-text-box {
-  @apply p-1 px-2 sm:px-3 rounded-full bg-zinc-800 bg-opacity-40 text-center text-[9px]
+  @apply p-1 px-2 sm:px-3 rounded-full bg-zinc-800 bg-opacity-40 text-center text-[10px]
 }
