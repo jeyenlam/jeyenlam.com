@@ -1,7 +1,7 @@
-<h1 align="center">jeyenlam.com</h1>
+<h1 align="center"><a href="https://jeyenlam.com" target="_blank">jeyenlam.com</a></h1>
 
 <div align="center">
-  <p>My second portfolio built with <a href="https://nextjs.org/">Next.js</a>, designed to be visually striking and highly interactive. The site is hosted on <a href="https://aws.amazon.com">AWS</a></p>
+  <p>My second portfolio built with <a href="https://nextjs.org/" target="_blank">Next.js</a>, designed to be visually striking and highly interactive. The site is hosted on <a href="https://aws.amazon.com" target="_blank">AWS</a></p>
   <img alt="Static Badge" src="https://img.shields.io/badge/status-in_process-blue">
 </div>
 
