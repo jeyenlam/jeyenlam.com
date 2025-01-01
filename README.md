@@ -1,11 +1,16 @@
-# jeyenlam.com
-My ultimate portfolio built with [Next.js](https://nextjs.org/), designed to be visually striking and highly interactive. The goal of this project is to create a polished and engaging portfolio, hosted on [AWS](https://aws.amazon.com), utilizing multiple AWS services for enhanced functionality.
+<h1 align="center"><a href="https://jeyenlam.com" target="_blank">jeyenlam.com</a></h1>
 
+<div align="center">
+  <p>My second portfolio built with <a href="https://nextjs.org/" target="_blank">Next.js</a>, designed to be visually striking and highly interactive. The site is hosted on <a href="https://aws.amazon.com" target="_blank">AWS</a></p>
+  <img alt="Static Badge" src="https://img.shields.io/badge/status-in_process-blue">
+</div>
+
+#
 ![portoflio](https://github.com/user-attachments/assets/eee417ba-79c1-4c44-9216-2d29f979b3e2)
 
-## Basic Cloud Architecture
+## Cloud Architecture
 
-![diagram-export-12-27-2024-5_07_35-PM](https://github.com/user-attachments/assets/a293771d-c338-4bfd-a783-feee94369e32)
+![diagram-export-12-30-2024-7_03_35-PM](https://github.com/user-attachments/assets/bf7f6f36-0787-4e1a-a6ba-dac29990310b)
 
 ## Getting Started
 First, run the development server:
