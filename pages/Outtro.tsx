@@ -7,7 +7,11 @@ import ContactIconList from '@/components/ContactIconList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
-const Outtro = () => {
+type OuttroProps = {
+  viewCount: string | null;
+};
+
+const Outtro: React.FC<OuttroProps> = ( {viewCount}) => {
   const handleArrowUpButton = () => {
     document.getElementById('intro')?.scrollIntoView({ behavior: 'smooth' });
   }
@@ -19,8 +23,9 @@ const Outtro = () => {
       <AnimationOnScroll>
         <ContactForm/>
       </AnimationOnScroll>
-      <div className='flex flex-col gap-8 items-center'>
-        <ContactIconList/>     
+      <div className='flex flex-col gap-4 items-center'>
+        <ContactIconList/>
+        <p className='mt-5 text-xs text-opacity-60 rounded-3xl text-indigo-400'>Page Views: {viewCount}</p>  
         <footer className='mt-5 relative bottom-5 flex justify-center items-center text-[10px] sm:text-xs px-4 py-1 bg-zinc-800 bg-opacity-30 text-opacity-60 rounded-3xl text-indigo-400 gap-2'>
           <h1>Made by Yen with ♡</h1>
           <h1>Copyright 2024</h1>
