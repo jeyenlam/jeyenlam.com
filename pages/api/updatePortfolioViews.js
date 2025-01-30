@@ -1,4 +1,9 @@
 const updatePortfolioViews = async (req, res) => {
+
+  if (req.method !== "POST"){
+    return res.status(404).json({message: "POST request only!"});
+  }
+  
   try {
       const response = await fetch(process.env.UPDATE_PORTFOLIO_VIEWS_AWS_GATEWAY_API_URL, 
         {
