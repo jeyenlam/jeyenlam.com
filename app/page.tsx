@@ -39,8 +39,8 @@ export default function Home() {
     },[])
 
   return (
-    <main className="h-screen w-full flex">
-      <div className="sticky top-0 h-screen z-10 overflow-hidden">
+    <main className="h-screen w-screen flex flex-col sm:flex-row">
+      <div className="sticky top-0 sm:h-screen z-10 overflow-hidden">
         <Nav />
       </div>
       <div className="flex-1 h-screen overflow-y-scroll">
