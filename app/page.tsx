@@ -40,10 +40,10 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen flex flex-col sm:flex-row">
-      <div className="sticky top-0 sm:h-screen z-10 overflow-hidden">
+      <div className="sm:sticky sm:top-0 sm:h-screen z-10 overflow-hidden">
         <Nav />
       </div>
-      <div className="flex-1 h-screen overflow-y-scroll">
+      <div className="sm:flex-1 h-screen overflow-y-scroll">
         <Intro />
         <About/>
         <Projects/>
