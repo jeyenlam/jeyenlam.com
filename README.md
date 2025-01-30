@@ -19,11 +19,8 @@
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE), but I **kindly request that you contact me** before using the code in your own projects.
+This project is licensed under the [MIT License](./LICENSE). However, I kindly request that you contact me at jeyenlam@gmail.com for any extensive use of my code in your own projects. Additionally, please credit me if you use this as a design template for your website."
 
-This project is my personal dedication and a result of significant effort, so I hope that if you find it helpful as a template or inspiration, you will **respect my work** and reach out to me before making use of it.
-
-For any commercial use or significant adaptations, please notify me by emailing **jeyenlam@gmail.com**.
 
 ## Getting Started
 First, run the development server:
