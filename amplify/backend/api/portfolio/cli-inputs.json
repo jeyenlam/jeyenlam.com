@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/sendEmail": {
+      "name": "/sendEmail",
+      "lambdaFunction": "sendEmailFromMyPortfolio",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/updatePortfolioViews": {
+      "name": "/updatePortfolioViews",
+      "lambdaFunction": "updatePortfolioViews",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

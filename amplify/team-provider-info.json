@@ -17,6 +17,19 @@
           "appId": "d1cg41wx0u7m4z",
           "type": "cicd"
         }
+      },
+      "function": {
+        "sendEmailFromMyPortfolio": {
+          "deploymentBucketName": "amplify-portfolio-dev-d798e-deployment",
+          "s3Key": "amplify-builds/sendEmailFromMyPortfolio-513146514b784d47506c-build.zip"
+        },
+        "updatePortfolioViews": {
+          "deploymentBucketName": "amplify-portfolio-dev-d798e-deployment",
+          "s3Key": "amplify-builds/updatePortfolioViews-544833366d7577384d4d-build.zip"
+        }
+      },
+      "api": {
+        "portfolio": {}
       }
     }
   }

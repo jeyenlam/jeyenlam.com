@@ -1,12 +1,79 @@
 {
+  "api": {
+    "portfolio": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "sendEmailFromMyPortfolio"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "updatePortfolioViews"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "sendEmailFromMyPortfolio": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "updatePortfolioViews": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
-      "lastPushTimeStamp": "2024-11-30T05:45:53.286Z",
       "service": "amplifyhosting",
       "type": "cicd"
     }
   },
   "parameters": {
+    "AMPLIFY_function_sendEmailFromMyPortfolio_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailFromMyPortfolio"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmailFromMyPortfolio_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailFromMyPortfolio"
+        }
+      ]
+    },
+    "AMPLIFY_function_updatePortfolioViews_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "updatePortfolioViews"
+        }
+      ]
+    },
+    "AMPLIFY_function_updatePortfolioViews_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "updatePortfolioViews"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
