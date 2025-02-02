@@ -5,7 +5,7 @@ const updatePortfolioViews = async (req, res) => {
   }
   
   try {
-      const response = await fetch(process.env.portfolioviewsapi, 
+      const response = await fetch('https://l6v3d30fq2.execute-api.us-east-2.amazonaws.com/dev', 
         {
           method: "POST",
           headers: {
