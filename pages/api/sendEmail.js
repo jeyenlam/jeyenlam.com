@@ -12,7 +12,7 @@ const sendEmail = async (req, res) => {
 
   try {
     // call AWS API Gate Way
-    const response = await fetch(process.env.GATEWAY_AWS_API_URL, {
+    const response = await fetch('https://wnbmwni6w3.execute-api.us-east-2.amazonaws.com/dev', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
