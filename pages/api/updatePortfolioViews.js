@@ -5,7 +5,7 @@ const updatePortfolioViews = async (req, res) => {
   }
   
   try {
-      const response = await fetch(process.env.UPDATE_PORTFOLIO_VIEWS_AWS_GATEWAY_API_URL, 
+      const response = await fetch(process.env.portfolioviewsapi, 
         {
           method: "POST",
           headers: {
