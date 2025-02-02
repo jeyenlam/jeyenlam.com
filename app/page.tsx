@@ -6,6 +6,7 @@ import Projects from "@/pages/Projects";
 import Experience from "@/pages/Experience";
 import Outtro from "@/pages/Outtro";
 import { useEffect, useState } from "react";
+import PageLayout from "@/components/PageLayout";
 
 const updatePortfolioViewsURL = process.env.NEXT_PUBLIC_UPDATE_PORTFOLIO_VIEWS;
 

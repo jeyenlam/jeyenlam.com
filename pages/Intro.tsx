@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import {easeInOut, motion} from "framer-motion"
 import ContactIconList from '@/components/ContactIconList'
 import Image from 'next/image'
-import purple from '@/assets/purple.jpg'
+import purple from '@/public/purple.jpg'
 
 const Intro = () => {
   return (

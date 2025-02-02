@@ -30,7 +30,7 @@ const sendEmail = async (req, res) => {
     res.status(500).json({message: "Message failed to reach AWS Lambda."});
 
   } catch (error){
-    res.status(500).json({message: "AWS Lambda Server Error"});
+    res.status(500).json({message: `AWS Lambda Server Error ${error}`});
   }
 }
 

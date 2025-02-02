@@ -1,11 +1,11 @@
 import { faUser, faLaptopFile, faBriefcase, faDownload, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 import { faDev, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {IIcon, IProject} from '@/lib/myInterface'
-import vinylAppImage from '@/assets/vinylapp.png'
-import financeAppImage from '@/assets/financeapp.png'
-import athleteAppImage from '@/assets/athleteapp.png'
-import ecochicImage from '@/assets/ecochic.png'
-import portfolioImage from '@/assets/portoflio.png'
+import vinylAppImage from '@/public/vinylapp.png'
+import financeAppImage from '@/public/financeapp.png'
+import athleteAppImage from '@/public/athleteapp.png'
+import ecochicImage from '@/public/ecochic.png'
+import portfolioImage from '@/public/portoflio.png'
 
 export const navLinks: IIcon[] = [
   {
