@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, DM_Mono } from "next/font/google";
+import { DM_Mono, Questrial } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider"
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const dmMono = DM_Mono({ subsets: ["latin"],  weight: ["300", "400", "500"]});
+const dmMono = DM_Mono({
+  subsets: ["latin"], 
+  variable: '--font-dmMono',
+  weight: ["300", "400", "500"],
+  display: "swap",
+});
+
+const commissioner = Questrial({
+  subsets: ["latin"],
+  variable: '--font-commissioner',
+  weight: ["400"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Yen Lam",
@@ -16,10 +28,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${dmMono.className}`}>
-        {children}
-      </body>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body className={`${dmMono.variable} ${commissioner.variable}`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   );
 }

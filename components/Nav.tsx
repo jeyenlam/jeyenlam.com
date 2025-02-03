@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 import { IIcon } from "@/lib/myInterface";
+import { useTheme } from "next-themes";
 
 const Nav = () => {
   const [isActive, setIsActive] = useState("About");
   const [isExpandedNav, setIsExpandedNav] = useState(false);
+  const { setTheme, theme } = useTheme();
 
   const handleMinimizingNav = () => {
     if (window.innerWidth < 1200){
@@ -44,7 +46,7 @@ const Nav = () => {
         animate={{ width: isExpandedNav ? "15rem" : "4rem"}}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <nav className="flex bg-zinc-900 w-screen sm:flex-col sm:pt-2 lg:pt-10 sm:items-center text-sm">
+        <nav className="flex w-screen sm:flex-col sm:pt-2 lg:pt-10 sm:items-center text-sm">
           {/* Menu button for expanding/collapsing nav bar */}
           <motion.div
             initial={{opacity:0, y: -50}}
@@ -53,11 +55,14 @@ const Nav = () => {
             onClick={handleNavMenuOnClick}
             className="cursor-pointer xl:mb-10"
           >
-            <FontAwesomeIcon className="hidden xl:block text-indigo-200" icon={isExpandedNav ? faArrowLeft : faBars} />
+            <FontAwesomeIcon className="hidden xl:block" icon={isExpandedNav ? faArrowLeft : faBars} />
           </motion.div>
 
           {/* Nav links */}
           <motion.ul className="flex w-screen items-center sm:flex-col justify-around">
+            
+            <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Theme</button>
+            
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={navLink.name}
@@ -70,8 +75,8 @@ const Nav = () => {
                   onClick={() => handleNavLinkOnClick(navLink)}
                   className={`flex items-center rounded-lg ${
                     isActive === navLink.name
-                      ? "rounded-lg font-bold bg-indigo-500 text-zinc-900"
-                      : "border-transparent justify-start text-indigo-200"
+                      ? "rounded-lg font-bold box"
+                      : "border-transparent justify-start"
                   } ${
                     isExpandedNav ? "pl-4 w-40 h-10" : "w-6 h-6 sm:w-8 sm:h-8 justify-center"
                   }`}

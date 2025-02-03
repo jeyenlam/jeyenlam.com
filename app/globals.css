@@ -23,41 +23,45 @@
 }
 
 .outter-padding {
-  @apply flex flex-col p-2 sm:p-8 bg-zinc-900 justify-center;
+  @apply flex flex-col p-2 sm:p-8 justify-center;
 }
 
 .low-opacity-text-box {
   @apply p-1 px-2 sm:px-3 rounded-full bg-zinc-800 bg-opacity-40 text-center text-[10px]
 }
 
-.light {
-  --background: 245, 245, 245;
+.dark {
+  --background: 24,24,27;
+  --text-color: 255, 255, 255;
+  --box-background: 49,46,129; 
 
-  --border: 212, 212, 212;
-  --card: 255, 255, 255;
-
-  --copy-primary: 23, 23, 23;
-  --copy-secondary: 115, 115, 115;
-
-  --cta: 139, 92, 246;
-  --cta-active: 124, 58, 237;
-  --cta-text: 255, 255, 255;
-
-  background: rgba(var(--background));
 }
 
-.dark {
-  --background: 0, 0, 0;
+.light {
+  --background: 245,245,244;
+  --text-color: 64,64,64;
+  --border-color: 231,229,228; /* Border color */
+  --box-background: 242, 242, 237;
+}
 
-  --border: 38, 38, 38;
-  --card: 23, 23, 23;
+* {
+  font-family: var(--font-commisioner);
+  color: rgba(var(--text-color), 1);
+  /* border-color: rgba(var(--border-color), 1); */
+}
 
-  --copy-primary: 250, 250, 250;
-  --copy-secondary: 115, 115, 115;
+section, nav{
+  background-color: rgba(var(--background), 1);
 
-  --cta: 99, 102, 241;
-  --cta-active: 79, 70, 229;
-  --cta-text: 255, 255, 255;
+}
 
-  background: rgba(var(--background));
+h1 {
+  font-family: var(--font-dmMono);
+}
+
+.box {
+  background-color: rgba(var(--box-background), 1);
+  border: 1px solid;
+  border-color: rgba(var(--border-color), 1);
+  color: rgba(var(--text-color), 1);
 }

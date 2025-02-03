@@ -34,7 +34,7 @@ const Projects = () => {
           {projectCounter < projects.length && ( // Show the button only if there are more projects
             <button
               onClick={handleExpandButton}
-              className='self-center text-indigo-400 w-8 h-8 border border-indigo-600 hover:bg-indigo-600 hover:scale-110 transition-all bg-transparent rounded-full'
+              className='self-center text-indigo-400 w-8 h-8 border hover:scale-110 transition-all bg-transparent rounded-full'
             >
               <FontAwesomeIcon icon={faAdd} />
             </button>
