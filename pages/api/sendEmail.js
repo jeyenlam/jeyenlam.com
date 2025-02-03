@@ -1,5 +1,7 @@
 const sendEmail = async (req, res) => {
 
+  const testAPI = process.env.GATEWAY_AWS_API_URL;
+
   if (req.method !== "POST"){
     return res.status(404).json({message: "POST request only!"});
   }
@@ -11,6 +13,7 @@ const sendEmail = async (req, res) => {
   }
 
   try {
+    console.log("API Gateway URL: ", testAPI);
     // call AWS API Gate Way
     const response = await fetch('https://wnbmwni6w3.execute-api.us-east-2.amazonaws.com/dev', {
       method: "POST",
