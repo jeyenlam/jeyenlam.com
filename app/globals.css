@@ -4,64 +4,89 @@
 
 /* scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #18181b;
+  background: var(--background);
 }
 
 /* the draggable */
 ::-webkit-scrollbar-thumb {
-  background-color: #a5b4fc;
+  background-color: var(--teritary);
   border-radius: 10px;
-  border: 3px solid #18181b;
+  border: 3px solid var(--background);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #818cf8;
+  background-color: var(--secondary);
 }
 
-.outter-padding {
+/* .outter-padding {
   @apply flex flex-col p-2 sm:p-8 justify-center;
-}
-
-.low-opacity-text-box {
-  @apply p-1 px-2 sm:px-3 rounded-full bg-zinc-800 bg-opacity-40 text-center text-[10px]
-}
+} */
 
 .dark {
-  --background: 24,24,27;
+  /* --background: 24,24,27;
   --text-color: 255, 255, 255;
-  --box-background: 49,46,129; 
+  --box-background: 49,46,129;  */
 
 }
 
 .light {
-  --background: 245,245,244;
-  --text-color: 64,64,64;
-  --border-color: 231,229,228; /* Border color */
-  --box-background: 242, 242, 237;
+  --background-light: #ffffff;
+  --background-pop: #f6f8fa;
+  --text-color: #2f3442;
+  --border-color: #d1d9e0;
+  --box-background: #f3f6fb;
+  --pop: #3f1836;
+  --primary: #5371bd;
+  --secondary: #55565a;
+  --teritary: #9ea0a9;
+}
+
+:root {
+  color: var(--text-color);
+  background-color: var(--background-light);
 }
 
 * {
   font-family: var(--font-commisioner);
-  color: rgba(var(--text-color), 1);
-  /* border-color: rgba(var(--border-color), 1); */
-}
-
-section, nav{
-  background-color: rgba(var(--background), 1);
 
 }
 
-h1 {
+section{
+  background-color: var(--background-light);
+  color: var(--text-color);
+}
+
+h1,h6 {
   font-family: var(--font-dmMono);
 }
 
+.secondary {
+  color: var(--secondary);
+}
+
+.teritary {
+  color: var(--teritary);
+}
+
+nav {
+  background-color: var(--background-light);
+  border-bottom: 1px solid;
+  border-color: var(--border-color);
+  color: var(--teritary) !important; 
+}
+
+
 .box {
-  background-color: rgba(var(--box-background), 1);
-  border: 1px solid;
-  border-color: rgba(var(--border-color), 1);
-  color: rgba(var(--text-color), 1);
+  padding: 6px;
+  border-radius: 5px;
+  background-color: var(--box-background);
+  border: 1px solid var(--border-color);
+}
+
+.project-card {
+  @apply border p-4 rounded-lg text-sm lg:w-96 lg:h-64 overflow-hidden;
 }

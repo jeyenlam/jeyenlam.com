@@ -1,11 +1,64 @@
-import { faUser, faLaptopFile, faBriefcase, faDownload, faAddressBook } from '@fortawesome/free-solid-svg-icons'
-import { faDev, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import {IIcon, IProject} from '@/lib/myInterface'
+import { faUser, faLaptopFile, faBriefcase, faAddressBook, faLocationDot} from '@fortawesome/free-solid-svg-icons'
+import { faClock, faCircleDot } from '@fortawesome/free-regular-svg-icons'
+import { faDev, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {IBio, IIcon, IProject} from '@/lib/myInterface'
 import vinylAppImage from '@/public/vinylapp.png'
 import financeAppImage from '@/public/financeapp.png'
 import athleteAppImage from '@/public/athleteapp.png'
 import ecochicImage from '@/public/ecochic.png'
 import portfolioImage from '@/public/portoflio.png'
+
+export const bio: IBio[] = [
+  {
+    type: "name",
+    text: 'Yen Lam',
+    subText: 'she/her'
+  },
+  {
+    type: "bio description",
+    text: 'Aspiring Junior Full-stack Developer.'
+  },
+  {
+    type: "position",
+    icon: 
+      {
+        name: 'briefcase',
+        icon: faBriefcase,
+        url: ''
+      },
+    text: 'Full-stack Developer'
+  },
+  {
+    type: "location",
+    icon: 
+      {
+        name: 'location',
+        icon: faLocationDot,
+        url: ''
+      },
+    text: 'Grand Rapids, MI'
+  },
+  {
+    type: "time",
+    icon: 
+      {
+        name: 'clock',
+        icon: faClock,
+        url: ''
+      },
+    text: 'Eastern Time (ET)'
+  },
+  {
+    type: "status",
+    icon: 
+      {
+        name: 'status',
+        icon: faCircleDot,
+        url: ''
+      },
+    text: 'Open to work'
+  }
+];
 
 export const navLinks: IIcon[] = [
   {
@@ -33,7 +86,7 @@ export const navLinks: IIcon[] = [
 export const contacts: IIcon[] = [
   {
     name: 'LinkedIn',
-    icon: faLinkedin,
+    icon: faLinkedinIn,
     url: 'https://www.linkedin.com/in/jeyenlam/'
   },
   {
@@ -44,34 +97,42 @@ export const contacts: IIcon[] = [
 ]
 
 export const skills = [
-  "React.js", "React Native", "Next.js", "Javascript", "Typescript", "Node.js", "MongoDB", "C#", "TailwindCSS"
+  "AWS", "React Native", "Next.js", "Typescript", "Node.js", "MongoDB", "C#", "TailwindCSS", "Python"
 ]
 
 export const experiences = [
+  {
+    title: 'SpartaHack X | Best Artistic Expression Winner',
+    company: {
+      name: 'SpartaHack',
+      url: 'https://www.spartahack.com/'
+    },
+    duration: 'February 2025',
+    roleDescription: [
+      "Developed a music-generating app in 24 hours that enables users to create music and play music generator games using hand movements, offering users an interactive and immersive experience."    ],
+    skills: ['JavaScript', 'Mediapipe', 'GoDaddy']
+  },
   {
     title: 'Software Engineer Intern',
     company: {
       name: 'PromoterMotor',
       url: 'https://promotermotor.com'
     },
-    duration: 'January 2024 - July 2024',
+    duration: 'January - July 2024',
     roleDescription: [
-      "Collaborated with peers utilizing Google Apps Script to maintain and debug the company’s system-level code, optimizing automation and task management workflows within Google Workspace.",
-      "Researched and assisted in resolving Google Tag Manager and Google Analytics tracking configuration issues on client websites, ensuring precise tracking and proper tag functionality."
+      "Collaborated with peers to maintain and debug system-level code using Google Apps Script, optimizing automation and task management within Google Workspace. Assisted in resolving Google Tag Manager and Google Analytics issues, ensuring accurate tracking and tag functionality on client websites."
     ],
     skills: ['Google Apps Script', 'JavaScript', 'Wordpress']
   },
   {
-    title: '3rd Place Winner of Black Wing Hacks 2024',
+    title: 'RTC Black Wings Hacks 2024 | 3rd place Winner',
     company: {
       name: 'Rewriting The Code',
       url: 'https://devpost.com/software/ecochic-0denl7',
     },
-    duration: 'Feb 2024',
+    duration: 'February 2024',
     roleDescription: [
-      "Developed a web app within 36 hours, using React.js, RapidAPI, JSON server and Figma.",
-      "Worked closely with teammates to brainstorm, refine, and deliver key features, ensuring a polished, user-focused app within the competition timeframe.",
-      "Created user flow designs, implemented dynamic components, and integrated routing and API calls using React libraries to provide a seamless user experience."
+      "Developed a user-focused web app in 24 hours using React.js, RapidAPI, JSON server, and Figma. Collaborated with teammates to design user flows, implement dynamic components, and integrate API calls, ensuring a polished, seamless experience within the competition timeframe."
     ],
     skills: ['React.js', 'RapidAPI', 'Figma']
   }

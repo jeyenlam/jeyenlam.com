@@ -8,41 +8,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import AnimationOnScroll from '@/components/AnimationOnScroll';
+import PageLayout from '@/components/PageLayout';
 
 const Experience = () => {
   return (
-    <section id='experience' className='outter-padding'>
+    <section id='experience'>
       <AnimationOnScroll>
-        <div className="flex flex-col justify-center items-center text-sm">
+        <PageLayout>
           {/* Title */}
           <SectionTitle title='03. My Experience'/>
-          {/* Experience Cards */}
-          <div className='lg:relative md:w-4/6 xl:w-3/6 text-indigo-200'>
+          <hr/>
+          <div className='mt-8'>
+            {/* Experience Card */}
             {experiences.map((experience, index) => {return (
-              <div key={index} className='p-2 rounded-3xl -b-2 lg:-b-4 mt-4'>
-                <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center'>
-                  {/* Title */}
-                  <h1 className='text-indigo-400 md:text-lg font-medium py-1 sm:py-2 sm:px-4'>{experience.title}</h1>
-                  {/* Company */}
-                  <h1 className='px-2 mb-1 sm:px-4 lg:-r-4 hover:text-indigo-500 bg-zinc-800 opacity-80 rounded-full'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
+              
+              <div key={index} className='p-2 flex'>
+                {/* Time */}
+                <div className='flex flex-col items-center justify-start'>
+                  <p className='w-20 lg:w-28 text-xs sm:text-sm font-medium teritary'>{experience.duration}</p>
+                  <div className='flex-1 mt-2 -ml-3 w-[.5px] bg-[var(--border-color)]'></div>
                 </div>
-                {/* Duration */}
-                <p className='m-1 sm:m-2 pl-2 text-xs sm:text-sm font-medium text-opacity-80 text-indigo-300'>{experience.duration}</p>
-                {/* Job Description */}
-                <ul className='sm:p-4 rounded-3xl'>
-                  {(experience.roleDescription).map((description, index) => {
-                    return (
-                      <div key={index} className='flex text-sm'>
-                        <FontAwesomeIcon icon={faCaretRight} width={10} className='mr-3 mt-3'/>
-                        <li className='pt-2'>{description}</li>
-                      </div>
-                    )
-                  })}
-                </ul>
+                <div className='ml-2 border rounded-lg flex flex-1 flex-col lg:flex-row gap-2 items-start p-4 secondary'>
+                  <div className='flex px-4 w-full justify-between items-baseline lg:flex-col gap-2'>
+                    <h1 className='font-medium text-[var(--text-color)]'>{experience.title}</h1>
+                    <h1 className='text-xs text-[var(--primary)]'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
+                  </div>
+                  {/* Job Description */}
+                  <ul>
+                    {(experience.roleDescription).map((description, index) => {
+                      return (
+                        <div key={index} className='lg:border-l flex text-sm mt-1'>
+                          <FontAwesomeIcon icon={faCaretRight} width={10} className='mx-2 mt-1 text-[var(--teritary)]'/>
+                          <li>{description}</li>
+                        </div>
+                      )
+                    })}
+                  </ul>
+                </div>
               </div>
             )})}
           </div>
-        </div>   
+        </PageLayout>
       </AnimationOnScroll>
     </section>
   );
