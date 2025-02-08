@@ -10,6 +10,7 @@ import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 import AnimationOnScroll from '@/components/AnimationOnScroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAdd } from '@fortawesome/free-solid-svg-icons'
+import PageLayout from '@/components/PageLayout'
 
 const Projects = () => {
 
@@ -20,11 +21,12 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className='outter-padding justify-center items-center'>
+    <section id="projects">
       <AnimationOnScroll>
-        <div className='flex flex-col gap-8 items-center sm:items-end'>
+        <PageLayout>
           <SectionTitle title={"02. My Projects"} />
-          <div className='grid sm:grid-cols-2 gap-4 sm:gap-6'>
+          <hr/>
+          <div className='mt-8 grid xl:grid-cols-2 gap-4 sm:gap-6'>
             {projects.slice(0, projectCounter).map((project, index) => (
               <div key={index} className='flex'>
                 <ProjectContainer project={project} />
@@ -34,12 +36,12 @@ const Projects = () => {
           {projectCounter < projects.length && ( // Show the button only if there are more projects
             <button
               onClick={handleExpandButton}
-              className='self-center text-indigo-400 w-8 h-8 border hover:scale-110 transition-all bg-transparent rounded-full'
+              className='mt-2 w-8 h-8 border hover:scale-110 transition-all text-[#e05485] bg-[#fcf3f7] border-[#fae9f1] rounded-full'
             >
               <FontAwesomeIcon icon={faAdd} />
             </button>
           )}
-        </div>
+        </PageLayout>
       </AnimationOnScroll>
     </section>
   )

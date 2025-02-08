@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { navLinks } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faBars, faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { IIcon } from "@/lib/myInterface";
 import { useTheme } from "next-themes";
 
@@ -59,10 +59,7 @@ const Nav = () => {
           </motion.div>
 
           {/* Nav links */}
-          <motion.ul className="flex w-screen items-center sm:flex-col justify-around">
-            
-            <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Theme</button>
-            
+          <motion.ul className="flex w-screen items-center sm:flex-col justify-around">            
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={navLink.name}
@@ -88,6 +85,14 @@ const Nav = () => {
                 </button>
               </motion.li>
             ))}
+            <motion.li
+              initial={{opacity:0, y: -50}}
+              animate={{opacity:1, y:0}}
+              transition={{duration: 0.65, delay:0.7, ease: "easeOut"}}
+              className="sm:pt-5 sm:text-base flex items-center">
+            <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}><FontAwesomeIcon icon={faWandMagicSparkles}/></button>
+
+            </motion.li>
           </motion.ul>
         </nav>
       </motion.div>

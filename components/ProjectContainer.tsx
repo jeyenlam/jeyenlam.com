@@ -9,18 +9,18 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
-    <div className='text-sm lg:w-96 lg:h-64 relative rounded-xl overflow-hidden group flex border shadow-lg bg-zinc-800 bg-opacity-10'>   
+    <div className='project-card  flex-1'>   
       <div className='p-2 md:p-6 flex flex-col justify-evenly gap-3'>
         {/* Title */}
         <Link href={project.urls[0].url} target="_blank">
-          <h1 className='text-base'>{project.title}</h1>
+          <h2 className='text-base text-[var(--primary)] font-medium'>{project.title}</h2>
         </Link>
         {/* Description */}
-        <p className='text-xs'>{project.projectDescription[0]}</p>
+        <p className='text-xs secondary'>{project.projectDescription[0]}</p>
         {/* Tech */}
-        <ul className='flex flex-wrap sm:gap-2'>
+        <ul className='flex flex-wrap gap-2'>
           {(project.tech).map((tech, index) => {return (
-            <li key={index} className='low-opacity-text-box'>{tech}</li>
+            <li key={index} className='text-[#e05485] bg-[#fcf3f7] border-[#fae9f1] border py-1 px-2 rounded-full text-xs'>{tech}</li>
           )})}
         </ul>
       </div>
