@@ -6,29 +6,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faBars, faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { IIcon } from "@/lib/myInterface";
 import { useTheme } from "next-themes";
+import { useAppContext } from "@/app/context";
 
 const Nav = () => {
-  const [isActive, setIsActive] = useState("About");
-  const [isExpandedNav, setIsExpandedNav] = useState(false);
-  const { setTheme, theme } = useTheme();
 
-  const handleMinimizingNav = () => {
-    if (window.innerWidth < 1200){
-      setIsExpandedNav(false);
-    }
-  }
+  const {
+    isExpandedNav,
+      isActive,
+      theme,
+      setIsExpandedNav,
+      setIsActive,
+      setTheme,
+      handleNavMenuOnClick,   
+      handleMinimizingNav,   
+      handleNavLinkOnClick,
+  } = useAppContext()
 
-  const handleNavMenuOnClick = () => {
-    setIsExpandedNav(!isExpandedNav);
-  }
-
-  const handleNavLinkOnClick = ( navLink: IIcon ) => {
-    setIsExpandedNav(isExpandedNav === true ? !isExpandedNav : isExpandedNav); // only minimizing nav when expended
-    setIsActive(navLink.name);
-
-    let sectionId = navLink.url.slice(1); //get rid of "#"
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  }
 
   useEffect(() => {
     window.addEventListener("resize", handleMinimizingNav);

@@ -44,7 +44,7 @@ export default function Home() {
       <div className="sm:sticky sm:top-0 sm:h-screen z-10 overflow-hidden">
         <Nav />
       </div>
-      <div className="sm:flex-1 h-screen overflow-y-scroll overflow-hidden sm:px-60">
+      <div className="sm:flex-1 h-screen overflow-y-scroll overflow-hidden lg:px-60">
         <Intro />
         <About/>
         <Projects/>
