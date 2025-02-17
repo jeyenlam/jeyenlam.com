@@ -1,5 +1,4 @@
-import { faUser, faLaptopFile, faBriefcase, faAddressBook, faLocationDot} from '@fortawesome/free-solid-svg-icons'
-import { faClock, faCircleDot } from '@fortawesome/free-regular-svg-icons'
+import { faClock, faCircleDot, faUser, faAddressBook, faBriefcase, faLocationDot, faLaptopCode, faCheck, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import { faDev, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import {IBio, IIcon, IProject} from '@/lib/myInterface'
 import vinylAppImage from '@/public/vinylapp.png'
@@ -26,7 +25,7 @@ export const bio: IBio[] = [
         icon: faBriefcase,
         url: ''
       },
-    text: 'Full-stack Developer'
+    text: 'Full-stack Developer, open to work'
   },
   {
     type: "location",
@@ -36,28 +35,8 @@ export const bio: IBio[] = [
         icon: faLocationDot,
         url: ''
       },
-    text: 'Grand Rapids, MI'
+    text: 'Based in Grand Rapids, MI, Eastern Time (ET)'
   },
-  {
-    type: "time",
-    icon: 
-      {
-        name: 'clock',
-        icon: faClock,
-        url: ''
-      },
-    text: 'Eastern Time (ET)'
-  },
-  {
-    type: "status",
-    icon: 
-      {
-        name: 'status',
-        icon: faCircleDot,
-        url: ''
-      },
-    text: 'Open to work'
-  }
 ];
 
 export const navLinks: IIcon[] = [
@@ -68,7 +47,7 @@ export const navLinks: IIcon[] = [
   },
   {
     name: "Projects",
-    icon: faLaptopFile,
+    icon: faLaptopCode,
     url: "#projects",
   },
   {

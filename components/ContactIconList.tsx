@@ -5,9 +5,25 @@ import React from 'react'
 import CustomTooltip from './CustomTooltip'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
-const ContactIconList = () => {
+
+
+const ContactIconList: React.FC<{isBox: boolean}> = ({isBox}) => {
+
   return (
-      <ul className='lg:text-2xl pt-4 flex gap-2 items-center justify-evenly w-28 lg:w-40'>
+      ( isBox === true ?
+        <ul className='pt-4 flex gap-2 items-center justify-center'>
+          {contacts.map((contact, index)=>{ return (
+            <Link key={index} href={contact.url} className='box flex items-center gap-x-2 rounded-lg hover:translate-y-[2px] hover:bg-purple-300 p-2 text-[var(--primary)]'>
+              <FontAwesomeIcon icon={contact.icon} />
+              {contact.name}
+            </Link>
+          )})}
+          <Link target="_blank" href='/YenLamResume2024v3.pdf' download={"YenLamResume2024v3.pdf"} className='box flex items-center gap-x-2 rounded-lg hover:translate-y-[2px] hover:bg-purple-300 p-2 text-[var(--primary)]'>
+            <FontAwesomeIcon icon={faDownload} />
+            Download Resume
+          </Link>
+        </ul> :
+        <ul className='pt-4 flex gap-2 items-center justify-evenly w-28 lg:w-40'>
           {contacts.map((contact, index)=>{ return (
             <Link key={index} href={contact.url} className='flex group rounded-lg hover:translate-y-[2px] p-2'>
               <FontAwesomeIcon icon={contact.icon} />
@@ -18,6 +34,7 @@ const ContactIconList = () => {
           <CustomTooltip tip="Download Resume"/>
           </Link>
         </ul>
+      )
   )
 }
 

@@ -46,10 +46,10 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       className='p-4 border flex flex-col rounded-xl gap-3 justify-evenly'
     >
-      <div className='flex justify-between gap-2'>
+      <div className='grid grid-flow-col'>
         <label htmlFor='name'>Name:</label>
         <input
-          className='p-2 rounded-lg bg-[var(--background-pop)] border'
+          className='col-span-3 p-2 rounded-lg bg-[var(--background-pop)] border'
           type="text"
           id="name"
           name="name"
@@ -58,10 +58,10 @@ const ContactForm = () => {
           required
         />
       </div>
-      <div className='flex items-center justify-between gap-2'>
+      <div className='grid grid-flow-col'>
         <label htmlFor="email">Email:</label>
         <input
-          className='p-2 rounded-lg bg-[var(--background-pop)] border'
+          className='col-span-3 p-2 rounded-lg bg-[var(--background-pop)] border'
           type="email"
           id="email"
           name="email"
@@ -70,10 +70,10 @@ const ContactForm = () => {
           required
         />
       </div>
-      <div className='flex items-center gap-2'>
+      <div className='grid grid-flow-col'>
         <label htmlFor="message">Message:</label>
         <textarea
-          className='h-24 p-2 rounded-lg bg-[var(--background-pop)] border'
+          className='col-span-3 h-24 p-2 rounded-lg bg-[var(--background-pop)] border'
           id="message"
           name="message"
           value={formData.message}

@@ -4,8 +4,6 @@ import ContactForm from '@/components/ContactForm'
 import SectionTitle from '@/components/SectionTitle'
 import React from 'react'
 import ContactIconList from '@/components/ContactIconList'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import PageLayout from '@/components/PageLayout'
 
 type OuttroProps = {
@@ -26,7 +24,7 @@ const Outtro: React.FC<OuttroProps> = ({viewCount}) => {
             <ContactForm/>
           </div>
           <div className='mt-8 flex flex-col gap-4 items-center teritary'>
-            <ContactIconList/>
+            <ContactIconList isBox={false}/>
             <p className='mt-5 text-xs'>Page Views: {viewCount}</p>  
             <footer className='mt-5 teritary relative bottom-5 flex justify-center items-center text-[10px] sm:text-xs px-4 py-1 rounded-3xl gap-2'>
               <hr/>

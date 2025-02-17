@@ -1,65 +1,64 @@
-"use client"
-import React from 'react'
-import {easeInOut, motion} from "framer-motion"
-import ContactIconList from '@/components/ContactIconList'
-import Image from 'next/image'
-import purple from '@/public/purple.jpg'
+"use client";
+import React from "react";
+import { easeInOut, motion } from "framer-motion";
+import ContactIconList from "@/components/ContactIconList";
+import Image from "next/image";
+import purple from "@/public/original1.jpg";
+import { bio } from "@/lib/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Intro = () => {
   return (
-    <section id='intro'>
-      <div className='p-2 mt-10 flex flex-col gap-4'>
+    <section id="intro">
+      <div className="p-2 mt-8 flex flex-col gap-4">
         {/* Big Text Box */}
-        <motion.div 
-          className='lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2 text-right border'
-          initial={{x:10, opacity:0}}
-          animate={{x:1, opacity:1}}
-          transition={{duration:0.5, delay: 0.3, ease:easeInOut}}
+        <motion.div
+          className="flex box h-24 flex-col justify-center items-center rounded-xl p-2 pt-2 relative"
+          initial={{ x: 10, opacity: 0 }}
+          animate={{ x: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3, ease: easeInOut }}
         >
-          <motion.h1 
-            initial={{x:10, opacity:0}}
-            animate={{x:1, opacity:1}}
-            transition={{duration:0.5, delay: 0.3, ease:easeInOut}}
-          >
-            I <motion.span>build</motion.span>
-          </motion.h1>
-          <motion.h1 
-            initial={{x:10, opacity:0}}
-            animate={{x:1, opacity:1}}
-            transition={{duration:0.5, delay:0.4, ease:easeInOut}}
-          >
-            Softwares</motion.h1>
-          <motion.h1 
-            initial={{x:10, opacity:0}}
-            animate={{x:1, opacity:1}}
-            transition={{duration:0.5, delay:0.5, ease:easeInOut}}
-          >Websites</motion.h1>
-          <motion.h1 
-            initial={{x:10, opacity:0}}
-            animate={{x:1, opacity:1}}
-            transition={{duration:0.7, delay:0.7, ease:easeInOut}}
-          >Mobile Apps</motion.h1>
+          <Image
+            src={purple}
+            width={150}
+            alt="purple_profile"
+            className="absolute top-4  border shadow rounded-full"
+          />
         </motion.div>
 
         {/* Small Text Box */}
-        <motion.div 
-          initial={{x:10, opacity:0}}
-          animate={{x:1, opacity:1}}
-          transition={{duration: 0.7, delay: 0.9, ease:easeInOut}}
-          className='flex-1'>
-          <div className='flex border gap-x-10 lg:-b-4 xl:-b-8 rounded-xl p-2 md:p-4 pt-2'>
-            <div>
-              I&#39;m actively<br/>
-              looking for a<br/> 
-              <span className='italic font-medium'>Full-time <br/>Opportunity</span>
-              <ContactIconList/>
-            </div>
-            <Image src={purple} width={150} alt="purple_profile" className='self-start border shadow rounded-xl'/>
+        <motion.div
+          initial={{ x: 10, opacity: 0 }}
+          animate={{ x: 1, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.9, ease: easeInOut }}
+          className="flex-1 mt-16 justify-center items-center"
+        >
+          <div className="flex flex-col justify-center items-center">
+            {bio.map((line, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center"
+              >
+                {line.type === "name" && (
+                  <h1 className="text-3xl font-medium">{line.text}</h1>
+                )}
+                {line.icon && (
+                  <div className="flex items-center gap-2 mt-4">
+                    <FontAwesomeIcon
+                      className="teritary"
+                      icon={line.icon.icon}
+                    />
+                    <p className="">{line.text}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+            <ContactIconList isBox={true}/>
           </div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

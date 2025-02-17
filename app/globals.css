@@ -39,34 +39,34 @@
 }
 
 .light {
-  --background-light: #fbfbff;
-  --background-pop: #efefff;
-  --text-color: #2c2c36;
-  --border-color: #d4d4ea;
-  --box-background: #cecef5;
-  --primary: #5353b0;
-  --secondary: #52526b;
-  --teritary: #3b3b68;
+  --background: #fbfbff;
+  --text: #2c2c36;
+  --border: #d4d4ea;
+  --pop: #1b2c55;
+  --primary: #3c3c3c;
+  --secondary: #7b7b7b;
+  --teritary: #e6e6e6;
 }
 
 :root {
   color: var(--text-color);
-  background-color: var(--background-light);
+  background-color: var(--background);
+  font-weight: 300;
 }
 
 * {
   font-family: var(--font-commisioner);
-  border-color: var(--border-color);
+  border-color: var(--teritary);
 
 }
 
-section{
-  background-color: var(--background-light);
-  color: var(--text-color);
-}
+/* section{
+  background-color: var(--background);
+  color: var(--text);
+} */
 
 h1,h6 {
-  font-family: var(--font-dmMono);
+  font-family: var(--font-dmMono); 
 }
 
 .secondary {
@@ -78,18 +78,13 @@ h1,h6 {
 }
 
 nav {
-  background-color: var(--background-light);
-  border-bottom: 1px solid;
-  border-color: var(--border-color);
-  color: var(--teritary) !important; 
+  background-color: var(--background);
+  color: var(--primary);
 }
 
 
 .box {
-  padding: 6px;
-  border-radius: 5px;
-  background-color: var(--box-background);
-  border: 1px solid var(--border-color);
+  background-color: var(--teritary);
 }
 
 .project-card {

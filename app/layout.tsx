@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Mono, Questrial } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider"
 import "./globals.css";
+import { AppContextProvider } from "./context";
 
 const dmMono = DM_Mono({
   subsets: ["latin"], 
@@ -38,7 +39,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <AppContextProvider>
+              {children}
+            </AppContextProvider>
           </ThemeProvider>
         </body>
       </html>

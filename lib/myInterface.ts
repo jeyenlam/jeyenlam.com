@@ -15,3 +15,10 @@ export interface IProject {
   projectDescription: string[],
   tech: string[]
 }
+
+export interface IBio {
+  type: string;
+  text: string;
+  subText?: string;
+  icon?: IIcon;
+}
