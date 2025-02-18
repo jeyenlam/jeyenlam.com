@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 import { projects } from '@/lib/data'
 import ProjectContainer from '@/components/ProjectContainer'
 import SectionTitle from '@/components/SectionTitle'
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 import AnimationOnScroll from '@/components/AnimationOnScroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAdd } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +23,6 @@ const Projects = () => {
       <AnimationOnScroll>
         <PageLayout>
           <SectionTitle title={"02. My Projects"} />
-          <hr/>
           <div className='mt-8 grid xl:grid-cols-2 gap-4 sm:gap-6'>
             {projects.slice(0, projectCounter).map((project, index) => (
               <div key={index} className='flex'>

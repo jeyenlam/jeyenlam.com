@@ -1,7 +1,6 @@
 "use client"
 import About from "@/pages/About";
 import Nav from "@/components/Nav";
-import Intro from "@/pages/Intro";
 import Projects from "@/pages/Projects";
 import Experience from "@/pages/Experience";
 import Outtro from "@/pages/Outtro";
@@ -44,7 +43,6 @@ export default function Home() {
         <Nav />
       </div>
       <div className="sm:flex-1 h-screen overflow-y-scroll overflow-hidden lg:px-60">
-        <Intro />
         <About/>
         <Projects/>
         <Experience/>

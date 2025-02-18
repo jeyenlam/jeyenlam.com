@@ -19,7 +19,6 @@ const Outtro: React.FC<OuttroProps> = ({viewCount}) => {
       <AnimationOnScroll>
         <PageLayout>
           <SectionTitle title="04. What's next?"/>
-          <hr/>
           <div className='mt-8'>
             <ContactForm/>
           </div>

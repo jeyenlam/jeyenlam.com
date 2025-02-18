@@ -2,12 +2,13 @@ import React from 'react'
 
 // Define the interface for the props
 interface CustomTooltipProps {
-  tip: string;
+  tip: string
+  direction: string
 }
 
-const CustomTooltip: React.FC<CustomTooltipProps> = ({tip}) => {
+const CustomTooltip: React.FC<CustomTooltipProps> = ({tip, direction="right"}) => {
   return (
-    <div className="absolute left-8 top-10 hidden w-max rounded-lg bg-zinc-800 text-slate-50 text-sm py-1 px-2 group-hover:block">
+    <div className="absolute left-10 top-8 hidden w-max rounded-lg box text-sm py-1 px-2 group-hover:block">
       {tip}
     </div>
   )

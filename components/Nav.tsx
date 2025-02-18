@@ -3,18 +3,11 @@ import React, { useEffect } from "react";
 import { navLinks } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faBars,
-  faWandMagicSparkles,
-} from "@fortawesome/free-solid-svg-icons";
+import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "@/app/context";
 
 const Nav = () => {
   const context = useAppContext();
-  if (!context) {
-    return null;
-  }
 
   const {
     isExpandedNav,
@@ -36,12 +29,10 @@ const Nav = () => {
 
   return (
     <motion.nav className="flex flex-col p-2 sm:h-screen items-center"
-      initial={{ padding: "0rem" }}
-      animate={{ padding: "2rem"}}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      initial={{ padding: "2rem" }}
     >
       {/* Nav links */}
-      <ul className="flex flex-col items-center gap-8">
+      <ul className="flex sm:flex-col items-center gap-8">
         {navLinks.map((navLink, index) => (
           <li key={navLink.name} className="text-xl flex items-center">
             <button

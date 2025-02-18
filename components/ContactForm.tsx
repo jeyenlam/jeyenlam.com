@@ -49,7 +49,7 @@ const ContactForm = () => {
       <div className='grid grid-flow-col'>
         <label htmlFor='name'>Name:</label>
         <input
-          className='col-span-3 p-2 rounded-lg bg-[var(--teritary)] border'
+          className='col-span-3 p-2 rounded-lg border'
           type="text"
           id="name"
           name="name"
@@ -61,7 +61,7 @@ const ContactForm = () => {
       <div className='grid grid-flow-col'>
         <label htmlFor="email">Email:</label>
         <input
-          className='col-span-3 p-2 rounded-lg bg-[var(--teritary)] border'
+          className='col-span-3 p-2 rounded-lg border'
           type="email"
           id="email"
           name="email"
@@ -73,7 +73,7 @@ const ContactForm = () => {
       <div className='grid grid-flow-col'>
         <label htmlFor="message">Message:</label>
         <textarea
-          className='col-span-3 h-24 p-2 rounded-lg bg-[var(--teritary)] border'
+          className='col-span-3 h-24 p-2 rounded-lg border'
           id="message"
           name="message"
           value={formData.message}

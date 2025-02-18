@@ -5,7 +5,7 @@ import vinylAppImage from '@/public/vinylapp.png'
 import financeAppImage from '@/public/financeapp.png'
 import athleteAppImage from '@/public/athleteapp.png'
 import ecochicImage from '@/public/ecochic.png'
-import portfolioImage from '@/public/portoflio.png'
+import portfolioImage from '@/public/portfolio.png'
 
 export const bio: IBio[] = [
   {

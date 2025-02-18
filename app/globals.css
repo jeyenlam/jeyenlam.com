@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark {
+  --background: #1e1e1e23;
+  --text: #b8b8c9;
+  --border: #272730;
+  --pop: #5e6bf0;
+  --primary: #ababbb;
+  --secondary: #5b5b62;
+  --teritary: #151517;
+
+}
+
+.light {
+  --background: #fbfbff;
+  --text: #2c2c36;
+  --border: #dedee0;
+  --pop: #5e6bf0;
+  --primary: #3b3b3b;
+  --secondary: #7b7b7b;
+  --teritary: #f8f8f8;
+  --scrollbar-thumb: #5e6bf0; /* Add scrollbar thumb color */
+
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
@@ -13,65 +36,46 @@
 
 /* the draggable */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--teritary);
+  background-color: var(--secondary);
   border-radius: 10px;
   border: 3px solid var(--background);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary);
-}
-
-/* .outter-padding {
-  @apply flex flex-col p-2 sm:p-8 justify-center;
-} */
-
-.dark {
-  --background-light: #18181f;
-  --background-pop: #1c1c27;
-  --text-color: #b8b8c9;
-  --border-color: #323243;
-  --box-background: #d0d6ff;
-  --primary: #8989c8;
-  --secondary: #e6e9ff;
-  --teritary: #3d3d4d;
-
-}
-
-.light {
-  --background: #fbfbff;
-  --text: #2c2c36;
-  --border: #dedee0;
-  --pop: #545fda;
-  --primary: #3b3b3b;
-  --secondary: #7b7b7b;
-  --teritary: #f8f8f8;
+  background-color: var(--primary);
 }
 
 :root {
-  color: var(--text-color);
+  color: var(--text);
   background-color: var(--background);
   font-weight: 300;
+  caret-color: transparent;
 }
 
 * {
   font-family: var(--font-commisioner);
   border-color: var(--border);
-
 }
-
 
 h1,h6 {
   font-family: var(--font-dmMono); 
 }
 
-.secondary {
+input, textarea {
+  caret-color:auto !important;
+  background-color: var(--background);
+}
+
+form {
+  background-color: var(--teritary);
+}
+/* .secondary {
   color: var(--secondary);
 }
 
 .teritary {
   color: var(--teritary);
-}
+} */
 
 nav {
   color: var(--secondary);
@@ -84,13 +88,9 @@ nav {
 }
 
 .project-card {
-  @apply border p-4 rounded-lg text-sm lg:w-96 lg:h-64 overflow-hidden;
+  @apply border p-4 rounded-lg text-sm h-64 overflow-hidden;
 }
 
-.small-box-pink {
-  @apply text-[#e05485] bg-[#fcf3f7] border-[#fae9f1] border py-1 px-2 rounded-full text-xs;
-}
-
-.small-box-purple {
-  @apply text-[#5462e0] bg-[#f3f3fc] border-[#ebe9fa] border py-1 px-2 rounded-full text-xs;
+.small-text-hover {
+  @apply text-xs cursor-pointer hover:text-sm duration-150 hover:font-medium hover:text-[var(--pop)];
 }
