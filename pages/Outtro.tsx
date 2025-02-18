@@ -23,13 +23,12 @@ const Outtro: React.FC<OuttroProps> = ({viewCount}) => {
           <div className='mt-8'>
             <ContactForm/>
           </div>
-          <div className='mt-8 flex flex-col gap-4 items-center teritary'>
+          <div className='mt-8 flex flex-col gap-6 items-center text-sm primary'>
             <ContactIconList isBox={false}/>
-            <p className='mt-5 text-xs'>Page Views: {viewCount}</p>  
-            <footer className='mt-5 teritary relative bottom-5 flex justify-center items-center text-[10px] sm:text-xs px-4 py-1 rounded-3xl gap-2'>
-              <hr/>
-              <h1>Made by Yen with ♡</h1>
-              <h1>Copyright 2024</h1>
+            <p>Page Views: {viewCount}</p>  
+            <footer className='relative bottom-5 flex justify-center items-center gap-2'>
+              <p>Designed and Built by Yen with ♡</p>
+              <p>Copyright 2024</p>
             </footer>
           </div>
         </PageLayout>

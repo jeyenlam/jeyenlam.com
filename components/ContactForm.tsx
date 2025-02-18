@@ -49,7 +49,7 @@ const ContactForm = () => {
       <div className='grid grid-flow-col'>
         <label htmlFor='name'>Name:</label>
         <input
-          className='col-span-3 p-2 rounded-lg bg-[var(--background-pop)] border'
+          className='col-span-3 p-2 rounded-lg bg-[var(--teritary)] border'
           type="text"
           id="name"
           name="name"
@@ -61,7 +61,7 @@ const ContactForm = () => {
       <div className='grid grid-flow-col'>
         <label htmlFor="email">Email:</label>
         <input
-          className='col-span-3 p-2 rounded-lg bg-[var(--background-pop)] border'
+          className='col-span-3 p-2 rounded-lg bg-[var(--teritary)] border'
           type="email"
           id="email"
           name="email"
@@ -73,7 +73,7 @@ const ContactForm = () => {
       <div className='grid grid-flow-col'>
         <label htmlFor="message">Message:</label>
         <textarea
-          className='col-span-3 h-24 p-2 rounded-lg bg-[var(--background-pop)] border'
+          className='col-span-3 h-24 p-2 rounded-lg bg-[var(--teritary)] border'
           id="message"
           name="message"
           value={formData.message}
@@ -81,7 +81,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit" className='self-center p-2 -b-2 px-4 hover:scale-110 hover:duration-100 rounded-lg bg-[var(--primary)] text-white border'>Submit</button>
+      <button type="submit" className='self-center p-2 -b-2 px-4 hover:scale-110 hover:duration-100 rounded-lg bg-[var(--pop)] text-[var(--teritary)] border'>Submit</button>
     </form>
   )
 }

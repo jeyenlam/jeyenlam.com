@@ -10,13 +10,13 @@ interface ProjectContainerProps {
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
   return (
     <div className='project-card  flex-1'>   
-      <div className='p-2 md:p-6 flex flex-col justify-evenly gap-3'>
+      <div className='p-2 flex flex-col justify-evenly gap-3'>
         {/* Title */}
         <Link href={project.urls[0].url} target="_blank">
           <h2 className='text-base text-[var(--primary)] font-medium'>{project.title}</h2>
         </Link>
         {/* Description */}
-        <p className='text-xs secondary'>{project.projectDescription[0]}</p>
+        <p className='text-xs text-[var(--primary)]'>{project.projectDescription[0]}</p>
         {/* Tech */}
         <ul className='flex flex-wrap gap-2'>
           {(project.tech).map((tech, index) => {return (

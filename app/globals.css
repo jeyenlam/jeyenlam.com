@@ -41,11 +41,11 @@
 .light {
   --background: #fbfbff;
   --text: #2c2c36;
-  --border: #d4d4ea;
-  --pop: #1b2c55;
-  --primary: #3c3c3c;
+  --border: #dedee0;
+  --pop: #545fda;
+  --primary: #3b3b3b;
   --secondary: #7b7b7b;
-  --teritary: #e6e6e6;
+  --teritary: #f8f8f8;
 }
 
 :root {
@@ -56,14 +56,10 @@
 
 * {
   font-family: var(--font-commisioner);
-  border-color: var(--teritary);
+  border-color: var(--border);
 
 }
 
-/* section{
-  background-color: var(--background);
-  color: var(--text);
-} */
 
 h1,h6 {
   font-family: var(--font-dmMono); 
@@ -78,15 +74,23 @@ h1,h6 {
 }
 
 nav {
-  background-color: var(--background);
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 
 .box {
   background-color: var(--teritary);
+  border: 1px solid var(--border);
 }
 
 .project-card {
   @apply border p-4 rounded-lg text-sm lg:w-96 lg:h-64 overflow-hidden;
+}
+
+.small-box-pink {
+  @apply text-[#e05485] bg-[#fcf3f7] border-[#fae9f1] border py-1 px-2 rounded-full text-xs;
+}
+
+.small-box-purple {
+  @apply text-[#5462e0] bg-[#f3f3fc] border-[#ebe9fa] border py-1 px-2 rounded-full text-xs;
 }
