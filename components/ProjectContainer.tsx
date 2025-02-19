@@ -40,7 +40,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
       </div>
 
       {/* Project Background */}
-      <Link href={project.urls[0].url} target="_blank" className={`${theme === "dark" ? "opacity-20" : ""} w-fit left-0 absolute blur-3xl top-0 -z-10`}>
+      <Link href={project.urls[0].url} target="_blank" className={`${theme === "dark" ? "opacity-25" : ""} w-fit left-0 absolute blur-3xl top-0 -z-10`}>
         <Image src={project.media} alt={project.title}/>
       </Link>
     </div>

@@ -39,13 +39,11 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen flex flex-col sm:flex-row">
-      <div className="sm:sticky sm:top-0 sm:h-screen z-10 overflow-hidden">
-        <Nav />
-      </div>
+      <Nav />
       <div className="sm:flex-1 h-screen overflow-y-scroll overflow-hidden lg:px-60">
         <About/>
-        <Projects/>
         <Experience/>
+        <Projects/>
         <Contact viewCount={viewCount ?? ''}/>
       </div>
     </main>

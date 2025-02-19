@@ -1,4 +1,4 @@
-import { faClock, faCircleDot, faUser, faAddressBook, faBriefcase, faLocationDot, faLaptopCode, faCheck, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
+import { faUser, faAddressBook, faBriefcase, faLocationDot, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import { faDev, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import {IBio, IIcon, IProject} from '@/lib/myInterface'
 import vinylAppImage from '@/public/vinylapp.png'
@@ -46,14 +46,14 @@ export const navLinks: IIcon[] = [
     url: "#about",
   },
   {
-    name: "Projects",
-    icon: faLaptopCode,
-    url: "#projects",
-  },
-  {
     name: "Experience",
     icon: faBriefcase,
     url: "#experience",
+  },
+  {
+    name: "Projects",
+    icon: faLaptopCode,
+    url: "#projects",
   },
   {
     name: "Contact",
@@ -119,6 +119,40 @@ export const experiences = [
 
 export const projects: IProject[] = [
   {
+    title: 'Responsive Portfolio',
+    status: 'complete',
+    media: portfolioImage,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: 'https://github.com/jeyenlam/jeyenlam.com'
+      },
+    ],
+    projectDescription: [
+      "Created a responsive personal website using Next.js, integrating various AWS services, and deployed it on AWS.",
+    ],
+    tech: ['Next.js', 'Typescript', 'TailwindCSS', 'Aamzon Web Services']
+  },
+  {
+    title: 'Full-stack Intelligent Athlete Tracker',
+    status: 'complete',
+    media: athleteAppImage,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: '/'
+      },
+    ],
+    projectDescription: [
+      "Developed a mobile app leveraging the built-in camera and ROC.ai technology to help coaches and parents monitor athlete performance and manage profiles efficiently, aiming for a low-cost alternative to existing products.",
+      "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
+      "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
+    ],
+    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.aiAPI', 'TailwindCSS']
+  },
+  {
     title: 'Vinyl Collection Tracker',
     status: 'complete',
     media: vinylAppImage,
@@ -142,40 +176,6 @@ export const projects: IProject[] = [
     tech: ['Flask', 'Python', 'HTML5', 'CSS3', 'DiscogAPI', 'OAuth']
   },
   {
-    title: 'Full-stack Intelligent Athlete Tracker',
-    status: 'complete',
-    media: athleteAppImage,
-    urls: [
-      {
-        name: 'github',
-        icon: faGithub,
-        url: '/'
-      },
-    ],
-    projectDescription: [
-      "Developed a mobile app leveraging the built-in camera and ROC.ai technology to help coaches and parents monitor athlete performance and manage profiles efficiently, aiming for a low-cost alternative to existing products.",
-      "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
-      "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
-    ],
-    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.aiAPI', 'TailwindCSS']
-  },
-  {
-    title: 'Responsive Portfolio',
-    status: 'complete',
-    media: portfolioImage,
-    urls: [
-      {
-        name: 'github',
-        icon: faGithub,
-        url: 'https://github.com/jeyenlam/jeyenlam.com'
-      },
-    ],
-    projectDescription: [
-      "Created a responsive personal website using Next.js, integrating various AWS services, and deployed it on AWS.",
-    ],
-    tech: ['Next.js', 'Typescript', 'TailwindCSS', 'Aamzon Web Services']
-  },
-  {
     title: 'EcoChic',
     status: 'complete',
     media: ecochicImage,
@@ -192,7 +192,7 @@ export const projects: IProject[] = [
     tech: ['React.js', 'Javascript', 'CSS', 'RapidAPI']
   },
   {
-    title: 'Full Stack Financial Tracker',
+    title: 'Full-stack Financial Tracker',
     status: 'complete',
     media: financeAppImage,
     urls: [

@@ -11,8 +11,7 @@ import { faAdd } from '@fortawesome/free-solid-svg-icons'
 import PageLayout from '@/components/PageLayout'
 
 const Projects = () => {
-
-  const [projectCounter, setProjectCounter] = useState(4) // Initial count to display
+  const [projectCounter, setProjectCounter] = useState(4)
 
   const handleExpandButton = () => {
     setProjectCounter(projectCounter + 4) // Load 4 more projects on button click
@@ -30,13 +29,18 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          {projectCounter < projects.length && ( // Show the button only if there are more projects
-            <button
-              onClick={handleExpandButton}
-              className='mt-2 w-8 h-8 border hover:scale-110 transition-all text-[#e05485] bg-[#fcf3f7] border-[#fae9f1] rounded-full'
-            >
-              <FontAwesomeIcon icon={faAdd} />
-            </button>
+
+          {/* Show the button only if there are more projects */}
+          {projectCounter < projects.length && (
+            <div className='flex justify-center items-center'>
+              <button
+                onClick={handleExpandButton}
+                className='mt-2 w-8 h-8 border hover:scale-110 duration-150 bg-[var(--teritary)] rounded-full'
+              >
+                <FontAwesomeIcon icon={faAdd} />
+              </button>
+            </div>
+            
           )}
         </PageLayout>
       </AnimationOnScroll>

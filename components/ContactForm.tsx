@@ -1,5 +1,5 @@
 "use client"
-import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
 const sendEmailURL = process.env.NEXT_PUBLIC_SEND_EMAIL_URL;

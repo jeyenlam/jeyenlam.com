@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import SectionTitle from '@/components/SectionTitle';
 import { experiences } from '@/lib/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import AnimationOnScroll from '@/components/AnimationOnScroll';
 import PageLayout from '@/components/PageLayout';
