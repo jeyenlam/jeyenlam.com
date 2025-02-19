@@ -1,7 +1,7 @@
 "use client";
 import { IIcon } from '@/lib/myInterface';
 import { useTheme } from 'next-themes';
-import  { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import  { createContext, useState, useContext, ReactNode } from 'react';
 
 interface AppContextType {
   isActive: string;
@@ -15,9 +15,12 @@ const AppContext = createContext<AppContextType | null>(null);
 
 const useAppContext = () => {
   const context = useContext(AppContext);
-  if (!context) {
-    throw new Error("useAppContext must be used within an AppContextProvider");
-  }
+  // if (!context) {
+  //   throw new Error("useAppContext must be used within an AppContextProvider");
+  // }
+    if (!context) {
+      return null;
+    }
   return context;
 };
 

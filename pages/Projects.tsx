@@ -11,10 +11,10 @@ import { faAdd } from '@fortawesome/free-solid-svg-icons'
 import PageLayout from '@/components/PageLayout'
 import { useAppContext } from '@/app/context'
 
-
 const Projects = () => {
   const [projectCounter, setProjectCounter] = useState(4)
-  const { theme } = useAppContext()
+  const appContext = useAppContext()
+  const theme = appContext ? appContext.theme : 'defaultTheme' // Replace 'defaultTheme' with your default theme
 
 
   const handleExpandButton = () => {

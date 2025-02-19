@@ -9,6 +9,10 @@ import { useAppContext } from "@/app/context";
 const Nav = () => {
   const context = useAppContext();
 
+  if (!context) {
+    return null;
+  }
+
   const {
     isActive,
     theme,

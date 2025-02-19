@@ -11,7 +11,7 @@ interface ProjectContainerProps {
   theme: string
 }
 
-const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme}) => {
+const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme="light"}) => {
 
   return (
     <div className='project-card flex-1 relative'>  
