@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { IProject } from '@/lib/myInterface'
 import Link from 'next/link'
@@ -33,7 +34,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme}) => 
         {/* Tech stack */}
         <ul className='flex flex-wrap gap-2'>
           {(project.tech).map((tech, index) => {return (
-            <li key={index} className='small-text-hover'>{tech}</li>
+            <li key={tech} className='small-text-hover'>{tech}</li>
           )})}
         </ul>
       </div>

@@ -28,7 +28,7 @@ const Projects = () => {
           <SectionTitle title={"02. My Projects"} />
           <div className='mt-8 grid xl:grid-cols-2 gap-4 sm:gap-6'>
             {projects.slice(0, projectCounter).map((project, index) => (
-              <div key={index} className='flex'>
+              <div key={project.title} className='flex'>
                 <ProjectContainer project={project} theme={theme}/>
               </div>
             ))}
