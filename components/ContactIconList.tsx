@@ -5,15 +5,13 @@ import React from 'react'
 import CustomTooltip from './CustomTooltip'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
-
-
 const ContactIconList: React.FC<{isBox: boolean}> = ({isBox}) => {
 
   return (
       ( isBox === true ?
         <ul className='pt-4 flex gap-2 items-center justify-center'>
           {contacts.map((contact, index)=>{ return (
-            <Link key={index} href={contact.url} className='box flex items-center gap-x-2 rounded-lg hover:translate-y-1 duration-200 hover:bg-[var(--pop)] hover:text-[var(--teritary)] p-2 text-[var(--primary)]'>
+            <Link key={index} href={contact.url} className='box-button'>
               <FontAwesomeIcon icon={contact.icon} />
               {contact.name}
             </Link>

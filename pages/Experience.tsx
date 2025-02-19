@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import SectionTitle from '@/components/SectionTitle';
 import { experiences } from '@/lib/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import AnimationOnScroll from '@/components/AnimationOnScroll';
 import PageLayout from '@/components/PageLayout';
@@ -25,19 +25,18 @@ const Experience = () => {
                   <div className='flex-1 mt-2 -ml-3 w-[.5px] bg-[var(--border)]'></div>
                 </div>
                 {/* Experience Card */}
-                <div className='ml-2 border rounded-lg flex flex-1 flex-col lg:flex-row gap-2 items-start p-4 bg-[var(--teritary)]'>
-                  <div className='flex px-4 w-full justify-between items-baseline lg:flex-col gap-2'>
+                <div className={`${index % 2 == 1 ? "lg:flex-row-reverse" : ""} ml-2 border rounded-lg flex flex-1 flex-col lg:flex-row gap-2 items-start p-6 bg-[var(--teritary)]`}>
+                  <div className='flex w-full justify-between items-baseline lg:flex-col gap-2'>
                     <h1 className='font-medium'>{experience.title}</h1>
-                    <h1 className='small-text-hover'><Link target='_blank' href={experience.company.url}>{experience.company.name}</Link></h1>
+                    <h1 className='small-text-hover text-nowrap'><Link target='_blank' href={experience.company.url}>
+                    <FontAwesomeIcon icon={faBuilding}/> {experience.company.name}
+                    </Link></h1>
                   </div>
                   {/* Job Description */}
                   <ul>
                     {(experience.roleDescription).map((description, index) => {
                       return (
-                        <div key={index} className='lg:border-l flex text-sm'>
-                          <FontAwesomeIcon icon={faCaretRight} width={10} className='mx-2 mt-1'/>
-                          <li>{description}</li>
-                        </div>
+                          <li key={index} className='text-sm lg:px-8'>{description}</li>
                       )
                     })}
                   </ul>

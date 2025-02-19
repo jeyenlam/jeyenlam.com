@@ -1,4 +1,6 @@
 "use client"
+import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
 const sendEmailURL = process.env.NEXT_PUBLIC_SEND_EMAIL_URL;
 
@@ -81,7 +83,8 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit" className='self-center p-2 -b-2 px-4 hover:scale-110 hover:duration-100 rounded-lg bg-[var(--pop)] text-[var(--teritary)] border'>Submit</button>
+      <button type="submit" className='box-button self-center'>
+        <FontAwesomeIcon icon={faPaperPlane}/>Send Message</button>
     </form>
   )
 }

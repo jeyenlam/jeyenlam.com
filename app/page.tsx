@@ -3,8 +3,8 @@ import About from "@/pages/About";
 import Nav from "@/components/Nav";
 import Projects from "@/pages/Projects";
 import Experience from "@/pages/Experience";
-import Outtro from "@/pages/Outtro";
 import { useEffect, useState } from "react";
+import Contact from "@/pages/Contact";
 
 const updatePortfolioViewsURL = process.env.NEXT_PUBLIC_UPDATE_PORTFOLIO_VIEWS;
 
@@ -46,7 +46,7 @@ export default function Home() {
         <About/>
         <Projects/>
         <Experience/>
-        <Outtro viewCount={viewCount}/>
+        <Contact viewCount={viewCount ?? ''}/>
       </div>
     </main>
   );

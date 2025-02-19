@@ -64,18 +64,12 @@ h1,h6 {
 input, textarea {
   caret-color:auto !important;
   background-color: var(--background);
+  outline: none;
 }
 
 form {
   background-color: var(--teritary);
 }
-/* .secondary {
-  color: var(--secondary);
-}
-
-.teritary {
-  color: var(--teritary);
-} */
 
 nav {
   color: var(--secondary);
@@ -93,4 +87,8 @@ nav {
 
 .small-text-hover {
   @apply text-xs cursor-pointer hover:text-sm duration-150 hover:font-medium hover:text-[var(--pop)];
+}
+
+.box-button {
+  @apply box flex items-center gap-x-2 rounded-lg hover:translate-y-1 duration-200 hover:bg-[var(--pop)] hover:text-[var(--teritary)] p-2 text-[var(--primary)];
 }
