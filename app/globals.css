@@ -73,6 +73,7 @@ form {
 
 nav {
   color: var(--secondary);
+  /* background-color: var(--background); */
 }
 
 

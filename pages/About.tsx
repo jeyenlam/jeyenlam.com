@@ -21,6 +21,9 @@ const About = () => {
             where I&#39;ve gained experience with modern frameworks, cloud computing,
             and DevOps. Lately, I&#39;ve been diving into AI and Machine Learning to
             stay in tune with where the industry is headed.
+            <br/>
+            <br/>
+            If I&#39;m not at computer, I&#39;m probably either baking, tending to my 🐶🐶, learning Mandarin Chinese or watching a good old movie.
             </p>
           </div>
         </AnimationOnScroll>

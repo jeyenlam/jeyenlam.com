@@ -16,7 +16,7 @@ const Contact : React.FC<{viewCount: string}> = ({ viewCount }) => {
           <div className='mt-8 flex flex-col gap-6 items-center text-sm'>
             <ContactIconList isBox={false}/>
             <hr/>
-            <div className='flex flex-col justify-center items-center gap-2'>
+            <div className='flex flex-col justify-center items-center gap-2 pb-10'>
               <p>Page Views: <span className='small-text-hover'>{viewCount}</span></p>  
               <p>Designed and Built by Yen Lam with ♡</p>
               <p>Copyright 2024</p>

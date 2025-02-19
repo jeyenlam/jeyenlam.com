@@ -21,12 +21,12 @@ const Nav = () => {
   } = context;
 
   return (
-    <motion.nav className="flex flex-col sm:h-screen items-center sm:text-xl"
-      initial={{ padding: "1.5rem" }}
+    <motion.nav className="backdrop-blur-3xl backdrop-contrast-100 z-50 h-10 flex items-center fixed w-full sm:h-full sm:w-20 justify-center sm:items-start sm:text-xl"
+      // initial={{ padding: "1.5rem" }}
     >
       {/* Nav links */}
-      <ul className="flex sm:flex-col items-center gap-8">
-        {navLinks.map((navLink, index) => (
+      <ul className="sm:pt-4 flex sm:flex-col sm:items-center gap-8">
+        {navLinks.map((navLink, _index) => (
           <li key={navLink.name}>
             <button
               onClick={() => handleNavLinkOnClick(navLink)}
