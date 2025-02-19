@@ -3,6 +3,7 @@ import { DM_Mono, Questrial } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider"
 import "./globals.css";
 import { AppContextProvider } from "./context";
+import Nav from "@/components/Nav";
 
 const dmMono = DM_Mono({
   subsets: ["latin"], 

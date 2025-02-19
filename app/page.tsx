@@ -39,7 +39,6 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen flex flex-col sm:flex-row">
-      <Nav />
       <div className="sm:flex-1 h-screen overflow-y-scroll overflow-hidden lg:px-60">
         <About/>
         <Experience/>
