@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "@/app/context";
-import CustomTooltip from "./CustomTooltip";
 
 const Nav = () => {
   const context = useAppContext();

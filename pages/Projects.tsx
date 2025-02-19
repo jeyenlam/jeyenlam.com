@@ -9,9 +9,13 @@ import AnimationOnScroll from '@/components/AnimationOnScroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAdd } from '@fortawesome/free-solid-svg-icons'
 import PageLayout from '@/components/PageLayout'
+import { useAppContext } from '@/app/context'
+
 
 const Projects = () => {
   const [projectCounter, setProjectCounter] = useState(4)
+  const { theme } = useAppContext()
+
 
   const handleExpandButton = () => {
     setProjectCounter(projectCounter + 4) // Load 4 more projects on button click
@@ -25,7 +29,7 @@ const Projects = () => {
           <div className='mt-8 grid xl:grid-cols-2 gap-4 sm:gap-6'>
             {projects.slice(0, projectCounter).map((project, index) => (
               <div key={index} className='flex'>
-                <ProjectContainer project={project} />
+                <ProjectContainer project={project} theme={theme}/>
               </div>
             ))}
           </div>

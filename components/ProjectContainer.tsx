@@ -4,14 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { useAppContext } from '@/app/context'
 
 interface ProjectContainerProps {
   project: IProject
+  theme: string
 }
 
-const ProjectContainer: React.FC<ProjectContainerProps> = ({project}) => {
-  const { theme } = useAppContext()
+const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme}) => {
 
   return (
     <div className='project-card flex-1 relative'>  
