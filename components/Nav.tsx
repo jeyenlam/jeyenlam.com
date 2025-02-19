@@ -21,7 +21,9 @@ const Nav = () => {
   } = context;
 
   return (
-    <nav className="flex flex-col sm:h-screen items-center sm:text-xl">
+    <motion.nav className="flex flex-col sm:h-screen items-center sm:text-xl"
+      initial={{ padding: "1.5rem" }}
+    >
       {/* Nav links */}
       <ul className="flex sm:flex-col items-center gap-8">
         {navLinks.map((navLink, index) => (
@@ -40,7 +42,7 @@ const Nav = () => {
           </button>
         </li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 

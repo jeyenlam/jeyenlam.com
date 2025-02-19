@@ -28,8 +28,8 @@ const Experience = () => {
                 <div className={`${index % 2 == 1 ? "lg:flex-row-reverse" : ""} ml-2 border rounded-lg flex flex-1 flex-col lg:flex-row gap-2 items-start p-6 bg-[var(--teritary)]`}>
                   <div className='flex w-full justify-between items-baseline lg:flex-col gap-2'>
                     <h1 className='font-medium'>{experience.title}</h1>
-                    <h1 className='small-text-hover text-nowrap'><Link target='_blank' href={experience.company.url}>
-                    <FontAwesomeIcon icon={faBuilding}/> {experience.company.name}
+                    <h1 className='small-text-hover sm:text-nowrap'><Link target='_blank' href={experience.company.url}>
+                    <FontAwesomeIcon className='hidden sm:block' icon={faBuilding}/> {experience.company.name}
                     </Link></h1>
                   </div>
                   {/* Job Description */}
