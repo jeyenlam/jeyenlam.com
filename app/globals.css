@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .dark {
-  --background: #1e1e1e23;
+  --background: #34333323;
   --text: #b8b8c9;
-  --border: #272730;
+  --border: #1f1f21;
   --pop: #5e6bf0;
-  --primary: #ababbb;
-  --secondary: #5b5b62;
-  --teritary: #151517;
+  --primary: #c0c0c9;
+  --secondary: #505053;
+  --teritary: #1b1a1abf;
 
 }
 
@@ -19,7 +19,7 @@
   --border: #dedee0;
   --pop: #5e6bf0;
   --primary: #3b3b3b;
-  --secondary: #7b7b7b;
+  --secondary: #797979;
   --teritary: #f8f8f8;
   --scrollbar-thumb: #5e6bf0; /* Add scrollbar thumb color */
 
@@ -64,12 +64,8 @@ h1,h6 {
 
 input, textarea {
   caret-color:auto !important;
-  background-color: var(--background);
-  outline: none;
-}
-
-form {
   background-color: var(--teritary);
+  outline: none;
 }
 
 nav {

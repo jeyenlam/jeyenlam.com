@@ -9,7 +9,7 @@ interface CustomTooltipProps {
 
 const CustomTooltip: React.FC<CustomTooltipProps> = ({text, direction="right", hovered}) => {
   return (
-    <div className="absolute left-10 top-8 hidden w-max rounded-lg box text-sm py-1 px-2 group-hover:block">
+    <div className="absolute bg-[var(--primary)] left-10 top-8 hidden w-max rounded-lg text-[var(--border)] text-sm py-1 px-2 group-hover:block">
       {text}
     </div>
   )
