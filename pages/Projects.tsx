@@ -25,7 +25,7 @@ const Projects = () => {
     <section id="projects">
       <AnimationOnScroll>
         <PageLayout>
-          <SectionTitle title={"02. My Projects"} />
+          <SectionTitle title={"My Projects"} />
           <div className='mt-8 grid xl:grid-cols-2 gap-4 sm:gap-6'>
             {projects.slice(0, projectCounter).map((project, index) => (
               <div key={project.title} className='flex'>

@@ -25,7 +25,7 @@ export const bio: IBio[] = [
         icon: faBriefcase,
         url: ''
       },
-    text: 'Full-stack Developer, open to work'
+    text: 'Full-stack Developer - open to work'
   },
   {
     type: "location",
@@ -35,7 +35,7 @@ export const bio: IBio[] = [
         icon: faLocationDot,
         url: ''
       },
-    text: 'Based in Grand Rapids, MI, Eastern Time (ET)'
+    text: 'Based in Grand Rapids, MI - Eastern Time (ET)'
   },
 ];
 
@@ -146,7 +146,7 @@ export const projects: IProject[] = [
       },
     ],
     projectDescription: [
-      "Developed a mobile app leveraging the built-in camera and ROC.ai technology to help coaches and parents monitor athlete performance and manage profiles efficiently, aiming for a low-cost alternative to existing products.",
+      "Built a mobile app leveraging mobile devices' help coaches and parents efficiently monitor their students/children athlete performance, aiming for a low-cost alternative to existing products.",
       "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
       "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
     ],
@@ -187,24 +187,8 @@ export const projects: IProject[] = [
       },
     ],
     projectDescription: [
-      "Developed a web app that features approved sustainable brands within 36 hours.",
+      "Developed a web app within 24 hours that promote fashion sustainability, configuring a map that helps user easily search for local sustainable stores location.",
     ],
     tech: ['React.js', 'Javascript', 'CSS', 'RapidAPI']
-  },
-  {
-    title: 'Full-stack Financial Tracker',
-    status: 'complete',
-    media: financeAppImage,
-    urls: [
-      {
-        name: 'github',
-        icon: faGithub,
-        url: 'https://github.com/jeyenlam/MERN-Expense-Tracker-Dashboard'
-      },
-    ],
-    projectDescription: [
-      "Developed an intuitive financial dashboard employing the MERN stack to facilitate efficient expense management.",
-    ],
-    tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'StyledComponents']
   }
 ];

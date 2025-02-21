@@ -16,19 +16,19 @@ const ContactIconList: React.FC<{isBox: boolean}> = ({isBox}) => {
               {contact.name}
             </Link>
           )})}
-          <Link target="_blank" href='/YenLamResume2025.pdf' download={"YenLamResume2025.pdf"} className='box flex items-center duration-200 gap-x-2 rounded-lg hover:translate-y-1 hover:bg-[var(--pop)] hover:text-[var(--teritary)] p-2 text-[var(--primary)]'>
+          <Link target="_blank" href='/YenLamResume2025.pdf' download={"YenLamResume2025.pdf"} className='box-button'>
             <FontAwesomeIcon icon={faDownload} />
             Download Resume
           </Link>
         </ul> :
-        <ul className='text-2xl text-[var(--primary)] flex gap-4 items-center justify-evenly'>
+        <ul className='flex gap-8 items-center justify-evenly'>
           {contacts.map((contact, index)=>{ return (
-            <Link key={index} href={contact.url} className='flex group hover:translate-y-1 p-2 duration-200'>
+            <Link key={index} href={contact.url} className='naked-button group hover:translate-y-1'>
               <FontAwesomeIcon icon={contact.icon} />
             </Link>
           )})}
-          <Link target="_blank" href='/YenLamResume2025.pdf' download={"YenLamResume2025.pdf"} className='flex relative group rounded-lg hover:translate-y-1 duration-200 p-2'>
-            <FontAwesomeIcon icon={faDownload} className='animate-bounce group-hover:animate-none hover:animate-none'/>
+          <Link target="_blank" href='/YenLamResume2025.pdf' download={"YenLamResume2025.pdf"} className='relative group hover:translate-y-1'>
+            <FontAwesomeIcon icon={faDownload} className='naked-button animate-bounce group-hover:animate-none hover:animate-none'/>
             <CustomTooltip text="Download Resume" direction='' hovered={true}/>
           </Link>
         </ul>

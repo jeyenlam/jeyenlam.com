@@ -59,6 +59,7 @@
 
 h1,h6 {
   font-family: var(--font-dmMono); 
+  font-weight: 500;
 }
 
 input, textarea {
@@ -91,5 +92,9 @@ nav {
 }
 
 .box-button {
-  @apply box flex items-center gap-x-2 rounded-lg hover:translate-y-1 duration-200 hover:bg-[var(--pop)] hover:text-[var(--teritary)] p-2 text-[var(--primary)];
+  @apply text-xs sm:text-base box flex items-center gap-x-2 rounded-lg hover:translate-y-1 duration-200 hover:bg-[var(--pop)] hover:text-[var(--teritary)] p-2 text-[var(--primary)];
+}
+
+.naked-button {
+  @apply text-2xl text-[var(--primary)] duration-200 ;
 }

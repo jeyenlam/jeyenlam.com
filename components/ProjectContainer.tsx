@@ -14,19 +14,19 @@ interface ProjectContainerProps {
 const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme="light"}) => {
 
   return (
-    <div className='project-card flex-1 relative'>  
+    <div className='project-card flex-1 relative max-h-fit sm:max-h-none'>  
       
       {/* Hidden Project Image */}
       <div className='group absolute bottom-full duration-700 flex flex-col items-end w-fit left-0'> 
         <Image src={project.media} alt={project.title} className='group-hover:translate-y-full duration-700'/>
-        <FontAwesomeIcon icon={faChevronDown} className='absolute -bottom-5 group-hover:bottom-0  duration-500 group cursor-pointer mr-2 text-[var(--secondary)]'/>
+        <FontAwesomeIcon icon={faChevronDown} className='absolute -bottom-5 group-hover:bottom-0 duration-500 group cursor-pointer mr-2 text-[var(--secondary)]'/>
       </div> 
 
       {/* Text Content */}
-      <div className='p-2 flex flex-col justify-evenly gap-3'>
+      <div className='flex flex-col justify-evenly gap-3'>
         {/* Title */}
         <Link href={project.urls[0].url} target="_blank" className='group flex items-baseline gap-2 hover:-translate-y-1 duration-150'>
-          <h2 className='text-2xl text-[var(--primary)] group-hover:text-[var(--pop)] font-medium'>{project.title}</h2>
+          <h2 className='text-lg sm:text-2xl text-[var(--primary)] group-hover:text-[var(--pop)] font-medium'>{project.title}</h2>
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='group-hover:block hidden group-hover:text-[var(--pop)]'/>
         </Link>
         {/* Description */}
