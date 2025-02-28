@@ -9,13 +9,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Intro = () => {
   return (
-    <div className="mt-10 sm:mt-auto lg:pt-4 flex flex-col gap-4">
+    <div className="pt-10 sm:pt-auto lg:pt-4 flex flex-col gap-4">
       {/* Image */}
       <motion.div
         className="flex justify-center items-center p-2"
         initial={{ x: 10, opacity: 0 }}
         animate={{ x: 1, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.3, ease: easeInOut }}
+        transition={{ duration: 0.5, delay: 0.2, ease: easeInOut }}
       >
         <Image src={purple} width={150} alt="purple_profile" className="border-2 rounded-full opacity-90"/>
       </motion.div>
@@ -24,7 +24,7 @@ const Intro = () => {
       <motion.div
         initial={{ x: 10, opacity: 0 }}
         animate={{ x: 1, opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.9, ease: easeInOut }}
+        transition={{ duration: 0.7, delay: 0.3, ease: easeInOut }}
         className="flex-1 justify-center items-center text-sm sm:text-base"
       >
         <div className="flex flex-col justify-center items-center">

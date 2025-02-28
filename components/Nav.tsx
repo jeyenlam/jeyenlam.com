@@ -5,13 +5,11 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "@/app/context";
+import { useIsMobile, useScrollDirection } from "@/lib/hooks";
 
 const Nav = () => {
   const context = useAppContext();
-
-  if (!context) {
-    return null;
-  }
+  if (!context) { return null}
 
   const {
     isActive,
@@ -20,12 +18,24 @@ const Nav = () => {
     handleNavLinkOnClick,
   } = context;
 
+  const scrollDirection = useScrollDirection(100)
+  const isMobile = useIsMobile();
+
+  const navY = isMobile
+  ? scrollDirection === "down"
+    ? "-100%"
+    : "0%"
+  : "0%";
+
+
   return (
-    <motion.nav className="backdrop-blur-3xl backdrop-contrast-100 z-50 h-10 flex items-center fixed w-full sm:h-full sm:w-20 justify-center sm:items-start sm:text-xl"
-      // initial={{ padding: "1.5rem" }}
+    <motion.nav 
+      className="z-40 bg- flex items-center fixed w-full sm:h-full sm:w-20 justify-center sm:items-start sm:text-xl"
+      animate={{ y: navY}}
+      transition={{duration:0.6, ease: "easeOut"}}
     >
       {/* Nav links */}
-      <ul className="sm:pt-4 flex sm:flex-col sm:items-center gap-8">
+      <ul className="sm:pt-4 flex sm:flex-col sm:items-center gap-8 px-6 py-2 rounded-full">
         {navLinks.map((navLink, _index) => (
           <li key={navLink.name}>
             <button

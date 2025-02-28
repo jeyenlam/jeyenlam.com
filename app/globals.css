@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 .dark {
-  --background: #34333323;
+  --background: #161616;
   --text: #b8b8c9;
   --border: #1f1f21;
   --pop: #5e6bf0;
   --primary: #c0c0c9;
   --secondary: #505053;
-  --teritary: #1b1a1abf;
-
+  --teritary: #1b1b1b;
 }
 
 .light {
@@ -22,7 +21,6 @@
   --secondary: #797979;
   --teritary: #f8f8f8;
   --scrollbar-thumb: #5e6bf0; /* Add scrollbar thumb color */
-
 }
 
 /* scrollbar */
@@ -70,7 +68,8 @@ input, textarea {
 
 nav {
   color: var(--secondary);
-  /* background-color: var(--background); */
+  background-color: var(--background);
+  border-bottom: 2px solid var(--teritary);
 }
 
 

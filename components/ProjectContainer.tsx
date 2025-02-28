@@ -6,12 +6,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-interface ProjectContainerProps {
-  project: IProject
-  theme: string
-}
-
-const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme="light"}) => {
+const ProjectContainer: React.FC<{project: IProject}> = ({project}) => {
 
   return (
     <div className='project-card flex-1 relative max-h-fit sm:max-h-none'>  
@@ -40,7 +35,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({project, theme="ligh
       </div>
 
       {/* Project Background */}
-      <Link href={project.urls[0].url} target="_blank" className={`${theme === "dark" ? "opacity-25" : ""} w-fit left-0 absolute blur-3xl top-0 -z-10`}>
+      <Link href={project.urls[0].url} target="_blank" className={`opacity-35 w-fit left-0 absolute blur-3xl top-0 -z-10`}>
         <Image src={project.media} alt={project.title}/>
       </Link>
     </div>

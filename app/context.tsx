@@ -15,9 +15,6 @@ const AppContext = createContext<AppContextType | null>(null);
 
 const useAppContext = () => {
   const context = useContext(AppContext);
-  // if (!context) {
-  //   throw new Error("useAppContext must be used within an AppContextProvider");
-  // }
     if (!context) {
       return null;
     }
@@ -26,7 +23,7 @@ const useAppContext = () => {
 
 const AppContextProvider = ({ children } : { children: ReactNode}) => {
   const [isActive, setIsActive] = useState("About");
-  const { theme = 'light', setTheme } = useTheme();
+  const { theme='light', setTheme } = useTheme();
 
   const handleNavLinkOnClick = ( navLink: IIcon ) => {
     setIsActive(navLink.name);

@@ -11,13 +11,14 @@ const Contact : React.FC<{viewCount: string}> = ({ viewCount }) => {
     <section id="contact">
       <AnimationOnScroll>
         <PageLayout>
-          <SectionTitle title="04. Contact Me?"/>
+          <SectionTitle title="Contact Me?"/>
           <div className='mt-8'><ContactForm/></div>
           <div className='mt-8 flex flex-col gap-8 items-center text-sm'>
             <ContactIconList isBox={false}/>
-            <footer className='flex flex-col justify-center items-center gap-2 pb-8'>
+            <footer className='flex flex-col justify-center items-center gap-2 pb-4'>
               <p>Page Views: <span className='small-text-hover'>{viewCount}</span></p>  
-              <p>Designed and Built by Yen Lam with ♡ Copyright 2024 </p>
+              <p>Designed and Built by Yen Lam</p>
+              <p className='text-xs text-[var(--secondary)]'>© 2024</p>
             </footer>
           </div>
         </PageLayout>

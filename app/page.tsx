@@ -5,6 +5,7 @@ import Projects from "@/pages/Projects";
 import Experience from "@/pages/Experience";
 import { useEffect, useState } from "react";
 import Contact from "@/pages/Contact";
+import ProjectContainer from "@/components/ProjectContainer";
 
 const updatePortfolioViewsURL = process.env.NEXT_PUBLIC_UPDATE_PORTFOLIO_VIEWS;
 
