@@ -8,6 +8,15 @@ import { useAppContext } from "@/app/context";
 import { useIsMobile, useScrollDirection } from "@/lib/hooks";
 
 const Nav = () => {
+  const scrollDirection = useScrollDirection(100)
+  const isMobile = useIsMobile()
+
+  const navY = isMobile
+  ? scrollDirection === "down"
+    ? "-100%"
+    : "0%"
+  : "0%";
+
   const context = useAppContext();
   if (!context) { return null}
 
@@ -17,16 +26,6 @@ const Nav = () => {
     setTheme,
     handleNavLinkOnClick,
   } = context;
-
-  const scrollDirection = useScrollDirection(100)
-  const isMobile = useIsMobile();
-
-  const navY = isMobile
-  ? scrollDirection === "down"
-    ? "-100%"
-    : "0%"
-  : "0%";
-
 
   return (
     <motion.nav 
