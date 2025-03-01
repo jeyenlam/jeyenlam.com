@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Intro = () => {
   return (
-    <div className="pt-10 sm:pt-auto lg:pt-4 flex flex-col gap-4">
+    <div className="pt-10 sm:pt-1 flex flex-col gap-4">
       {/* Image */}
       <motion.div
         className="flex justify-center items-center p-2"

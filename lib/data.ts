@@ -25,7 +25,7 @@ export const bio: IBio[] = [
         icon: faBriefcase,
         url: ''
       },
-    text: 'Full-stack Developer - open to work'
+    text: 'Full-stack Developer'
   },
   {
     type: "location",
@@ -35,7 +35,7 @@ export const bio: IBio[] = [
         icon: faLocationDot,
         url: ''
       },
-    text: 'Based in Grand Rapids, MI - Eastern Time (ET)'
+    text: 'Based in Grand Rapids, Michigan'
   },
 ];
 

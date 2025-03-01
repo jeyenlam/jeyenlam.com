@@ -4,9 +4,10 @@
 
 .dark {
   --background: #161616;
+  --bgRgb: #040312e2;
   --text: #b8b8c9;
   --border: #1f1f21;
-  --pop: #5e6bf0;
+  --pop: #5c68f0;
   --primary: #c0c0c9;
   --secondary: #505053;
   --teritary: #1b1b1b;
@@ -14,9 +15,10 @@
 
 .light {
   --background: #fbfbff;
+  --bgRgb: #ebebf9d8;
   --text: #2c2c36;
   --border: #dedee0;
-  --pop: #5e6bf0;
+  --pop: #5c68f0;
   --primary: #3b3b3b;
   --secondary: #797979;
   --teritary: #f8f8f8;

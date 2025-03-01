@@ -35,7 +35,8 @@ const ProjectContainer: React.FC<{project: IProject}> = ({project}) => {
       </div>
 
       {/* Project Background */}
-      <Link href={project.urls[0].url} target="_blank" className={`opacity-35 w-fit left-0 absolute blur-3xl top-0 -z-10`}>
+      <Link href={project.urls[0].url} target="_blank" className={`opacity- w-fit left-0 absolute blur-sm top-0 -z-10`}>
+        <div className='absolute bg-[var(--bgRgb)]  w-full h-full'></div>
         <Image src={project.media} alt={project.title}/>
       </Link>
     </div>
