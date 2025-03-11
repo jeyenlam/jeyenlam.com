@@ -23,7 +23,12 @@ const ProjectContainer: React.FC<{project: IProject}> = ({project}) => {
         <Link href={project.urls[0].url} target="_blank" className='group flex items-baseline gap-2 hover:-translate-y-1 duration-150'>
           <h2 className='text-lg sm:text-2xl text-[var(--primary)] group-hover:text-[var(--pop)] font-medium'>{project.title}</h2>
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='group-hover:block hidden group-hover:text-[var(--pop)]'/>
+          <span className={`${project.highlight === true ? 'block' : 'hidden'} text-[10px] bg-[var(--bgRgb)] px-2 border border-[var(--border)] rounded-full`}>highlighted</span>
         </Link>
+        
+        {/* Duration */} 
+        <p className='text-xs text-[var(--secondary)]'>{project.duration}</p>
+
         {/* Description */}
         <p className='rounded-lg text-sm text-[var(--primary)]'>{project.projectDescription[0]}</p>
         {/* Tech stack */}
@@ -35,8 +40,8 @@ const ProjectContainer: React.FC<{project: IProject}> = ({project}) => {
       </div>
 
       {/* Project Background */}
-      <Link href={project.urls[0].url} target="_blank" className={`opacity- w-fit left-0 absolute blur-sm top-0 -z-10`}>
-        <div className='absolute bg-[var(--bgRgb)]  w-full h-full'></div>
+      <Link href={project.urls[0].url} target="_blank" className={`w-fit left-0 absolute blur-sm top-0 -z-10`}>
+        <div className='absolute bg-[var(--bgRgb)] w-full h-full'></div>
         <Image src={project.media} alt={project.title}/>
       </Link>
     </div>

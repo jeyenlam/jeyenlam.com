@@ -2,7 +2,7 @@ import { faUser, faAddressBook, faBriefcase, faLocationDot, faLaptopCode } from 
 import { faDev, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import {IBio, IIcon, IProject} from '@/lib/myInterface'
 import vinylAppImage from '@/public/vinylapp.png'
-import financeAppImage from '@/public/financeapp.png'
+import readsify from '@/public/readsify.png'
 import athleteAppImage from '@/public/athleteapp.png'
 import ecochicImage from '@/public/ecochic.png'
 import portfolioImage from '@/public/portfolio.png'
@@ -120,7 +120,9 @@ export const experiences = [
 export const projects: IProject[] = [
   {
     title: 'Responsive Portfolio',
+    highlight: true,
     status: 'complete',
+    duration: 'Mar 2024 - Now',
     media: portfolioImage,
     urls: [
       {
@@ -130,13 +132,33 @@ export const projects: IProject[] = [
       },
     ],
     projectDescription: [
-      "Created a responsive personal website using Next.js, integrating various AWS services, and deployed it on AWS.",
+      "A responsive serverless personal website built with Next.js, various AWS services; deployed and hosted by AWS.",
     ],
     tech: ['Next.js', 'Typescript', 'TailwindCSS', 'Aamzon Web Services']
   },
   {
-    title: 'Full-stack Intelligent Athlete Tracker',
+    title: 'Readsify',
+    highlight: true,
     status: 'complete',
+    duration: 'Feb 2025 - Now',
+    media: readsify,
+    urls: [
+      {
+        name: 'github',
+        icon: faGithub,
+        url: 'https://github.com/jeyenlam/readsify'
+      },
+    ],
+    projectDescription: [
+      "An AI-powered web app that features an multi-filters book recommender system, a chatbot to converse about book and a digital bookshelf.",
+    ],
+    tech: ['Next.js', 'Django', 'SQLite', 'Langchain', 'OpenAI', 'Vector-Search']
+  },
+  {
+    title: 'Full-stack Intelligent Athlete Tracker',
+    highlight: false,
+    status: 'complete',
+    duration: 'Aug - Dec 2025',
     media: athleteAppImage,
     urls: [
       {
@@ -146,15 +168,15 @@ export const projects: IProject[] = [
       },
     ],
     projectDescription: [
-      "Built a mobile app leveraging mobile devices' help coaches and parents efficiently monitor their students/children athlete performance, aiming for a low-cost alternative to existing products.",
-      "Integrated Auth0 for secure authentication, used MongoDB for data storage, and implemented various React Native libraries to support core app functionalities.",
-      "Employed Scrum methodology to manage development, ensuring timely delivery and adaptability to project needs."
+      "A mobile app to capture raw game footages of student atheletes then AI-processed to produce key highlights shorts.",
     ],
-    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'Roc.aiAPI', 'TailwindCSS']
+    tech: ['Expo', 'Node.js', 'MongoDB', 'Auth0', 'GridFS', 'TailwindCSS']
   },
   {
     title: 'Vinyl Collection Tracker',
+    highlight: false,
     status: 'complete',
+    duration: 'Feb - Apr 2024',
     media: vinylAppImage,
     urls: [
       {
@@ -169,15 +191,15 @@ export const projects: IProject[] = [
       }
     ],
     projectDescription: [
-      "Developed a web app to enhance Discogs' user experience by integrating features like random vinyl browsing and intuitive collection management.",
-      "Leveraged the DiscogsAPI to access and update user collection data, implementing OAuth for secure authentication and safeguarding user privacy.",
-      "Created use cases, a traceability matrix and applied Agile methodology to accommodate ongoing changes, ensuring the app's adaptability and smooth integration of new features throughout development."
+      "A web app to simplfy Discogs' user experience with vinyl collection management by integrating simple and intuitive vinyl-collection-oriented management features.",
     ],
-    tech: ['Flask', 'Python', 'HTML5', 'CSS3', 'DiscogAPI', 'OAuth']
+    tech: ['Flask', 'HTML', 'CSS', 'DiscogAPI', 'OAuth']
   },
   {
     title: 'EcoChic',
+    highlight: false,
     status: 'complete',
+    duration: 'Feb 2024',
     media: ecochicImage,
     urls: [
       {
@@ -187,8 +209,8 @@ export const projects: IProject[] = [
       },
     ],
     projectDescription: [
-      "Developed a web app within 24 hours that promote fashion sustainability, configuring a map that helps user easily search for local sustainable stores location.",
+      "A web app within 24 hours that promote fashion sustainability, configuring a map that helps user easily search for local sustainable stores location.",
     ],
-    tech: ['React.js', 'Javascript', 'CSS', 'RapidAPI']
+    tech: ['React.js', 'Javascript', 'RapidAPI', 'Figma']
   }
 ];
